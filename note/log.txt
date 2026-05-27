@@ -1,0 +1,710 @@
+sudo dd bs=1m if=2023-05-03-raspios-bullseye-arm64.img of=/dev/rdisk6
+sudo dd bs=1M if=fileName.img of=/dev/rdisk6
+https://project-chip.github.io/connectedhomeip-doc/index.html
+
+안녕하세요
+이번 달에는 하라고 하신 것들을 하나도 하지 않았습니다
+지금까지 도와주셔서 감사했습니다
+
+let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+
+let fileURL = documentsDirectory.appendingPathComponent("example.txt")
+
+let data = "Hello, world!".data(using: .utf8)
+do {
+    try data?.write(to: fileURL)
+} catch {
+    // handle error
+    print(error)
+}
+
+
+
+let libraryDirectory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+
+let fileURL = libraryDirectory.appendingPathComponent("a_month_game/tileData")
+
+# answer
+샌드박스형 게임 만들고 있어요
+돈스타브나 림월드랑 비슷한 게임이예요
+게임 월드에 타일 단위로 오브젝트나 아이템이 있고 상호작용할 수 있는 게임이예요
+오브젝트랑 상호작용하고 아이템 얻어서 다른 아이템이나 타일을 만들 수 있어요
+
+위에 두 게임이랑 다른 점이라면, 멀티터치를 적용해서 더 자유로운 조작이 가능하도록 할거고요
+캐릭터한테 다양한 스킬 변수를 둬서 같은 작업을 반복하면 효율이 좋아지거나 결과물이 좋아지는 시스템을 만들거예요
+
+# reply
+네 개발전에 필요한 내용은 다음과 같습니다.
+확인해서 작성해주세요.
+
+- 화면 설계서(전체 화면에 대한 대략적인 서술)
+- 전체 기능 설계서(동작 방식 및 화면 별로 필요한 기능 서술)
+- DB 설계서( 저장할 데이터가 있으면 작성)
+위 내용들 작성해서 전달주세요.
+
+코딩도 중요하지만
+초기 설계단에서 설계한 내용을 전부 구현하는게
+가장 중요합니다.
+(중간중간 개발이 어렵거나 돌아가고 싶은 순간이 생기겠지만 방지하는 차원도 있어요..)
+
+# do
+Tiny Home
+월드 선택 화면
+    월드 선택
+    월드 초기화(정말 초기화할지 묻는 윈도우)
+    여러 월드를 만들 수 있는 기능은 존재하지만 중요한 부분은 아니니 제거
+게임 화면
+    메뉴 버튼
+    인벤토리(왼손, 오른손)
+    상호작용
+        터치
+        드래그
+    제작
+    주변 재료들로 제작 가능한 오브젝트가 왼쪽에 뜬다
+메뉴 윈도우
+    월드 선택 화면으로 돌아가기
+
+
+전체 기능 설계서를 작성할 때
+- 가능한 구체적으로 작성한다
+- 필요한 내용은 가능한 구체적으로 작성한다
+- 구체적인 수치를 알 수 없는 경우 생략한다
+    - 만약 크리티컬한 경우 알아내기 위해 노력한다
+        - 크리티컬하다 함은 의도를 담아낼 필요가 있는 경우이다
+
+멀티 터치 설명을 여러 장으로 더 나눴으면 좋겠다던가 하시면 말씀해 주세요
+어제 말씀하신 문서들 작성해서 이메일로 보내드렸습니다
+게임 이름은 Tiny Home 입니다
+
+myNode.contains(touchLocation)
+nodes(at: touchLocation)
+
+# 2023-05-21
+draft
+
+issue
+// Should i make game object subclass?
+
+isWalkable
+isPickable
+
+func addCraftWindow(to parent: SKNode) {
+    let craftWindow = SKNode()
+    // add 5? craft cell
+    parent.addChild(craftWindow)
+}
+
+// Resource.swift
+GameObject.stone, Constant.ResourceName.gameObjectStone
+GameObject.branch, Constant.ResourceName.gameObjectBranch
+
+// Constant.swift
+let recipe [gameObject: [gameObject]] = [
+    GameObjectAxe.self: [GameObjectBranch, GameObjectStone],
+]
+
+// WorldSceneController.swift
+// called when accessable game object array changed
+func checkRecipe(accessableGameObjectArray array: [SKNode]) {
+    let accessableGameObjectArray = array.map() { self.gameObjectNodeToModel[$0] }
+}
+
+o
+    o
+        o
+    o
+        o
+    o
+        o
+    o
+        o
+    o
+        o
+
+
+        .default: (GameObject.self, "game_object_default"),
+        .pineCone: (GameObjectPineCone.self, "game_object_pine_cone"),
+        .pineTree: (GameObjectPineTree.self, "game_object_pine_tree"),
+        .woodWall: (GameObjectWoodWall.self, "game_object_wood_wall"),
+        .stone: (GameObjectBranch.self, "game_object_stone"),
+        .branch: (GameObjectStone.self, "game_object_branch"),
+        .axe: (GameObjectAxe.self, "game_object_axe"),
+
+```
+// MARK: - class GameObject
+class GameObject: SKSpriteNode {
+
+    // MARK: property to be overriden
+    var isWalkable: Bool { return true }
+    var isPickable: Bool { return true }
+
+    func interact(leftHand: GameObject?, rightHand: GameObject?) {
+
+    }
+
+    // TODO: move to constant
+    private static let rawResources: [(type: GameObject.Type, name: String)] = [
+        (GameObject.self, "game_object_default"),
+        (GameObjectPineCone.self, "game_object_pine_cone"),
+        (GameObjectPineTree.self, "game_object_pine_tree"),
+        (GameObjectWoodWall.self, "game_object_wood_wall"),
+        (GameObjectBranch.self, "game_object_stone"),
+        (GameObjectStone.self, "game_object_branch"),
+        (GameObjectAxe.self, "game_object_axe"),
+    ]
+
+    private static let resource: [ObjectIdentifier: (typeID: Int, texture: SKTexture)] = ({
+
+        var dictionary: [ObjectIdentifier: (typeID: Int, texture: SKTexture)] = [:]
+
+        for (typeID, gameObjectType) in rawResources.enumerated() {
+            let rawResource = rawResources[typeID]
+            let objectIdentifier = ObjectIdentifier(rawResource.type)
+            let resourceName = rawResource.name
+            let texture = SKTexture(imageNamed: resourceName)
+            let value = (typeID: typeID, texture: texture)
+            dictionary[objectIdentifier] = value
+        }
+
+        return dictionary
+    })()
+
+    func typeID() -> Int {
+        let objectIdentifier = ObjectIdentifier(type(of: self))
+        return GameObject.resource[objectIdentifier]!.typeID
+    }
+
+    static func new(typeID: Int) -> GameObject {
+        let type = self.rawResources[typeID].type
+        let texture = self.resource[ObjectIdentifier(type)]!.texture
+        return type.init(texture: texture)
+    }
+
+}
+
+    private static let rawResources: [name: String] = [
+        "game_object_none",
+        "game_object_pine_cone",
+        "game_object_pine_tree",
+        "game_object_wood_wall",
+        "game_object_branch",
+        "game_object_stone",
+        "game_object_axe",
+    ]
+
+        
+        
+        
+        
+        
+        
+        
+    ]
+
+    private static let resourceNames: [String] = [
+        (true, true, "game_object_none"),
+        (true, true, "game_object_pine_cone"),
+        (true, true, "game_object_pine_tree"),
+        (true, true, "game_object_wood_wall"),
+        (true, true, "game_object_branch"),
+        (true, true, "game_object_stone"),
+        (true, true, "game_object_axe"),
+
+class Node {
+
+    private weak var _origin: Node?
+    private weak var _parent: Node? = nil
+    private var _children: [Node] = []
+
+    init() {
+        self._origin = self
+    }
+
+}
+
+extension Node: NodeProtocol {
+
+    var origin: NodeProtocol { self._origin! }
+    var parent: NodeProtocol? { self._parent }
+    var childer: [NodeProtocol] { self._children }
+
+}
+
+protocol NodeProtocol {
+
+    var origin: NodeProtocol { get }
+    var parent: NodeProtocol? { get }
+    var childer: [NodeProtocol] { get }
+
+}
+
+{
+    override func touchBegan(_ touch: UITouch) {
+
+    }
+
+    override func touchMoved(_ touch: UITouch) {
+
+    }
+
+    override func touchEnded(_ touch: UITouch) {
+
+    }
+
+    override func touchCancelled(_ touch: UITouch) {
+
+    }
+
+    override func resetTouch(_ touch: UITouch) {
+
+    }
+
+}
+
+
+class WorldScene: SKScene {
+    var touchManager: WorldSceneTouchManager = WorldSceneTouchManager()
+}
+
+# todo
+월드 별로 테마가 있다
+월드 3개 이상 특색 있는 설계 해오기
+    눈 나무 등
+최소 3 천원
+힐링 가능
+
+        self.newGOMO(typeID: 1, containerID: 0, x: Int32(Constant.centerTileIndex - 2), y: Int32(Constant.centerTileIndex - 3))
+        self.newGOMO(typeID: 2, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex - 3))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex - 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex)),
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex + 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex), y: Int32(Constant.centerTileIndex + 1)),
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex + 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex)),
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex - 1))
+        self.newGOMO(typeID: 4, containerID: 0, x: Int32(Constant.centerTileIndex), y: Int32(Constant.centerTileIndex - 3)),
+        self.newGOMO(typeID: 5, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex - 3))
+
+        self.newGOMO(typeID: 1, containerID: 0, x: Int32(Constant.centerTileIndex - 2), y: Int32(Constant.centerTileIndex - 3))
+
+        self.newGOMO(typeID: 1, containerID: 0, x: Int32(Constant.centerTileIndex - 2), y: Int32(Constant.centerTileIndex - 3))
+        self.newGOMO(typeID: 2, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex - 3))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex - 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex - 1), y: Int32(Constant.centerTileIndex + 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex), y: Int32(Constant.centerTileIndex + 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex + 1))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex))
+        self.newGOMO(typeID: 3, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex - 1))
+        self.newGOMO(typeID: 4, containerID: 0, x: Int32(Constant.centerTileIndex), y: Int32(Constant.centerTileIndex - 3))
+        self.newGOMO(typeID: 5, containerID: 0, x: Int32(Constant.centerTileIndex + 1), y: Int32(Constant.centerTileIndex - 3))
+
+1 >> 4
+18 >> 4
+-1 >> 4
+-18 >> 4
+
+        self.newGOMO(typeID: 1, containerID: 0, x: Constant.centerTileIndex - 2, y: Constant.centerTileIndex - 3)
+        self.newGOMO(typeID: 2, containerID: 0, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 3)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex, y: Constant.centerTileIndex + 1)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex)
+        self.newGOMO(typeID: 3, containerID: 0, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(typeID: 4, containerID: 0, x: Constant.centerTileIndex, y: Constant.centerTileIndex - 3)
+        self.newGOMO(typeID: 5, containerID: 0, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 3)
+
+        let request = NSFetchRequest<GameObjectManagedObject>(entityName: Constant.gameObjectDataEntityName)
+        request.predicate = NSPredicate(format: "id == %@", argumentArray: [gameObject.id])
+
+        self.newGOMO(type: 1, container: .field, x: Constant.centerTileIndex - 2, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: 2, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: 3, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(type: 4, container: .field, x: Constant.centerTileIndex, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: 5, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 3)
+
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: .woodWall, container: .field, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 1)
+
+    func touchBegan(_ touch: UITouch) {}
+    func touchMoved(_ touch: UITouch) {}
+    func touchEnded(_ touch: UITouch) {}
+    func touchCancelled(_ touch: UITouch) {}
+    func resetTouch(_ touch: UITouch) {}
+
+        Coordinate(-1, -1),
+        Coordinate(0, -1),
+        Coordinate(1, -1),
+        Coordinate(-1, 0),
+        Coordinate(0, 0),
+        Coordinate(1, 0),
+        Coordinate(-1, 1),
+        Coordinate(0, 1),
+        Coordinate(1, 1),
+
+    case West
+    case Origin
+    case East
+    case NorthWest
+    case North
+    case NorthEast
+    case West
+    case Origin
+    case East
+    case NorthWest
+    case North
+    case NorthEast
+            self.fieldGOModels[3] = self.fieldGOModels[4]
+            self.fieldGOModels[4] = self.fieldGOModels[5]
+            self.fieldGOModels[6] = self.fieldGOModels[7]
+            self.fieldGOModels[7] = self.fieldGOModels[8]
+
+            self.fieldGOModels[2] = self.fieldGOModels[1]
+            self.fieldGOModels[1] = self.fieldGOModels[0]
+            self.fieldGOModels[5] = self.fieldGOModels[4]
+            self.fieldGOModels[4] = self.fieldGOModels[3]
+            self.fieldGOModels[8] = self.fieldGOModels[7]
+            self.fieldGOModels[7] = self.fieldGOModels[6]
+
+            self.fieldGOModels[0] = self.fieldGOModels[3]
+            self.fieldGOModels[1] = self.fieldGOModels[4]
+            self.fieldGOModels[2] = self.fieldGOModels[5]
+            self.fieldGOModels[3] = self.fieldGOModels[6]
+            self.fieldGOModels[4] = self.fieldGOModels[7]
+            self.fieldGOModels[5] = self.fieldGOModels[8]
+
+            self.fieldGOModels[6] = self.fieldGOModels[3]
+            self.fieldGOModels[7] = self.fieldGOModels[4]
+            self.fieldGOModels[8] = self.fieldGOModels[5]
+            self.fieldGOModels[3] = self.fieldGOModels[0]
+            self.fieldGOModels[4] = self.fieldGOModels[1]
+            self.fieldGOModels[5] = self.fieldGOModels[2]
+        case .South: return [.North]
+        case .West: return [.East]
+        case .North: return [.South]
+    mo: GameObjectMO!, id: Int, type: GameObjectType, tileCoord: TileCoordinate?, inventoryCoord: InventoryCoordinate?,
+
+    private var _mo: GameObjectMO!
+    private let _id: Int
+    private let _type: GameObjectType
+    private var _coord: Coordinate<Int>?
+    private var _invCoord: InventoryCoordinate?
+
+    var mo: GameObjectMO! {
+        get {}
+        set {}
+    }
+let id: Int {
+    get {}
+    set {}
+}
+let type: GameObjectType {
+    get {}
+    set {}
+}
+var coord: Coordinate<Int>? {
+    get {}
+    set {}
+}
+var invCoord: InventoryCoordinate? {
+    get {}
+    set {}
+}
+
+        self.newGOMO(type: .pineCone, x: 0, y: 0)
+        self.newGOMO(type: .pineCone, x: Constant.centerTileIndex - 2, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: .pineTree, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex - 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex + 1)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex)
+        self.newGOMO(type: .woodWall, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 1)
+        self.newGOMO(type: .branch, x: Constant.centerTileIndex, y: Constant.centerTileIndex - 3)
+        self.newGOMO(type: .stone, x: Constant.centerTileIndex + 1, y: Constant.centerTileIndex - 3)
+        ("game_object_none", true, true),
+        ("game_object_none", true, true),
+        ("game_object_pine_cone", true, true),
+        ("game_object_pine_tree", false, false),
+        ("wood_wall", false, false),
+        ("game_object_branch", true, true),
+        ("game_object_stone", true, true),
+        ("game_object_axe", true, true),
+
+false
+false
+true
+true
+true
+true
+true
+true
+
+        "game_object_none"
+        "game_object_pine_cone"
+        "game_object_pine_tree"
+        "wood_wall"
+        "game_object_branch"
+        "game_object_stone"
+        "game_object_axe"
+floor(1.0)
+floor(0.5)
+floor(0.0)
+floor(-0.5)
+floor(-1.0)
+
+            let temp4 = self.chunks[6].position
+            let temp5 = self.chunks[7].position
+            let temp6 = self.chunks[8].position
+            self.chunks[6].position = self.chunks[3].position
+            self.chunks[7].position = self.chunks[4].position
+            self.chunks[8].position = self.chunks[5].position
+            self.chunks[3].position = self.chunks[0].position
+            self.chunks[4].position = self.chunks[1].position
+            self.chunks[5].position = self.chunks[2].position
+            self.chunks[0].position = temp4
+            self.chunks[1].position = temp5
+            self.chunks[2].position = temp6
+[.northeast, .east, .southeast],
+[.southeast, .south, .southwest],
+[.southwest, .west, .northwest],
+[.northwest, .north, .northeast],
+
+        Coordinate(-16, -16),
+        Coordinate(0, -16),
+        Coordinate(16, -16),
+        Coordinate(-16, 0),
+        Coordinate(0, 0),
+        Coordinate(16, 0),
+        Coordinate(-16, 16),
+        Coordinate(0, 16),
+        Coordinate(16, 16),
+
+
+        .woodWall: [.woodStick: 4],
+        .axe: [.stone: 1, .woodStick, 1],
+        .pickaxe: [.stone: 1, .woodStick, 1],
+        .stoneShovel: [.stone: 1, .woodStick, 1],
+
+
+
+
+    func moveToBelong(_ go: GameObject) {
+        if go.chunkCoord != nil {
+            self.moveToBelongField()
+
+            return
+        }
+
+        if go.invCoord != nil {
+            let event = Event(type: WorldEventType.moveToBelongInv,
+                              udata: nil,
+                              sender: go)
+            WorldEventManager.default.enqueue(event)
+
+            return
+        }
+
+        let event = Event(type: WorldEventType.take,
+                          udata: nil,
+                          sender: go)
+        WorldEventManager.default.enqueue(event)
+    }
+
+    func moveToBelongField() {
+        let go = event.sender as! GameObject
+        let characterCoord = scene.character.data.chunkCoord.coord
+
+        go.lmiRemoveFromParent()
+        scene.chunkContainer.add(go)
+        scene.accessibleGOTracker.add(go)
+    }
+
+    func moveToBelongInv() {
+        let go = event.sender as! GameObject
+
+        guard !scene.invContainer.isValid(go.invCoord!) else {
+            go.lmiRemoveFromParent()
+            scene.invContainer.add(go)
+
+            return
+        }
+
+        let event = Event(type: WorldEventType.take,
+                          udata: nil,
+                          sender: go)
+        WorldEventManager.default.enqueue(event)
+    }
+
+    func take() {
+        let go = event.sender as! GameObject
+        let characterInv = scene.invContainer.characterInv
+
+        if let index = characterInv.emptyIndex {
+            go.lmiRemoveFromParent()
+
+            let newInvCoord = InventoryCoordinate(characterInv.id, index)
+            go.data.set(invCoord: newInvCoord)
+
+            characterInv.add(go)
+
+            return
+        }
+
+        go.data.set(chunkCoord: scene.character.data.chunkCoord)
+        go.lmiRemoveFromParent()
+        scene.chunkContainer.chunks[Direction9.origin].add(go)
+        scene.accessibleGOTracker.add(go)
+    }
+
+    func moveToUI() {
+        let go = event.sender as! GameObject
+
+        go.lmiMove(toParent: scene.ui)
+    }
+
+    func interact() {
+        let go = event.sender as! GameObject
+
+        print("interact go")
+    }
+
+    func interactToGO() {
+        let go = event.sender as! GameObject
+        let targetGO = event.udata as! GameObject
+
+        if targetGO.type.isTile {
+            let tileChunkCoord = targetGO.chunkCoord!
+            go.data.set(chunkCoord: tileChunkCoord)
+
+            let event = Event(type: WorldEventType.moveToBelongField,
+                              udata: nil,
+                              sender: go)
+            WorldEventManager.default.enqueue(event)
+
+            return
+        }
+
+        //    if no interaction
+        let event = Event(type: WorldEventType.moveToBelong,
+                          udata: nil,
+                          sender: go)
+        WorldEventManager.default.enqueue(event)
+    }
+
+{ scene in // none
+
+},
+
+{ scene in // caveHoleTile
+
+},
+
+{ scene in // waterTile
+
+},
+
+{ scene in // caveCeilTile
+
+},
+
+{ scene in // sandTile
+
+},
+
+{ scene in // clayTile
+
+},
+
+{ scene in // cobblestoneTile
+
+},
+
+{ scene in // dirtTile
+
+},
+
+{ scene in // woodFloorTile
+
+},
+
+{ scene in // pineCone
+
+},
+
+{ scene in // pineTree
+
+},
+
+{ scene in // woodWall
+
+},
+
+{ scene in // woodStick
+
+},
+
+{ scene in // stone
+
+},
+
+{ scene in // stoneAxe
+
+},
+
+{ scene in // stoneShovel
+
+},
+
+{ scene in // stonePickaxe
+
+},
+
+{ scene in // leafBag
+
+},
+        case .north:
+            direction = .north
+
+
+        case .southWest:
+direction = .southWest
+        case .south:
+direction = .south
+        case .southEast:
+direction = .southEast
+        case .west:
+direction = .west
+        case .origin:
+direction = .origin
+        case .east:
+direction = .east
+        case .northWest:
+direction = .northWest
+        case .north:
+direction = .north
+        case .northEast:
+direction = .northEast
+
+[.north, .east],
+[.east],
+[.south, .east],
+[.south],
+[.south, .west],
+[.west],
+[.north, .west],
+[.north],
+
