@@ -100,7 +100,7 @@ NorthBayou NB H80 모니터암 20,460
 AirPods Max - 스타라이트 769,000
 
 2024-11-22 Fri
-Mac mini M4_2024 24/512 1,490,000
+Mac mini (2024) 24/512 1,490,000
   receive date : 2024-11-27 Wed
 
 2024-12-01 Sun
@@ -108,3 +108,16 @@ Sandisk Extreme Portable SSD V2 E61 (2TB) 201,000
 
 2025-05-03 Sat
 EFM ipTIME AX1500SR 유무선공유기 35,880
+
+2025-08-09 Sat
+스틸리STEELIE 핸드폰거치대 휴대폰 스마트폰 차량용 태블릿 10,990
+
+2025-10-27 Mon
+SDDR-B731 QuickFlow UHS-I 마이크로 SD카드 리더기 20,920
+
+2025-12-12 Fri
+Apple Vision Pro 512GB, 듀얼 니트 밴드 - M, 라이트실 - 33W 5,290,000
+Apple Vision Pro 여행용 케이스 299,000
+
+2025-12-13 Sat
+ZEISS Optical Inserts 399,000
