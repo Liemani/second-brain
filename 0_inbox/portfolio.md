@@ -67,7 +67,7 @@
 
 ## haven and hearth 클라이언트 개조
 
-![liefeni.png](/image/liefeni.png)
+![liefeni.png](./assets/liefeni.png)
 
 2022/07/29 ~ 2022/09/23
 
@@ -380,7 +380,7 @@ UTF-8 이 어떻게 생긴 포멧인지를 이해하는 것은 고통스러웠�
 
 ### miniRT
 
-![output.bmp](/image/output.bmp)
+![output.bmp](./assets/output.bmp)
 
 2021/04/04 ~ 2021/06/03
 
@@ -533,7 +533,7 @@ serial print 로 4x4 의 X 를 계속 출력하다가 주기적으로 O 로 변�
 
 ## Haven and Hearth Assistant 앱 출시
 
-![haven_and_hearth.png](/image/haven_and_hearth.png)
+![haven_and_hearth.png](./assets/haven_and_hearth.png)
 
 2020/02/01 ~ 2020/03/14
 
