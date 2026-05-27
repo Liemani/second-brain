@@ -9871,8 +9871,8 @@ git difftool -t vimdiff
 
 2025-07-29 Tue
 https://notes.eliasnorrby.com/vim/tsc-quickfix
-  set errorformat^=%f\\(%l\\,%c\\):\ error\ %m,
-  set makeprg=npx\ tsc\ --noEmit\ --pretty\ false
+  :set errorformat^=%f\\(%l\\,%c\\):\ error\ %m
+  :set makeprg=npx\ tsc\ --noEmit\ --pretty\ false
 :set includeexpr=substitute(v:fname,'^\\$be','src/be','')
 
 2025-07-30 Wed
@@ -9895,8 +9895,11 @@ for f in 9*; do [[ -e "$f" ]] || continue; mv -vn -- "$f" "zz${f#9}"; done
 2025-08-13 Wed
 figma shortcut
 <Command-K> action menu
+<Command-/> action menu
 <Command-?> action menu
-<CS-?> keyboard shortcuts
+<Control-Shift-?> keyboard shortcuts
+<Option-Command-K> Create component
+<Option-Command-B> Detach instance
 
 2025-08-18 Mon
 vim scp://<ip>[:<port>]/<absolute path>
@@ -9918,3 +9921,322 @@ done
 idea
 - 자서전 ai : 나의 모든 데이터를 입력하면 자서전을 만들어준다.
 - 이력서 ai : 나의 모든 데이터를 입력하면 이력서를 만들어준다.
+
+대게 많은 오픈 월드 게임이 2D 오픈월드이다.
+1D 오픈월드는 어떨까?
+
+2025-09-16 Tue
+uv venv
+uv pip install <pacakge>
+
+uv init
+uv add <pacakge>
+uv remove <pacakge>
+uv sync
+
+uv run <file>
+uv run <package>
+
+2025-09-17 Wed
+나중에 푸는 원리가 그거구나
+가해자도 : 내가 좀 심했네
+생각을 하긴 할텐데
+이 생각을 한 후에
+피해자가 : 나 그 때 좀 그랬어.
+라고 해야 가해자가 : 미안해
+라고 하겠지
+
+2025-09-18 Thu
+:help option-list
+
+2025-09-19 Fri
+rsync -av <ip address>:/tmp/20250918/test-be .
+- 경로 방식이 mv나 cp와 달리 목적지에 test-be를 쓰면 항상 target이 아닌 parent directory로 인식한다.
+
+2025-09-24 Wed
+sudo mv dist /var/www/parrc-fe
+sudo vim /etc/nginx/site-available/parrc-fe.conf
+sudo ln -s /etc/nginx/site-available/parrc.conf /etc/nginx/site-enable/parrc-fe.conf
+sudo systemlctl reload nginx
+
+bash gradlew build -x test
+
+2025-09-25 Thu
+rsync -arv -e "ssh -p <port>" <user>@<host>:<path> .
+  -a : symlink 유지
+ctags -R --languages=Java
+find . -type f -path '*controller*' -not -name '*.swp' -exec echo controller {}: \; -exec cat {} \; -exec echo \;
+find . -type f -path '*dto*' -not -name '*.swp' -exec echo dto {}: \; -exec cat {} \; -exec echo \;
+
+2025-09-26 Fri
+ps -p 30312 -o pid,tty,command
+
+2025-10-27 Mon
+sudo su
+tail -c 1M usb_image_resized.img | hexdump -C | grep -v '00 00 00 00 00 00 00 00'
+sudo losetup -Pf --show usb_image_resized.img
+/dev/loop13
+ls /dev | grep loop13
+fdisk -l /dev/loop13
+sudo e2fsck -f /dev/loop13p1
+sudo resize2fs /dev/loop13p1 58G
+sudo tune2fs -l /dev/loop13p1
+fdisk -l /dev/loop13
+sudo parted /dev/loop13
+(parted) print
+(parted) resizepart 1 58.4GB
+Yes/No? Yes
+(parted) quit
+sudo losetup -d /dev/loop13
+sudo fdisk -l usb_image_resized.img
+sudo truncate -s 58087524864 usb_image_resized.img
+gzip -k usb_image_resized.img
+sudo gzip -dck usb_image_resized.img.gz | sudo dd of=/dev/rdisk10 bs=1m status=progress
+
+sudo fdisk -l usb_image_resized.img
+sudo truncate -s 63864552960 usb_image_resized.img
+gzip -k usb_image_resized.img
+sudo gzip -dck usb_image_resized.img.gz | sudo dd of=/dev/rdisk4 bs=1m status=progress
+
+2025-10-28 Tue
+git clone --bare <src> <repo>
+git submodule add -f <repo> <dst>
+git clone --recurse-submodules <repo>
+git submodule init
+git submodule update
+
+git submodule add -b <branch-name> <repo-url> <path>
+
+2025-11-04 Tue
+IFS='@:' read USER HOST PORT DST < $DST_SSH_ADDR_FILE
+
+2025-11-10 Mon
+apt install git, vim, parted, kpartx, file
+docker run -it --name ubuntu24.04 --privileged -v /Volumes/mac/cnhrd_autocar_as/ubuntu24.04:/mnt/host ubuntu:24.04
+parted usb_image_resized.img print
+losetup -fP usb_image_resized.img
+losetup -a
+parted /dev/loop0 print
+lsblk
+kpartx -av /dev/loop0
+kpartx -dv /dev/loop0
+lsblk
+ls /dev/mapper/
+lsblk /dev/mapper/loop0p1
+e2fsck -f /dev/mapper/loop0p1
+file -s /dev/mapper/loop0p1
+resize2fs /dev/mapper/loop0p1 55G
+e2fsck -f /dev/mapper/loop0p1
+parted /dev/loop0
+(parted) unit B
+(parted) print
+(parted) resizepart 1 59055800320
+(parted) quit
+parted /dev/loop0 unit B print
+mkdir /mnt/usb
+mount /dev/mapper/loop0p1 /mnt/usb
+df -h
+umount /mnt/usb
+
+sudo diskutil eraseDisk FAT32 USB_DISK MBR /dev/disk2
+
+sudo diskutil partitionDisk /dev/diskX GPT "Free Space" "%noformat%" 100%
+
+losetup -fP soda_for_l4t_big.img
+kpartx -av /dev/loop0
+kpartx -dv /dev/loop0
+losetup -d /dev/loop0
+
+mount /dev/mapper/loop0p1 /mnt/usb
+umount /mnt/usb
+
+losetup -a
+dumpe2fs /dev/mapper/loop0p1 | less
+
+parted usb_image_resized.img print
+e2fsck -f /dev/mapper/loop0p1
+resize2fs /dev/mapper/loop0p1 55G
+parted usb_image_resized.img unit s print
+parted usb_image_resized.img resizepart 1 <new_end_sector>s
+
+sgdisk --backup=backup.gpt usb_image.img
+#sgdisk --replicate=usb_image_resized.img usb_image.img
+sgdisk -e usb_image_resized.img
+sgdisk -v usb_image_resized.img
+sudo dd if=soda_for_l4t_mini.img of=/dev/rdisk6 bs=4M status=progress
+sudo dd if=ubuntu-24.04.3-live-server-amd64.iso of=/dev/rdisk6 bs=4M status=progress
+
+2025-11-12 Wed
+system_profiler -listDataTypes
+system_profiler SPUSBHostDataType
+sudo blockdev --getsize64 /dev/sdb
+lsblk -b /dev/sdb
+sudo fdisk -l /dev/sdb
+sudo dumpe2fs /dev/loop14p1 | less
+sudo resize2fs -P /dev/loop14p1
+
+2025-11-20 Thu
+for ip in `cat /var/log/auth.log | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort -u`; do sudo ufw deny from $ip; done
+for ip in `grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' /var/log/auth.log | sort -u`; do sudo ufw deny from $ip; done
+sudo ufw status
+sudo ufw delete deny from 192.168.219.1
+
+2025-12-03 Wed
+traceroute kccicn-ca.iptime.org
+sudo traceroute -P TCP -p 22 kccicn-ca.iptime.org
+nslookup kccicn-ca.iptime.org
+sudo nmcli connection show
+sudo nmcli connection modify "Wired connection 1" ipv4.method manual ipv4.addresses 192.168.10.2/24 ipv4.gateway ""
+sudo nmcli connection up "Wired connection 1"
+
+2025-12-23 Tue
+sudo ufw status
+sudo ufw status verbose
+sudo ufw delete deny from <ip>
+sudo ufw deny from <ip>
+sudo ufw allow from <ip>
+sudo ufw status numbered
+sudo ufw delete from <number>
+sduo ufw allow from <ip> to any port 5900
+sudo ufw allow 80/tcp
+sudo ufw allow ssh
+sudo ufw allow 8080
+
+sudo chmod -R g+s bindsoft
+sudo usermod -aG bindsoft bagjeonghun
+sudo killall -u $USER
+
+2026-01-02 Fri
+apt show
+
+2026-01-05 Mon
+rsync -rv --no-g PARRC-Docker lserver:~/project/parrc
+sudo chmod -R g+rw ~
+
+2026-01-06 Tue
+git push <remote> --delete <branch_name>
+
+2026-01-07 Wed
+sudo nmtui
+sudo systemctl list-units --type=service --state=running
+
+2026-01-08 Thu
+git tag -a v0.3.0 -m "관리자 모니터링 추가"
+git push origin v0.3.0
+git show v0.3.0
+git tag -f -a v0.3.0 -m "관리자 모니터링 추가"
+git push -f origin v0.3.0
+ssh-keygen -R lrasp
+xcrun --show-sdk-path
+cat $(xcrun --show-sdk-path)/usr/include/sys/syscall.h | grep "#define" | grep "SYS_"
+
+2026-01-10 Sat
+sudo nmtui
+cat /proc/cpuinfo
+pinout
+sudo nmcli dev wifi list
+sudo nmcli dev wifi connect "SSID" password "PW"
+iw dev wlan0 info
+rp3b 의 wifi module 로는 STA+AP mode 가 어렵다.
+3p4b 의 wifi module 로는 STA+AP mode 를 성공했다.
+
+sudo iw dev wlan0 info
+sudo iw dev wlan0 interface add wlan1 type __ap
+sudo nmcli con add type wifi ifname wlan1 mode ap con-name MyHotspot ssid RPi4_Hotspot
+sudo nmcli con modify MyHotspot wifi-sec.key-mgmt wpa-psk
+sudo nmcli con modify MyHotspot wifi-sec.psk "asdf1234"
+sudo nmcli con modify MyHotspot ipv4.method shared ipv4.addresses 192.168.50.1/24
+sudo nmcli con up MyHotspot
+
+2026-01-12 Mon
+networksetup -listpreferredwirelessnetworks en0
+
+2026-01-13 Tue
+sudo iw dev wlan1 del
+
+2026-01-14 Wed
+ssh -O exit "server"
+kill $PPID
+who -u
+nmcli dev wifi list
+
+2026-01-15 Thu
+rsync -rvn --delete --exclude .git --exclude '.*swp' . user@host:path
+
+2026-01-19 Mon
+stty -F /dev/serial0 9600 raw -echo -echoe -echok
+
+2026-01-20 Tue
+docker compose config
+
+2026-01-22 Thu
+docker cp container:path .
+docker exec container mosquitto_passwd -b /mosquitto/config/pwfile id pw
+mosquitto_sub -h 192.168.50.51 -p port -t \# -v -u id -P pw
+
+2026-01-24 Sat
+shift + command + g in finder: go to folder
+
+2026-01-27 Tue
+sudo apt update && sudo apt upgrade -y
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
+
+// not confirmed
+sudo nmcli device wifi hotspot \
+  ifname wlan0 \
+  con-name MyRaspberryAP \
+  ssid MyRaspberryAP \
+  password 'password1234'
+
+2026-01-29 Thu
+New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "AppsUseLightTheme" -Value 0 -PropertyType DWord -Force
+New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "SystemUsesLightTheme" -Value 0 -PropertyType DWord -Force
+
+2026-01-30 Fri
+sudo lshw -class disk
+lsblk -d -o NAME,ROTA,SIZE,MODEL
+
+2026-02-09 Mon
+brew install cmake
+brew install --cask gcc-arm-embedded
+mkdir ~/pico
+cd ~/pico
+git clone https://github.com/raspberrypi/pico-sdk.git
+cd pico-sdk
+git submodule update --init
+echo 'export PICO_SDK_PATH=$HOME/pico/pico-sdk' >> ~/.zshrc
+source ~/.zshrc
+cd ~/pico
+git clone -b master https://github.com/raspberrypi/pico-examples.git
+cd pico-examples
+mkdir build
+cd build
+cmake -DPICO_BOARD=pico2_w ..
+cmake -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cmake -G Ninja -B build
+cmake -G Ninja -B build -DPICO_BOARD=pico2_w
+cmake -G Ninja -B build -DPICO_BOARD=pico2_w -DWIFI_SSID="bindsoft_805_2.4g" -DWIFI_PASSWORD="bindsoft805" -DMQTT_SERVER="192.168.42.42" -DMQTT_USERNAME="admin" -DMQTT_PASSWORD="admin"
+cd blink
+make -j$(sysctl -n hw.ncpu)
+cmake --build .
+cp picow_blink.uf2 /Volumes/RP2350/
+
+2026-03-03 Tue
+git ls-files
+git rm --cached <file>
+
+2026-03-23 Mon
+sudo nginx -T
+
+2026-03-26 Thu
+sqlite3 -header -csv test "SELECT * FROM a;" > my_export.csv
+
+2026-03-31 Tue
+cmake -G Ninja -B build -DPICO_BOARD=pico2_w
+cd build
+ninja mpu6050_i2c
+picotool load -x i2c/mpu6050_i2c/mpu6050_i2c.uf2 -f
+
+2026-04-16 Thu
+ssh -R 12345:localhost:22 <user>@<address> -p 54321
