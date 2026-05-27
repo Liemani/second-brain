@@ -1,0 +1,28 @@
+name_convention.txt
+
+# category
+dump
+guide
+idea
+list
+model
+review
+
+# dump
+## expertized
+dump
+log
+list
+
+## ?
+catalog(subject catalog): systematic list of items or resources, often organized by subject or category
+index(index of topics): a list of keywords or topics that is used to organize and locate information within a larger document or database
+collection: a group of related items or resources that are organized and stored together
+
+## structure
+raw
+scatter
+unsorted
+rough
+draft
+working

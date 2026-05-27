@@ -1,0 +1,11 @@
+list: game.txt
+
+mindustry
+oxygen not included
+haven and hearth
+reamworld
+don't starve
+terraria
+fater than light
+stardew valley
+mabinogi

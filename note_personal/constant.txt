@@ -1,0 +1,1 @@
+safari_min_width_pixel = 576

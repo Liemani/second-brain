@@ -1,0 +1,7 @@
+list_wonder.txt
+
+2023-01-13
+- why hollow cilinder slow
+    reference: https://www.youtube.com/watch?v=XPUuF_dECVI
+- why the precession of mercury don't follow classical physics in detail with observational data
+- why `perl -e 'print "N" x 100000000' > .temp2` is so fast

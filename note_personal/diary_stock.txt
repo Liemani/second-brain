@@ -1,0 +1,33 @@
+diary_stock.txt
+format : https://github.com/Liemani/note_personal/blob/main/document_format_bootstrap.txt
+주식 관련된 주저리
+
+article {
+
+date
+content
+
+}
+
+2024-07-17
+ai
+nvidia
+energy utility
+apple
+tesla
+pltr
+intel
+bitx
+iwm
+
+2024-03-21
+12월 산타 랠리
+3월 좀 빠지고
+대선이라 계속 오를 것 같다
+
+반도체가 한동안 계속 강세일 것 같다
+주도주 위주 투자를 하도록 하자
+그리고 2차 주도주도 좋다(버티브 : 반도체 냉각)
+주도주와 다르게 노이즈가 적다
+그리고 주도주와 반대로 가는 주식 종목도 알아두면 좋겠다(테슬라, 애플, 구글)
+느리더라도 지속적 우상향 주식도 알아두면 좋다(아메리칸 익스프레스, 뱅크오브아메리카, 버크셔, 옥시덴털 페트롤리움)

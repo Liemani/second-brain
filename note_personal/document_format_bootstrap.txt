@@ -1,0 +1,83 @@
+template : https://github.com/Liemani/note_personal/blob/main/template.txt
+구체적인 파일 작성 형식의 bootstrap
+이 파일은 interface 를 정의합니다.
+template.txt 파일은 최소한의 implementation 입니다.
+
+bootstrap {
+comment :
+  `identifier` is replaced to identifier or can be omitted.
+  `identifiers` means one or more `identifier` would appear.
+  `A or B` means A or B
+}
+
+subject definition {
+
+subject name {
+attributes
+
+content
+
+}
+
+}
+
+attribute definition {
+location : local
+example :
+  name : 일반적인 이름
+  pretty_name : 보기 좋은 이름
+  display_name : 보여주기 이름
+  comment : 주석
+  example : 예제
+
+attribute name :
+  attribute contents
+or
+attribute name : attribute content
+}
+
+file {
+
+file name
+format : format reference
+descriptions
+
+content definition
+
+contents
+
+}
+
+date {
+example :
+  2025-01-22 Wed
+
+yyyy-mm-dd DDD
+
+}
+
+create {
+similar name :
+  invent
+  model
+process :
+  want(= history)
+  case
+  implementation
+comment :
+  i don't know what is this
+}
+
+under construction :
+label {
+location : global
+
+name :
+
+}
+
+log {
+todo :
+  how to differenciate label and attribute not just location?
+  need minimal template
+}

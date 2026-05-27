@@ -1,0 +1,149 @@
+device_model :
+arduino
+{
+  model : Arduino
+  arduino_mkr_wifi_1010
+  {
+    model : Arduino MKR WiFi 1010
+    mcu : ATSAMD21G18A-U 2251TG8
+      ARM® Cortex®-M0+ CPU running at up to 48 MHz
+  }
+
+  arduino_uno_rev3
+  {
+    model : Arduino Uno Rev3
+    mcu : ATmega328P
+      AVR® 8-bit microcontroller
+    clock speed : 16MHz
+  }
+}
+
+raspberry_pi
+{
+  raspberry_pi_4_model_b
+  {
+    model : Raspberry Pi 4 Model B
+    mcu : Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GHz
+    logical spi max frequency : 125MHz
+    effective spi frequency : 7.5 KHz ~ 33 MHz
+  }
+}
+
+mac_mini_2018
+{
+  vendor : Apple
+  model : Mac mini (2018)
+  specification link : https://support.apple.com/en-us/111912
+  generation : 8th
+  processor :
+    3.2GHz 6-core Intel Core i7
+    Turbo Boost up to 4.6GHz
+    12MB shared L3 cache
+    8th generation Core codenamed "Coffee Lake"
+    intel core i7-8700B
+  memory : 64GB of 2666MHz DDR4 SO-DIMM memory
+  storage : 256GB PCIe-based SSD
+  graphics : Intel UHD Graphics 630
+  size :
+    height : 3.6 cm
+    width : 19.7 cm
+    depth : 19.7 cm
+  weight : 1.3 kg
+}
+
+mac_mini_2024
+{
+  vendor : Apple
+  model : Mac mini (2024) Apple M4 chip
+  specification link : https://support.apple.com/en-us/121555
+  chip :
+    10-core CPU with 4 performance cores and 6 efficiency cores
+    10-core GPU
+    Hardware-accelerated ray tracing
+    16-core Neural Engine
+    120GB/s memory bandwidth
+    Media Engine
+    Hardware-accelerated H.264, HEVC, ProRes, and ProRes RAW
+    Video decode engine
+    Video encode engine
+    ProRes encode and decode engine
+    AV1 decode
+  memory : 16GB unified memory
+  storage : 256GB SSD
+  size :
+    height: 5.0 cm
+    width: 12.7 cm
+    depth: 12.7 cm
+  weight : 0.67 kg
+}
+
+macbook_air_m1_2020
+{
+  vendor : Apple
+  model : MacBook Air (M1, 2020)
+  specification link : https://support.apple.com/en-us/111883
+  chip : Apple M1 chip
+    8-core CPU with 4 perform­ance cores and 4 efficiency cores
+    7-core GPU, 8-core GPU
+    16-core Neural Engine
+  memory : 8GB unified memory
+  storage : 256GB SSD
+  size :
+    height : 0.16–0.63 inch (0.41–1.61 cm)
+    width : 11.97 inches (30.41 cm)
+    depth : 8.36 inches (21.24 cm)
+  weight : 2.8 pounds (1.29 kg)
+}
+
+ssd
+{
+  vendor : Sandisk
+  model : Sandisk Extreme Portable SSD V2 E61
+}
+
+device :
+LiBook2012
+{
+  model : MacBook Air (M1, 2020)
+  purchase date : 2020-12-24
+  purchase cost : 1,365,000
+}
+
+LiMini2401
+{
+  model : Mac mini (2018)
+  purchase date : 2024-01-04
+  purchase cost : 600,000
+}
+
+LiMini2411
+{
+  model : Mac mini (2024) Apple M4 chip
+  purchase date : 2024-11-22 Fri
+  date received : 2024-11-27 Wed
+  purchase cost : 1,490,000
+  option :
+    memory : 24GB
+    storage : 512GB
+}
+
+win
+{
+  model : Sandisk Extreme Portable SSD V2 E61
+  size : 2TB
+  format : exFAT
+}
+
+mac
+{
+  model : Sandisk Extreme Portable SSD V2 E61
+  size : 2TB
+  format : APFS
+}
+
+sony
+{
+  model : SONY SL-BG Series (256GB)
+  size : 256GB
+  format : NTFS
+}

@@ -1,0 +1,24 @@
+Ⅰ  U+2160  Roman Numeral One
+Ⅱ  U+2161  Roman Numeral Two
+Ⅲ  3
+Ⅳ  4
+Ⅴ  5
+Ⅵ  6
+Ⅶ  7
+Ⅷ  8
+Ⅸ  9
+Ⅹ  10
+Ⅺ  11
+Ⅻ  12
+Ⅼ  50
+Ⅽ  100
+D  500
+M  1000
+
+ⅰ
+ⅱ
+ⅲ
+ⅳ  U+2173
+
+→  U+2192  Rightwards Arrow
+⇨  U+21E8  Rightwards White Arrow

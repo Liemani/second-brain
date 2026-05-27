@@ -1,0 +1,18 @@
+dump_broadcast.txt
+
+#2023-05-31
+ipad 6th generation: 1536 x 2048 -> 768x1024 or 1024x768
+https://www.twitch.tv/popout/liemani/chat?popout=
+
+# title log
+
+2023-01-08 ChatGPT로 놀기
+2022-??-?? hafen 클라 개조 48일 WaitManager 개선
+
+# resolution
+mac 1080p 1728x1080
+mac 11" detial 1680x1050(1152x720)
+mac 11" default 1440x900
+
+hd 1280x720
+fhd 1920x1080

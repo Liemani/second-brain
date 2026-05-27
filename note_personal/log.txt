@@ -1,0 +1,973 @@
+[2026-02-07 14:37:31] 녹화로 방송 테스트하기
+  아이폰 송출
+  AVP 송출
+  mac 송출
+AVP:
+  방송 송출 가능한가?
+    미러링은 되는데
+    아이폰처럼 mirroring app 으로 미러링 되어야 송출이 가능할텐데
+    방송 가능하게 만들기
+  mirroring 시 Movie Recording 이라는 프로그램이 실행된다.
+    이거 그냥 macbook 에서 OBS 켜면 어떻게 될지 확인해보기
+    소리도 아마 mac 에서 날테니 아주 좋다.
+  ipad를 통한 미러링도 가능하다.
+    macbook 으로 송출하자.
+      그러면 소리 안나는 문제 -> mac mini 로 송출해야 함.
+    지금 연결 상태를 figma 로 정리하기
+  새로운 방송 및 개인용 데이터 저장 공간 만들기
+    저장공간 및 환경 설정(terminal, vimsession, finder, safari)
+library 와 para 정리법 적절히 분배 및 설계
+[2026-02-08 14:41:01] 쇼트는 왜 문제가 되는거지? 5V 3A 에서 쇼트가 났다고 하면 해봐야 3A 수준으로 흐를거 아니야? 일반 콘센트 전원에서는 A 의 한계가 없기라도 한거야?
+[2026-02-08 15:06:57] 전원에서 전자를 계속 펌프질 하기도 하는데, 반대로 접지 혹은 + 극에서 전자를 끌어들이는것도 전압에 영향을 주겠네? 일반적인 5V 3A 충전기 같은것도 벽의 콘센트로부터 교류 전기를 사용해서 직류 전기를 만들텐데 그럼 얘는 전자를 끌어당기는 +극이 있는거야? 그리고 +극이 GND 인거야? 아니면 - 극을 GND 라고 해? + 극이겠지? 종종 벽 콘센트에서 나오는 전기는 접지가 연결되어 있지 않은 경우도 있는데 그런 경우는 충전기가 + 극으로 오는 전자들을 어떻게 처리해? 충전기는 + 극에 있는 전자를 퍼올려 - 극에 넣어주니까 - 극에 전자는 자연스럽게 또 전자가 부족한 + 극으로 이동하겠구나.
+[2026-02-08 15:18:33] 그럼 만약 건전지 2개를 써서 하나는 도선의 + 극에만 연결하고 하나는 도선의 - 극에만 연결하면 어떻게 되? - 극에서 전자가 나오는데 + 극에서는 전자를 받는데 한계가 있어서 결국 전체 회로의 전압은 시간이 지남에 따라 0V 가 될 거 같아.
+[2026-02-08 15:22:25] 션트 저항이라는게, 측정하고자 하는 대기 전력에 타겟해서 적절한 저항을 선택해야 결국 전력 측정에 유리한 거구나? 그럼 들어오는 전류에 따라 고전류용 또는 저전류용 로직으로 구분해서 처리하면 좋겠는데?
+[2026-02-08 15:34:17] 샘플링 조절은 10초 단위로 재다가 전류 변화가 감지되면 0.1초 단위로 정밀 측정할게 아니라, 대기 모드에서 저전력으로 전류를 관측하다가 전류가 특정 타겟의 변화를 감지하면 하드웨어 시그널을 주도록 만들면 더 좋지 않을까?
+[2026-02-08 15:38:12] 가장 주된 전기 생산자는 전체 전력망에서 사용하는 전기보다 더 많은 전기를 생산해야 하잖아? 그럼 넘치는 전기는 무의미하게 전력망을 밀고 땅기기만 하고 아무대도 안쓰이겠네? 총 전기 중 전력량 계측기를 돌리게 한 양에 대해서만 요금을 거둬들이겠네?
+[2026-02-08 16:31:46] 줄의 법칙에 의해 열은 전류의 제곱에 비례한다면, 전기 난방기는 높은 열을 발생시키기 위함이라고 하더라도 전류는 적게 쓰는게 좋으니까, 높은 전압일수록 열이 많이 나겠지? 높은 전압을 사용해서 열을 내도록 제품이 디자인 되어 있겠지? 그리고 저항을 전류가 통할 정도로 아슬아슬할 정도로 큰 저항을 사용하겠지? 전압이 클수록 더 높은 저항에서도 전류가 흐를거 아니야?
+[2026-02-08 16:46:55] 그 송전탑이 전압을 높히는 이유가, 전류를 높히는 것보다 전압을 높히는게 뭐 제곱으로 전력을 전달할 수 있다 그런게 있었던거 같은데
+[2026-02-08 17:17:17] 커패시터는 5V 회로에서는 5V 짜리를 써야하는거지? 그리고 전류 스펙은 회로도에 따라 적절한 스펙을 고르면 되겠지?
+[2026-02-08 17:41:02] 대기 전력을 측정하려면 전압은 알고 있기 때문에 전류만 측정하면 전력 측정이 완료되는거야?
+[2026-02-08 17:42:24] 레귤레이터는 뭐야? 배터리와 MCU 사이에 또 전압을 조절할 필요가 있어? 그냥 5V 나 3.3V 의 맞춤형 배터리 쓰면 되는거 아니야? 그러지 않는 제품을 타겟으로 할 경우 필요한 소자인건가? 강압 컨버터나 고전류용 LDO 라는 것도 레귤레이터야? 왜 이렇게 이름이 다양한거야?
+[2026-02-08 17:51:03] C-rate 라는건 충전기에는 안보이는데. 충전기에도 측정할 수 있는 수치겠지? 배터리에는 C-rate 라는게 적혀있으려나? 건전지 제품마다의 특성보다는 애초에 구성 물질로 인한 타입 자체가 다를 경우 유의미한 지표려나?
+[2026-02-08 17:57:55] 스탭모터를 쓴다면 스탭모터의 순간 전력 소모에 따라 적절한 용량의 캐퍼시터를 설치하는게 중요하겠네?
+[2026-02-08 18:05:35] GPIO 를 신호로만 쓰고 트랜지스터나 MOSFET, 릴레이 같은 스위치에 신호만 준다고 하면 이건 뭐 건전지가 2개가 들어가서 전력을 따로 공급해줘야 하는거야? 나는 그런 제품은 평생 본적이 없는데. 아니면 메인 파워는 하나인데 보드 쪽으로는 특정 전력을 보증하도록 회로를 설계하고 나머지 남는 전력에 대해 작동부로 보내면 되려나?
+[2026-05-05 19:18:14] pathfinder
+    blockmap을 매번 new하는 것이 마음에 들지 않는다
+    실패 시 해당 타일을 block으로 하고 다시 pathfinding 시행
+    object pathfinder
+    coord pathfinder
+automation
+    AlignLog
+        설명 보충(주의 사항 등)
+            나무를 쌓아둘 영역은 이전 log를 제외하곤 clean 할 것으로 간주합니다
+            기존에 쌓아놓은 위치에 그대로 적용 가능
+        RN_LOG를 사용하고 있는데, 이거 없에고 import도 빼고 gob에 isLog를 넣자
+        지정한 영역 내의 clean만을 간주하고 그 외 영역은 clean하지 않은 것으로 간주한다(이동 제외)
+        공간이 부족하면 공간이 어떻게 부족한지, 얼마가 필요한지를 알려주면 좋겠다
+        깔끔한 상태, 혹은 이전에 이 프로그램을 사용하여 정리한 공간을 선택한 것으로 간주합니다(북서 타일이 동일해야 함
+        해당 위치에 이미 통나무가 있다고 인식하기 위해서는 이 프로그램을 통해 시작 타일이 동일한 작업 공간에 내려 놓아진 통나무만 인식할 수 있습니다
+        각 에러 메세지에 따른 해결 방법 및 왜 그런 에러메세지가 뜨는지 man page에 추가하자
+영어 버전을 추가하고 한국 버전으로 보내기
+    Read this in other languages: English, 한국어, 日本語, 简体中文, 正體中文.
+모든 사람을 향한 일반적인 설명 추가
+구체적인 실행 방법 기술하기
+    다운 후 hafen.jar을 실행
+lmi.Api를 만들어도 좋겠다
+    모든 api 함수들은 lmi.Api가 shadow한다
+mapview에서 mousedown 시에 "place" action을 날릴지에 대한 분기가 존재한다
+    이 조건을 is???()라고 이름 지으면 좋겠다
+        이 조건을 성립하도록 만드는 이전 처리 과정을 실행하기 위해 어떤 wsgmsg 들을 날렸을까?
+            건설: act, bp, name -> place
+            내려놓기
+                내려 놓는 것도 분명 이런 분기가 존재할 텐데..
+서버측에서 처리하는 정보는 기다릴 필요가 없는 것 아닐까?
+    가령 물체 들고 빠르게 우클릭해서 내리기
+    반대로 클라이언트에서 처리하는 정보: selection, plob
+        하지만 이것도 클라이언트에서 완료됨과 무관하게 바로 다음 요청을 보내면 될 것 같다
+다시 생각해보니 event-driven 방식을 사용해도 좋을 것 같다
+    AlignLog가 event-driven 방식에서는 어떻게 구현될지 state-machine을 그려보자
+    timer가 있어야 하기 때문에 event-driven 방식을 사용한다면 로직 흐름이 많이 난해해질 것 같다
+    devent-driven을 사용하는 것과 자동화 프로그램을 state-machine으로 구현하는 것은 별개의 문제이다
+enummap을 사용하는데도 두 enum 중 하나라도 비트가 set 인 경우를 제대로 detect 하는 코드를 작성하지 못했다
+notify에서 _iswaiting을 사용하는데 delegate에서 사용하고 싶을 때, 이걸 public으로 할지, notify() 함수가 boolean 값을 반환할지
+여러 정보를 출력하는 커맨드를 dev에 작성
+    커서 이름
+Automation을 생성할 때 args를 String[]으로 받도록 하면 좋을 것 같다
+    Dev에 이를 적용하여 다양한 행동을 가능하게 하자
+    class Automation implements Runnable을구현하여 automation program이 Runnable 대신 implements 하도록 하기
+타르 가마는 조금 넣으면 빨리꺼지나?
+ortho나 cam 등 캐워드 검색 ㅡㅅ 내장 커맨드 라인 사용법
+배포 과정을 단순화 시키자
+    용량 문제 해결, 다른 녀석들은 어떻게 했나?
+    동적 리소스 업데이트...
+debug branch 없애기
+구글 드라이브 정리하기
+배포 과정(일단 개발자 알파 버전 배포)
+    liefen title 이름도 바꾸자
+    사용법 작성
+    클라이언트 특징 작성
+        자동화 목록 작성
+    앞으로 개발 방향 작성
+git의 release 방식을 알아보자
+readme에 추가
+    convention
+        private field는 _를 붙여 naming
+        private field는 access시 identifier만 사용
+        method는 invoke시 invoking object를 생략하지 않는다 (ex> this.method(), ClassName.method())
+    목적
+        기능 강화가 목적이 아니라 작업 자동화를 목표로 합니다
+loader로 특정 패키지의 class들을 가져올 수 있다면, 일일이 연결할 필요 없도록 명령 실행, 메뉴얼 실행을 자동화 시키면 좋겠다
+command 깔끔하게 정리하기
+앞으로 automation의 class 이름 앞에는 automation을 붙이자
+    모든 command를 automation으로 만들고, class 이름 앞에 automation 빼기
+action이 끝난 것은 hand의 변화를 통해 감지해야할 것 같다
+    혹은 action이 적용된 경우 hand가 제대로 처리되지 못했으면,, 아니 이것도 나름 이상하다
+action을 signal로 생각해보기
+Coord::four way(int value)를 만들자
+AlignLog
+    캐릭터가 오브젝트를 향해 강제로 걸어갈 때 파고들 수 있는 최대 수치가 있다
+    그 수치를 감당할 수 있을 정도로 로그 간에 간격을 두자(인간 중심)
+    아니 말의 바운딩 박스를 기준으로 하는게 좋겠다
+    oldtrunk는 크기가 다르다면 간격에 이를 고려하도록 하자
+        만약 크기가 같다면 isLog()에서 포하하도록 하자
+        oldtrunk위 높이가 log에 비해 많이 컸다
+            log 사이의 간격은 oldtrunk 기준으로 하여 통행이 원활하도록 수정했다
+한 번식 클릭이 씹히는 문제(바닐라도 그럴까?)
+select area가 딜레이되는 것은 synchronize(uimsgs)가 유력하다
+    getrel()을 차근 차근 살펴보자
+    결국 uimsgs에 값을 넣어서 rworker thread가 일을 처리하게 하는 것이 아니라, 직접 selector를 생성하도록 했다
+drawable이 null인데 class는 Gob인 녀석이 존재하는 것 같다
+    아! 아직 그려지지 않은 경우?
+    Gob을 파악할 때 그려진 것만 이름을 알 수 있으므로 그려진 것만 처리하도록 하자
+    하지만 drawable이 null인 Gob의 정체를 알고 싶다..
+        아마 oldtrunk로 변하면서 resource가 완벽히 저장되지 않은 gob인 것이 아닐까?
+alert는 알림음, error는 에러 음
+    전부 딸깍 하는 에러 음이 좋을수도?
+    알림음 너무 시끄럽다
+게임 안에서 명령 입력받는 기능 추가하기
+    이 경우 예외가 팝업창으로 뜨는지 확인하도록 하자
+지금 automation thread가 돌아갈 때 exit하면 종료하나?
+    계속 남나?
+일단 haven의 command line으로 실행하는 것은 성공했는데 실행하면 main thread가 그 동안 멈춰버리는 문제가 있다
+    이를 해결하자
+    MainCommand를 적절한 타이밍에 추가하기
+    부캐를 드낙거리면서 kin messag가 어떻게 system message에 흰 색으로 출력하는지 알아보기
+        user message를 이 방식으로 출력할 것이다
+특정 키를 눌렀을 때 interrupt하도록 해야한다
+setCommand를 초기에 설정하도록 하고, 명령이 입력된 경우 MainRunnable로 command를 실행하도록 하자
+get area에서 map click이 modifier에 상관 없이 작동하는 문제
+get area 중 중단 시 click이 먹통이 되는 문제
+forcemove를 하는 것이 아니라 move에 실패하면 다음 targetPutCoord를 찾는게 맞을 것 같다
+    나의 자동화 시스템은 제한된 환경 하에서 진행되기 때문에 force move를 하는 것이 맞다
+    멈췄다는 것은 외부의 개입으로 인해 멈춘 것으로 간주하고 하던 작업을 강제하는 것이 맞다
+CleanLog -> AlignLog
+짝수 row는 위에서 아래로 put해야 한다!
+    cleanLog를 실수로 소문자로 파일 이름을 적었다. 이거 대문자로 바꿔야 하는데 쉽지 않을 것이다. 이미 한 번 실패함
+loop()에서 처음에 가장 가까운 나무를 바로 lift하는데, first point로 가서 lift해야 한다
+실패 시 다시 move를 반복 수행하는 move를 만들면 좋겠다
+assign -> transform or mutating(언어의 한계를 받아들이자)
+Util부터 diff 계속 보기
+나무 정리하는 매크로
+    범위를 지정하여 로그 정리하기
+    다양한 각도로 내려놓는 방법
+exception을 사용하여 status code 관리하기
+지금 AutomationThread에서 lambda를 사용중인데 이거 함수로 뺄 수도 있을까?
+    그리고 여기서 try catch를 사용하여 범용 exception을 처리해야 할 것 같다
+최적화, 만약 자리가 차지되 있으면 불필요한 이동 없이 다음 자리로
+SC_* -> ET_*
+Returns -> Throws
+SC_SUCCEEDED -> x
+y위치 제대로 계산한거 맞는지 검산하기
+pbot api에서 바운딩 박스를 알아내는 방법
+Self.hardHitPoint()가 haven.LMI.gaugeWidgetGaugeArray()를 호출할 때 인자로 null을 전달하는 문제
+Gob.waitLift()
+Point는 이름도 마음에 안들고 아예 field를 바꿔서 새로운 class를 만드는 것이 의미가 있었지만,
+    Gob은 기존의 haven.Gob에 method를 추가하는 것이 더 좋지 않을까?
+meter array에서 resource name으로 widget을 get하는 함수를 widget manager에 추가하기
+끌 때마다 계속 뭔가 예외가 나는데 무슨 문제일까?
+carry()
+나무의 바운딩 박스 크기를 알아내는 함수(들고 내려놓고 반복)
+lift는 잘 됐다 put을 만들면 되겠다
+lift
+    trigger: following::$follow
+    verify: pose - banzai
+이거 progress beginning이랑 ending이 delegate에서 빠진 것 같은데?
+wait() -> wait(Object subject)
+    이로 인해 변하는 함수들도 recursive하게 수정해준다
+관찰 대상
+    자신 캐릭터, 상호작용한 아이템, 
+log가 머리 위로 올라오는 것은 어떤 함수가 호출되서 그렇게 되는거지?
+    delta는 아닌 것 같다
+        d.type 16도 아니었고 18도 아니었다
+    그럼 uimsg()를 호출하는 getrel일까?
+    아니면 map data를 control하는 mapdata()일까?
+    머리 위로 올라왔을 때 그 물체의 좌표는 나의 좌표와 같겠지?
+command -> action
+widget message handler에서 public api를 elaborate하기
+대상을 우클릭하여 flower menu가 뜨기 까지, 그리고 이동, 채집, 만약 끝났으면 채집을 다시 확인, 그런데 1. 플라워 메뉴가 안열린다, 2. 열린 플라워 메뉴에 하던 작업이 사라졌다. -> 채집이 끝남
+survey를 지정할 때 드래그가 어떻게 작동하는지 파악해보자
+    만약 사용할 수 있다면 이를 통해 영역 내의 gob을 가져올 수 있으면 좋겠지만..
+변화를 혼자 감지하는 것이 아니라 서버로부터 받은 응답으로부터 감지하면 될 거 같다
+FlowerMenu의 constructor에서 petal까지 다 생성된 FlowerMenu를 특정 변수에 넣어준다(synch). 그러면 해당 FlowewrMenu가 다 만들어졌는지 알 수 있고, wdgmsg()를 소화할 수 있도록 설정이 완료된 상황이라면 명령을 수행하는 것이 가능하다. 만약 일정 시간동안 FlowerMenu widget이 생성되지 않는다면 서버와의 통신이 불안정한 것으로 인지하고 매크로를 중지하도록 하자
+flowermenu 상호작용 완성하기
+    uimsg로부터 flowermenu가 생성됐는지 확인하고 signal 보내기 
+FlowerMenuHandler::waitOpen()
+움직임이 멈췄는지도 uimsg를 통해 알 수 있을 것 같다.
+스톡파일의 상태를 확인하는 방법
+wait을 하는 상황이 다양한데, 다양한 wait을 각각 다 구현해주는 것이 맞을까? 아니면 공통된 wait을 만들어서 사용하는 것이 좋을까
+이동 애니메이션이 끝나면 도착한 것으로 생각할 수 있다.
+flowermenu strict
+pose를 가져오는 함수를 GobHandler로 빼기
+일단은 상호작용 시 1초간 응답이 없으면 실패하는 것으로 했는데, ack라도 날라오지 않으려나? 찍어보자
+    다른 wait() 사용 함수들도 timer를 등록하여 응답이 없으면 실패한 것으로 간주하도록 수정하자
+다시 좀 찍어보자 이동하는 d.type을
+FlowerMenu의 open()과 close()는 잘 수정 했다. choose()를 수정하자
+FlowerMenu도 WaitManager를 적용하기 (delegate가 아니라)
+일단 기본적인 동작은 잘 하는 것 같다. 제대로 동작하는지 검산하고 플로우차트 그리기
+    일단 didAdded는 달 됐다
+    아직 flower menu가 ProgressManager를 사용하지 않는다. 이걸 사용하도록 수정하자
+어제 만든 플라워 메뉴 정리하기
+MoveManager 만들기
+반환값 정리하고 문서화하기
+만약 장애물에 걸려 경로가 변경되면 어떤 메세지들이 날아올까?
+    1, 4가 오다가 1, 3, 4가 온다
+move가 엄밀하지 못하다
+    가령 waitMove()에서 is arrived가 false라 wait move beginning()을 호출하려 하는데 그 사이에 도착해버리면 fail한다
+MoveManager도 있어야 겠다. FlowerMenu를 선택했을 때 움직임은 linMove인가?
+    그렇다
+stockpile widget이랑 flower menu widget 모두 haven.Widget을 extends하는 것 같다. 그리고 여러개가 존재할 수 있겠네..?
+    하지만 flower menu widget은 하나만 존재
+    Debug.describeClassNameAndHash()로 addwidget 시 추가되는 widget의 class name을 출력해보자
+후.. WaitManager 완성했다.. 기본적인 WidgetMessageHandler의 method 들도 WaitManager를 사용하도록 수정했다
+    Self의 move()나 FlowerMenu의 open() close() 등도 WaitManager를 사용하도록 수정하자
+        그리고 모든 경우 WaitManager를 사용할 수는 없다. 결국 움직여서 도착하는 것을 알기 위해서는 거리를 확인해야만 한다
+후.. 어차피 각 send마다 complete signal을 다른 방식으로 받아오는데, 이거 WaitManager::waitMessage를 사용할 이유가 있나?
+    flower menu에 close와 choose가 어떤 상황일 때 wait을 해야 할지 생각중이었다
+        차라리 WaitManager::waitMessage를 안쓰면 더 좋을듯???
+            WaitManager::waitMessage를 사용해서 이득을 보는 경우가 뭐가 있지?
+                flowerMenu를 열려고 시도했는데 열리지 않았을 때
+custom을 enum으로 수정하기
+move-did-starting, move-did-ending을 checkCommand하도록 추가하기
+import static 연구해보기
+waitOpen()이 잘 되도록 delegate 손보기
+constant의 이름을 애초에 구분지어 설정한 후 static import를 하여 사용하기
+    응, 괜찮을 것 같다
+이번에 WaitManager를 수정하면서 moving을 수정할 예정인데 d.type 1이 어떤 attribute class였는지 출력해보자
+들고 있는 오브젝트 내려놓기
+flower menu did open delegate 만들기
+gob을 다 소모했을 경우 출력
+OCache::GobInfo::apply()를 통해 delta를 적용한 후 만약 의도한 위치에 도착했다면 attribute의 동작을 수정할 것 같은데, 애니메이션이 변하는 것일까? 이동 모션에 대한 데이터는 어디에 있으며, apply() 후 어떻 식으로 그 데이터를 수정하는지 알아보자 -> 도착함을 인지할 수 있다
+pbot 조사
+    get_poses
+    is_knocked
+    stockpile_is_full
+Skeleton::PoseMode의 age()가 호출되는데, 이게 abstract이다
+그러니 Skeleton::PoseMode를 상속받는 녀석들의 age()가 어떤 일을 하는지 알아보자
+moveCenter()
+move4way()
+GItem이라는 메세지가 많이 전달받는데 뭐하는 녀석일까?
+인벤토리의 아이템을 집는 방법
+아이템을 클릭하면 gob을 어떻게 가져오는 걸까? 
+gob sensor
+debug에 boolean을 둬서 debug메세지를 출력할지 말지를 설정할 수 있게 하기
+RWorker가 받은 메세지를 출력하고 싶지만 굉장히 불편하게 출력된다. 간결하게 출력하도록 해보자
+    이 메세지를 통해 어떤 응답을 받았는지에 따라 적절한 시그널을 체크하는 시스템을 만들어보자
+    그러면 명령한 작업이 응답을 받았는지 직접 알 수 있다
+tileCenter를 test하기
+local repository를 가리키는 branch의  이름을 local이라고 하면 되지 않을까?
+    어떤 branch이던 항상 remote repository에 push해 둘 것이기 때문에 local이 따로 필요할지 잘 모르겠다
+main branch에 통합좀 시키자
+README.md 도 만들어서 접근성을 높일 필요도 있다
+lmi도 Initializer 만들기
+MapView:1977 정도에 주석 달아놓은거 구현하기
+flower menu interaction 구현
+    lmi.OjbectShadow.rootWidget_.lchild as haven.FlowerMenu
+debug도 dev에 rebase하고 backup branch 삭제하기
+flower menu를 띄우는 방식이 조금 복잡하다
+    ClickData 더 알아보고 slot은 무엇인지, clickdata가 어디서 읽어서 설정되는지 파악하자
+    mesh에 대한 이해도 필요할 것 같다(mesh 데이터가 어떤 구조로 저장되는지
+    callback에 대한 이해, 그에 따른 stack 구현이 어떻게 되는지(아마 내가 아는 것과 다르지 않을 것이다)
+    이를 토대로 올바르게 flower menu를 띄우는 방법을 알아보자
+overlay는 아직 언제 필요한지 모르겠다, 항상 없는것으로 우선 구현해두자
+일반적으로 meshid는 -1로 두고 필요하면 조사하여 적용하도록 하자
+없는 petal을 선택하면 어덯게 될까?
+    에러를 발생시키도록 만들었다
+gob.rc와 gob.c의 차이??
+드래그로 범위를 긁어오는 법 구현하기
+meters가 public이 아니라 직접 접근이 불가능하다
+    이런 경우를 위해 rootWidget_으로부터 resource name이 특정한 widget을 가져오는 함수를 만들어서 사용하도록 하자
+        일단 컴파일이 되고 실행이 되도록 수정한 후 push를 하도록 한다
+동서남북 움직이기
+objectChange가 마지막 하나까지 undo가 가능한 문제
+getc로 Coord3f를 가져올 수 있다고 하는데, 높이가 나오는걸까?
+    play를 object로 설정하고 위치를 옮겨가며 getc()를 호출해보자
+    getv()도 호출해보자
+따로 Thread.isInterrupted()를 체크하지 않아도 try catch문 안에 있다면 thread가 종료될까?
+동서남북 좌표체계 awt의 좌표 체계와 동일 
+log은 복잡하지만 character select는 구현해보자
+java에는 self가 없고 this가 있기 때문에 Plyaer를 Self라고 하면 어떨까?
+아주 근거리를 클릭할 경우 캐릭터는 움직이지 안는다. 만약 바라보는 방향이 달라질 수 있다면 바라보는 방향을 바꾼다. 만약 1 정수거리만큼을 수정하여 캐릭터의 방향을 바꾸었을 때 실제 위치도 바뀔까?
+    그리고 움직이지 않는다고 하더라도 혹시 미세하게 실제 위치는 바뀐게 아닐까?
+캐릭터를 클릭하여 gob을 저장하고 매크로를 실행하여 이동한 후, 캐릭터의 좌표가 의도한 위치에 있는지 출력해보기
+    위로 1 타일 움직였다가 원래 위치의 바로 1 오른쪽의 서버 좌표로 이동해보고, 실제 1 서버 좌표만큼 큰 좌표로 이동했는지 확인해보자
+util의 convert 함수를 사용하여 coord를 변환하도록 수정
+gob을 클릭하면 그 gob을 얻어오는 로직을 짰으니 타일 중앙에 두 gob을 두고 각 각의 좌표를 출력하여 실제 한 타일의 크기를 알아내보자
+click한 object를 가져와서 그 좌표를 출력하도록 하자
+default client를 토대로 mapClick을 재구현하기
+겹친 gob을 클릭하면 무엇이 클릭될까?
+    가장 위의 하나만 클릭된다.
+일단은 하나의 매크로만 실행 가능하도록 구현하기
+    필요하다면 하나의 매크로 안에서 다양한 기능을 하도록 만들 수 있을 것이다.
+    thread 분리해서 여러 매크로 돌릴 수 있도록 하기
+        이 때 원하는 매크로는 언제나 끌 수 있어야 한다.
+wgdmsg()가 남발되지 않도록 guard하는 함수를 만들면 좋겠다.
+    최소한의 간격을 두고 메세지를 보내도록
+        이 간격 간수 등은 상수 파일로 따로 분리하자
+constant를 만들었는데 getter 없이 print했을 때 무엇이 출력되는지 확인하기
+프로그램 종료를 어떻게 할지
+    interrupt를 받았을 경우 interrupt인지를 판단하고 프로그램을 종료하는 로직
+장소 이동 시 mapView_.player()의 반환 값이 다른 object로 변하는지 확인하기
+    변한다(항상은 아니겠지만)
+허스 데이터를 허스 텍스트 파일로 옮기기
+메모 기록 옮겨적기
+아이디 관리하기
+Util.saveGob()을 public에서 private으로 바꿨다, haven package에서 이를 반영하도록 수정하자.
+object finder를 만들어서 이전 object로 다시 이동할 수 있도록 하자.
+agent 는 job 을 stack 으로 가져야 할 것 같아. 그래야 interrupt 가 들어왔을 때 우선 처리할 job 을 위에 끼워넣지 않겠어?
+단순 실행과 에이전트 실행 구분해야 하는가?
+  간단한 함수 실행하는데도 agent 를 만들어야 하는가?
+  아니면 dev agent 를 만들어서 a dev 로 실행할 수도 있지
+lmi/ObjectShaodw 가 getter, setter 없이 public variable 을 사용하도록 수정해줘.
+a_command 구조 설계
+나는 AppContext 의 objectCache 가 oCache 이면 더 좋겠어.
+a_command 에서 'a --agent' 를 'a set' 로 바꿔줘.
+'a --stop' 으로 작업을 중단하도록 트리거 하는 방식을, ESC 키를 눌렀을 때 트리거하도록 변경해줘.
+애초에 Gob 은 위치인 rc 가 Coord2d 인데, 서버로부터 애초에 double 형을 받는거야? 아니면 원래 Coord 같이 정수형을 받는데, 그래픽을 그리기 위해 부동소수 형태로 변형시켜서 저장하는거야?
+WaitResult 라는 이름보다는, task, behavior 의 반환값도 공통적으로 사용할 수 있도록 Brief 로 바꿔줘.
+지금 lmi/Hook.java 에 didClicked() 는, 특정 Gob이 클릭됐는지 signal 을 lmi/ClickManager.java 에게 전달하는 함수인데, 굳이 WaitManager.isWaitingSignal() 이 인자를 처리할 필요는 없을 것 같거든. 그래서 WaitManager.isWaitingSignal() 를 WaitManager.SignalWaiter 를 class 로 만들고, 그 안에 wait(long timeOut) 을 만들면 되는데, signal 종류도 분간할 필요 없이, boolean isWaiting 하나 만들어서, 그걸로 WaitManager.class 가 wait() 중인지 저장하면 될 것 같아. 만약 isWaiting 을 변수가 아니라 calculated property로 한다면 시스템상 가능할까? 만약 그렇다면 변수로 사용하는 것과 비교해서 성능 차이가 어떻게 될까? 그래서, 기존의 WaitManager.java 에서 사용하던 signal 시스템을 이렇게 바꾸면 어떨까 싶은데, 먼저 작업하기 전에, 넌 어떻게 생각해?
+상호작용 signal
+나의 상태
+움직이기 시작
+움직임 멈춤
+gob 들기
+gob 내려놓기
+파괴
+채광
+건설
+맵 이동
+먹기
+탑승
+내리기
+공격하기
+활 장전하기
+활 쏘기
+수레 끌기
+
+window 상태
+flower menu open
+flower menu close
+게시판 열기
+인벤토리 열기
+
+gitem 상태
+아이템 전송
+아이템 버리기
+아이템 획득
+아이템 가공
+아이템 제작
+아이템 사용
+아이템 가공 완료 변화
+
+progress 상태
+progress 시작
+progress 완료
+
+MapView 클릭
+gob 선택하기
+영역 선택하기
+pholder 배치하기
+왜 esc 안먹냐?
+exception 발생 시 이유만 출력하게
+Agent/
+  Job/
+  Settings/
+지금 src/lmi/MenuGridProxy 가 agent 패키지를 읽고 pagina 로 추가하고 있는데, 이 때, 실제 src/agent 의 file structure와 일치하게 pagina 를 생성하도록 해줘. 지금은 directory 구조 상관 없이 class 들을 전부 agent pagina 밑에 넣고 있는 것 같아.
+agent.Agent 가 스케쥴러에 더 가깝다면, 그건 Agent 안에 지금 너무 많은 것이 들어있는건 아닐까? 지금 구조도 괜찮을 거 같아? 아니면 Agent 안에 복잡한 기능은 좀 분리하는게 좋을까?
+1. 동의.
+2. 동의.
+3. 동의. 내가 재로그인을 신경 못쓴 것 같아.
+4.
+> AppContext는 컨텍스트 저장소 역할이어야 하는데, 특정 필드 갱신이 곧바로 메뉴 주입 트리거가 되면 lifecycle 디버깅이 어려워집니다. 특히 나중에 menuGrid rebinding 시점이 늘어나면 “값 갱신”과 “재주입 정책”을 분리하지 않은 비용이 커집니다.
+무슨 말인지 잘 이해가 안가. 설명해줄래?
+5. 동의. 나도 그동안 필요한 것들을 그 때 그 때 필요한 것을 찾아서 저장했을 뿐이라. 한 번 정리가 필요한 것 같아.
+6. 그럼 어떤 구조로 가야 할까?
+질문 답변:
+> 실제로 재로그인이나 캐릭터 전환 시 GameUI, Inventory, Equipory, IMeter가 새 인스턴스로 다시 만들어지는 흐름을 전제로 리뷰했습니다. Haven 쪽 구현상 이 전제가 맞는지 최종 확인은 필요합니다.
+좋아. 실제로 재로그인도 가능하고 캐릭터 전환도 가능해.
+> mainInventory가 “항상 주 인벤토리 하나”라는 강한 개념인지, 아니면 여러 Inventory 중 하나를 편의상 잡아둔 것인지에 따라 보관 방식이 달라질 수 있습니다.
+실제로 주 인벤토리는 하나 존재해. 하지만 그게 내 생각에는 일반 인벤토리와 동일한 class 를 사용해서 instance 를 만드는 것 같아. 자세한건 더 알아봐야 해. mainInventory 라는게 아마 다른 상호작용을 아무것도 안해도 캐릭터를 선택하면 항상 존재한다고 생각하는데, 검증은 필요해보여.
+> 핵심은 AppContext를 “상태 저장소”로 두고, “그 상태를 보고 뭘 할지”는 밖에서 결정하게 하자는 뜻입니다.
+동의.
+> 같은 클래스 안에 둬도 되지만, 최소한 의미는 나눠야 합니다.
+너무 좋아.
+> 장기적으로는 AppContext 필드를 여기저기 직접 참조하기보다 접근을 모으는 게 좋습니다. 그러면 나중에 AppContext 저장 방식이 바뀌어도 바깥 코드 영향이 줄어듭니다
+잘 이해가 안되. 설명해줘.
+> 즉 AppContext가 단순한 저장소가 아니라 사실상 공개 전역 변수 묶음이 됩니다.
+사실상 공개 전역 변수 처럼 쓰려고 만든거긴 해.
+> mapView를 직접 저장하지 않고 gameUI.map에서 유도하고 싶다
+이건 다양한 인벤토리를 동적으로 원하는걸 찾기 위해 꼭 필요한 방식이긴 해.
+> 재로그인 시 rootWidget이 바뀌어도 자동으로 최신 위젯을 찾아오게 만들고 싶다
+이건 versatile 하긴 하지만, 언제 서버로부터 widget 생성 메세지를 받을지 모르기 때문에 연산 비용이 작지 않을거라고 생각해서. 가능하면 딱 class 생성할 때 가져오도록 작성을 해왔거든. 너가 보기엔 연산 비용을 치르더라도 특정 widget 을 매번 탐색해서 찾도록 하는게 좋아보여? 어떻게 생각해?
+> WidgetManager.menuGrid()
+이 방식은 마음에 들어. 그런대 위에서 내가 말했드시, 나는 AppContext 를 만들 때, 공개 전역 변수로서의 기능을 생각하고 만들었어. 그리고 WidgetManager 를 오히려 없애고 AppContext 하나로 관리하는건 어떻게 생각해? 그니까, AppContext.menuGrid() 처럼 되는거지. AppContext 하나로 모으는 것보다 너는 WidgetManager 를 둬서 두 파일로 관리하는게 좋아보여? 만약 그렇다면 이 경우엔 WidgetManager 라는 이름을 좀 바꿨으면 좋겠어. Manager 라는 명칭은 좀 뭔가 더 많은걸 해야 할 것 같은 느낌이거든. 애초에 나는 그래서 AppContext 에는 전역 변수를, Interaction 에는 변수를 사용해서 실제 동작하는, 함수에 해당하는 것들을 넣으려고 했거든. 근대 너의 말을 듣다보니 WidgetManager 라던가 그런걸 둬서, 아니면 MapViewProxy 같은걸 추가로 둬서 상호작용을 관리하는건 어떨까 하는 생각도 들고, 그러면 WidgetManager 도 이름 조금 바꿔서 관리할 수도 있을 것 같거든. 내가 이래. 이렇게 할까, 저렇게 할까 고민만 많고, 처음에 확장 가능한 구조에서 시작해서 점점 발전해나가는 best practice 같은게 없다보니까 무엇을 선택해서 진행해나갈지 고민이 많아지는거야. 물론 큰 그림을 끊임없이 보면서 조금조금씩 구조를 넓혀가긴 하는데, 그래서는 단점이 있단말이지. 금새 바뀔 구조에 대해 많은 시간을 투자하게 된다는게 단점이야. 어차피 또 큰 그림을 보다보면 금새 바뀔 수 있는 부분인데, 그럼에도 시간을 많이 쏟고 있는거야. 그래서 내가 작업하는게 큰그림을 놓치지 않는다는건 마음에 드는데, 좀 밸런스가 맞지 않게, 생산량에 비해 시간을 많이 쏟는 느낌이 들어. 내가 이걸 밸런스를 잡는걸 너가 좀 도와줬으면 좋겠어.
+그럼 WidgetManager 는 AppContext 로 흡수해줘. 그리고 AppContext 도 나름 이름 잘 고민해서 지었다고 생각했는데, 전역 변수의 느낌이 강하면 이름을 변경하는게 더 좋지 않을까 생각이 들어. context 라는건 단순 상태가 아니라 과거엔 뭘했고 앞으론 뭘할건지 같은 느낌도 드는데 지금 이 class 가 하는 일은 그런게 아닌 것 같으니까.
+그래 MapViewProxy 는 나중에 생각해보자.
+> 이름 좋은 abstraction을 미리 만들기보다, 실제 복잡도가 한 파일에서 버겁다고 느껴지는 순간 분리하는 게 더 낫습니다.
+좋아 명심할께.
+> 원칙 1. 구조 작업은 항상 “현재 고통”이 있는 곳만 한다
+말은 쉽지만 적용은 쉽지 않은 원칙이네. 고통이라는게 사람마다 느끼는 정도가 다 다르니까. 나는 간단한 가독성 문제도 '고통' 이라고 느꼈던거지. 생산성은 떨어지지만 읽기 좋고 만족스러운 코드가 작성되면 뿌듯하고 자랑스럽거든. 너가 말한 '고통' 에 대한 예시는 아주 직접적이네. 저런 것들은 당연히 보이면 즉시 손대야지.
+> 이름이 아직 완벽히 마음에 안 듦
+난 좋은 이름이 굉장히 중요하다고 생각해. 하지만 이름이라는게 자주 바꾸면 비효율적인게, 코드를 작성하다보면 각 class 의 속성이 계속 조금씩 변하니까 변화의 선두에 존재하는 코드의 이름을 끊임없이 바꾸게 되는 단점이 있는 것 같아.
+> 새 구조는 “두 번 이상 반복된 문제”가 생겼을 때 만든다
+좋아 마음에 들어.
+> 미래를 위한 설계보다 “변경 비용을 낮추는 얇은 경계”를 만든다
+오, 멋진 개념인 것 같아.
+```
+  1. AppContext는 유지
+  2. 공개 필드는 점진적으로 getter 메서드로 치환
+  3. WidgetManager는 AppContext로 흡수
+  4. 캐시할 위젯과 탐색할 위젯을 구분
+  5. Proxy 계층은 실제 복잡도가 생길 때만 추가
+```
+좋아 마음애 들어.
+그럼 처음에 IMeter 가 생성됐을 때 구분이 안되서 문제인건데, 그냥 일단 가지고 있다가, 실제 값을 읽을 필요가 있을 때 stanima(), energy() 등에서 lazy 하게 imeter 중에 일치하는 resource name 을 가진 녀석의 값을 읽어서 반환하는건 어때? 마치, haven 이 IMeter 를 그릴 때 resource load 가 안됐으면 아직 안그리고, load 가 완료되면 실제 이미지를 그리는 것과 유사하게 처리하는거지.
+좋아. 너무 멋지게 동작하는거 확인했어.
+그리고, lmi.Constant.Gauge.Index 는 이제 아무 곳에서도 안쓰는거 확인했어. 지워줘.
+``` sql
+CREATE TABLE wp_node (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  name              TEXT NOT NULL UNIQUE,
+  root_node_id      INTEGER NOT NULL,
+  gob_id            INTEGER NOT NULL UNIQUE,
+  rel_x             INTEGER NOT NULL,
+  rel_y             INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_root_node_id FOREIGN KEY (root_node_id) REFERENCES wp_node(id)
+);
+
+CREATE TABLE wp_graph (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  root_node_id      INTEGER NOT NULL UNIQUE,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_root_node_id FOREIGN KEY (root_node_id) REFERENCES wp_node(id)
+);
+
+CREATE TABLE gob (
+  id                INTEGER NOT NULL PRIMARY KEY,
+  node_id           INTEGER UNIQUE,
+  base_gob_id       INTEGER NOT NULL,
+  rel_x             INTEGER NOT NULL,
+  rel_y             INTEGER NOT NULL,
+  resname           TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_node_id FOREIGN KEY (node_id) REFERENCES wp_node(id),
+  CONSTRAINT fk_base_gob_id FOREIGN KEY (base_gob_id) REFERENCES gob(id)
+);
+
+CREATE TABLE wp_edge (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  node0_id          INTEGER NOT NULL,
+  node1_id          INTEGER NOT NULL,
+  direction         INTEGER NOT NULL,
+  time_cost         DOUBLE NOT NULL,
+  fatigue_cost      DOUBLE NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_node0_id FOREIGN KEY (node0_id) REFERENCES wp_node(id),
+  CONSTRAINT fk_node1_id FOREIGN KEY (node1_id) REFERENCES wp_node(id),
+  CONSTRAINT chk_direction CHECK (direction IN (0, 1, 2, 3)),
+  UNIQUE (node0_id, node1_id)
+);
+
+CREATE TABLE wp_segment (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  edge_id           INTEGER NOT NULL,
+  segment_idx       INTEGER NOT NULL,
+  base_gob_id       INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_edge_id FOREIGN KEY (edge_id) REFERENCES wp_edge(id),
+  CONSTRAINT fk_base_gob_id FOREIGN KEY (base_gob_id) REFERENCES gob(id),
+  UNIQUE (edge_id, segment_idx)
+);
+
+CREATE TABLE wp_point (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  segment_id        INTEGER NOT NULL,
+  point_idx         INTEGER NOT NULL,
+  rel_x             INTEGER NOT NULL,
+  rel_y             INTEGER NOT NULL,
+  mouse_button      INTEGER NOT NULL,
+  gob_id            INTEGER,
+  mesh_id           INTEGER,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT fk_segment_id FOREIGN KEY (segment_id) REFERENCES wp_segment(id),
+  UNIQUE (segment_id, point_idx)
+);
+```
+그래, 이름으로 찾을 일이 많을 것 같아. wp_node.name 를 UNIQUE 로 하자.
+root_node는 node 가 서로 상대 좌표 (rel_x, rel_y) 를 계산할 때 origin 이 되는 node야. 만약 서로 다른 두 graph 가 병합하라 때, 더 작은 graph 의 root_node_id 를 더 큰 graph 의 root_node_id 로 재계산하기도 할거야. 그럼 서로 연결되지 않은 graph 단위를 기록하기 위한 table 을 별도로 두는게 좋을까?
+gob 테이블에 resname을 두자는 의견은 마음에 들어. 하나 추가하자.
+wp_edge.direction 는 총 4개의 값을 갖고 싶은 의도에서 만든거야. 정방향인지, 역방향인지, 양방향인지, 통행 불가인지.
+gob.root_node_id 는 node 를 찾기 위해 사용되. node 의 위치는 우리가 서버로부터 직접 받아올 방법이 없어. 하지만 gob 의 위치는 서버로부터 얻어올 수 있지. 우리가 어떤 gob 을 발견하게 된다면 그 gob 을 중심으로 우리의 좌표 체계를 계산할 시작점이 되고, graph 입장에서는, 발견한 gob 이 갖는 root_node_id 를 통해 첫 node 의 로컬 좌표를 알 수 있게 되지, 그러고나면 연결된 모든 node 의 좌표를 알게 되는거야. 특히 user inteface 로는, 사용자가 이미 기억하고 있는 db 에 등록된 특정 gob 을 선택해달라고 요청하면 우리는 db 에서 찾아서, 전체 graph 시스템의 로컬 좌표를 확정할 수 있는거지.
+wp_point 에는 이제 is_door 가 있을 필요가 없어. node 에 연결되어 있지 않은 모든 segment 의 시작과 끝은 반드시 door 일 수밖에 없거든.
+updated_at 과 created_at 을 둘이나 넣는건 과하다고 생각해서, 더 중요해보이는 updated_at 만 남겼어. 어차피 update 를 하지 않은 상태에서는 updated_at 이 created_at 의 역할을 할 수 있고, 만약 값이 바뀌었다면 updated 된 시간이 더 중요해 질 거라고 생각했어.
+> wp_point와 wp_segment는 기록 순서와 생성 맥락을 볼 일이 많아 보여서요.
+왜 그걸 볼 일이 많다고 생각해?
+내 대답에 대한 너의 의견 듣고 싶어. 아직 궁금한게 있으면 더 물어봐줘.
+db table 생성할 때는 기존의 table 잘려버릴거라. 없다고 생각하고 작성해줘.
+```
+  - 0 = forward
+  - 1 = backward
+  - 2 = bidirectional
+  - 3 = blocked
+```
+이건 blocked, forward, backward, bidirectional 순으로 하자.
+좋아. wp_graph 추가하고, wp_graph.root_node_id 는 UNIQUE 로 만들자.
+wp_node.name 도 UNIQUE 로 하자.
+gob.resname 도 추가하자.
+> wp_segment.root_node_id는 edge의 어느 쪽 node와도 무관하게, “이 segment의 좌표계 root”만 뜻하나요?
+맞아. edge 의 양 끝 노드가 아니어도, 현재 graph 의 root node id 를 가져야 해.
+하나의 gob 은 하나의 node 와 관계를 맺기 때문에 하나의 graph 에만 속하게 되지.
+> graph 병합이 일어나면, 해당 graph에 속한 gob들의 root_node_id도 같이 재계산할 생각인가요?
+그래 graph 병합이 일어나면 해당 graph 에 속한 gob 들의 root_node_id 도 재계산 됐으면 좋겠어. 하지만 그 graph 에 속한 segment 들의 root_node_id 는 재계산하지 말아줘. 이건 재계산 비용이 너무 크기 때문에 parent_node_id 로 바꾸자.
+아, 내가 말하지 않은 경우의 수가 있는데, 만약 A 맵에서 B 맵으로 door 를 넘어 새로운 node 를 생성할 경우, 새로운 graph 가 생성되며 A 맵쪽의 segment 는 A 쪽 graph 의 node 를 root_node_id 로 갖고, B 맵쪽 segment 는 B 맵쪽 graph 의 node 를 root_node_id 로 갖게 되. 그런대 만약 C 에서 D 로 이동하는 중에 "문이 2개" 라면 가운데 segment 는 가질 수 있는 graph node 가 존재하지 않아. 만약 이런 waypoint record 가 발생한 경우, 그 기록은 실패 메세지를 출력하며 실패하게 되.
+또 궁금한거 있을까?
+```
+  - base_node_id
+  - ref_node_id
+  - origin_node_id
+```
+좋은 의견이야. 나는 base_node_id 가 좋아.
+gob 의 resname 은 NOT NULL 로 해줘.
+wp_point의 gob_id 는 외래키가 없는게 맞아. 지금 gob table 에는 node 와 관계된 gob 만 넣을거고, wp_point 는 node 와 관계되지 않은 gob의 id 도 들어갈 수 있거든.
+> wp_node.root_node_id에서 루트 노드 자신은
+root node 자신은 null 값을 갖게 하기 위해 root_node_id 는 nullable 하게 했어. 그런대 너의 말을 들어보니 확실히 자신의 id 를 넣어서 로직이 단순하게 만드는게 더 매력적인 것 같아. 그럼 autoincrement 때문에 어떻게 해야 해?
+그래 그러면
+> ## 1. 가장 현실적인 방법: insert 후 update
+이걸로 가자.
+잠깐, 아까 내가 실패 조건을 설명했는데, 좋은 생각이 떠올랐어. door 를 연속 2번 지나더라도 실패하지 않도록 구조를 살짝 바꿀 수 있어. 먼저 segment 는 base_node_id 를 갖는게 아니라 base_gob_id 를 갖어. 그리고 node 와 관계 있는 gob 이 아니더라도 door gob 을 gob table 에 기록할거야. 그러면 node와 연결되지 않은 segment 도 door gob 을 기준으로 wp_point 의 위치를 계산할 수 있어. 그렇게하면 recording 은 지금 상태에서 실패하지 않게 되. 단, 그렇게 door gob 을 gob 테이블에 기록한다고 해도 wp_point 의 gob_id 는 door 가 아닌 gob 이 존재하기 때문에 fk 가 아닌 것은 동일해.
+>  ### 병합 시 처리
+이 부분에 대해 한 가지 언급할게 있어. root_node_id 를 재계산 한다는것은 당연히 같이 있는 rel_x 와 rel_y 를 재계산한다는 뜻이야.
+gob table 에 들어가는건 node 를 생성할 때는 사용자에게 입력을 받을거야. 하지만 door gob 은 이동하면서 거쳐가는 gob 이라 자연스럽게 사용자에게 입력받거나, 혹은 계산할 수 있어. 그렇게 door gob 은 자연스럽게 확보해 두었다가 gob talble 에 insert 할거야.
+그리고, 좌표를 계산할 때 root_node 의 rel_x 와 rel_y 는 0,0 이 되도록 해서 해당 graph 에 속한 node 등의 위치 계산은 root_node 의 자표와 연산 필요 없이 root_node 에 연결된 gob 과의 연산만으로 가능하도록 하면 될 것 같아. 이 때 특정 root_node 와 연결된 gob 을 빠르게 얻기 위해서 gob 을 탐색할 필요 없이 graph 테이블에 base_gob_id 를 넣으면 좋겠어.
+``` sql
+CREATE TABLE gob_graph (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  entry_node_id     INTEGER NOT NULL UNIQUE,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_entry_node_id FOREIGN KEY (entry_node_id) REFERENCES gob_node(id)
+);
+
+CREATE TABLE gob_node (
+  id                INTEGER NOT NULL PRIMARY KEY,
+  graph_id          INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  wp_node_id        INTEGER UNIQUE,
+  resname           TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES gob_graph(id),
+  CONSTRAINT fk_wp_node_id FOREIGN KEY (wp_node_id) REFERENCES wp_node(id)
+);
+CREATE INDEX IF NOT EXISTS idx_gob_node_graph_id ON gob_node (graph_id);
+
+CREATE TABLE gob_edge (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  node0_id          INTEGER NOT NULL,
+  node1_id          INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_node0_id FOREIGN KEY (node0_id) REFERENCES gob_node(id),
+  CONSTRAINT fk_node1_id FOREIGN KEY (node1_id) REFERENCES gob_node(id),
+  UNIQUE (node0_id, node1_id)
+);
+
+CREATE TABLE wp_node (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  gob_graph_id      INTEGER NOT NULL,
+  gob_node_id       INTEGER NOT NULL UNIQUE,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  name              TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_gob_graph_id FOREIGN KEY (gob_graph_id) REFERENCES gob_graph(id),
+  CONSTRAINT fk_gob_node_id FOREIGN KEY (gob_node_id) REFERENCES gob_node(id)
+);
+CREATE INDEX IF NOT EXISTS idx_wp_node_gob_graph_id ON wp_node (gob_graph_id);
+
+CREATE TABLE wp_edge (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  node0_id          INTEGER NOT NULL,
+  node1_id          INTEGER NOT NULL,
+  direction         INTEGER NOT NULL,
+  time_cost         DOUBLE NOT NULL,
+  fatigue_cost      DOUBLE NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_node0_id FOREIGN KEY (node0_id) REFERENCES wp_node(id),
+  CONSTRAINT fk_node1_id FOREIGN KEY (node1_id) REFERENCES wp_node(id),
+  CONSTRAINT chk_direction CHECK (direction IN (0, 1, 2, 3)),
+  UNIQUE (node0_id, node1_id)
+);
+
+CREATE TABLE wp_segment (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  gob_graph_id      INTEGER NOT NULL,
+  edge_id           INTEGER NOT NULL,
+  step              INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_gob_graph_id FOREIGN KEY (gob_graph_id) REFERENCES gob_graph(id),
+  CONSTRAINT fk_edge_id FOREIGN KEY (edge_id) REFERENCES wp_edge(id),
+  UNIQUE (edge_id, step)
+);
+CREATE INDEX IF NOT EXISTS idx_wp_segment_gob_graph_id ON wp_segment (gob_graph_id)
+
+CREATE TABLE wp_point (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  segment_id        INTEGER NOT NULL,
+  step              INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  mouse_button      INTEGER NOT NULL,
+  gob_id            INTEGER,
+  mesh_id           INTEGER,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_segment_id FOREIGN KEY (segment_id) REFERENCES wp_segment(id),
+  UNIQUE (segment_id, step)
+);
+```
+> gob_node.wp_node_id는 항상 nullable 1:1 관계를 의도한 거지?
+맞아. nullable 1:1 이야. gob_node.wp_node_id는 UNIQUE 로 하는게 좋아보이네.
+> wp_node에 gob_graph_id와 gob_node_id를 둘 다 두는 것
+둘 다 두자.
+> gob_graph.root_node_id
+entry_node_id 가 좋아.
+> wp_point.vir_x/vir_y
+이제는 virtual coordinate 로 공통 좌표계로 관리할거야.
+> wp_segment에는 이제 base_gob_id가 없는데, 그럼 segment가 door를 경계로 좌표계가 바뀌는 건 어떻게 표현할 생각이야?
+가상 좌표는 gob_node 를 따라가기 때문에 door 경계로 달라진 좌표계에 대해 읽고 쓰는데에는 문제가 없을 것 같아. wp_edge 는 당연히 door 기준으로, 서로 다른 가상 좌표계에 속할 수 있어. wp_segment는 door 를 직접 넘어가기 전에는 실제 좌표를 알 수 없어. door 를 넘어간다면 반대편 door 를 통해 graph 가 확정되고 실제 좌표를 알게 되지. 그래서 미리 어떤 gob_graph 기준인지 알 필요가 없어.
+gfx/terobjs/burrow
+gfx/tiles/ridges/caveout
+gfx/tiles/ridges/cavein2
+gfx/tiles/ridges/caveout
+calibration 시 어디까지 메모리에 올릴지는 이렇게 결정하자. wp_node 에 edge 연결된 wp_node 를 탐색했는데 그 wp_node 가 hidden 이어야 하는 경우(동일 graph 가 아님(portal 너머), client 가 draw 중인 tile 범위 밖임) 해당 wp_node(hidden) 와 edge 로 연결된 wp_node 까지만 메모리에 올려둔다.
+만약 tick(?) 등에서 draw tile 의 범위가 변경된 경우 memory 에 올려둘 domain object 를 정리한다. 다시 올릴건 올리고, 내릴건 내리고.
+portal 을 통한 재-calibration 에는 당연히 사용자로부터 gob 입력을 받을 필요가 없어. portal gob 으로 calibration 을 시도하면 되거든, 만약 portal gob 이 gob_node 에 없으면 그냥 calbration 은 실패하는거고 isCalibrated 같은 변수는 false 로 두면 되겠지.
+memory 에 올리되 hidden 으로 둔다는것은, 해당 object 의 attribute 를 hidden 으로 두는게 아니라, drawable 과 hidden domain object 를 구분된 두개의 collection 으로 다루는거야. 그래서 draw() 시 drawable collection 에 있는 domain object 만 그릴 수 있도록.
+생각해보니, 그럼 UI 를 위한 WaypointView 같은걸 하나 두는게 좋지 않을까? 그런데 이 view(?) 는 위치가 gameui위에 있어야 할 것 같아. 그래서 gameui click 이 발생했을 때 먼저 이 view 가 event 를 처리하도록 말이야.
+이걸 고려하여 다시 알고리즘 설계해줘. 그리고 더 궁금한거 있어?
+> wait/notify는 지금 단계에선 과합니다
+아직도 과하다고 생각해?
+> MapView의 terrain/gobs loading 상태를 직접 확인
+내 생각에 이 기능은 wait / notify 로 가는게 더 좋을것 같거든. 실시간성도 향상되고, boolean 하나를 if check 한다고 해도 tick() 에서 아예 호출을 안할 수 있잖아. 심지어 이 loading 은 한 10 분에 한 번호출될건데 tick() 에서 매번 상태 체크하는건 비효율적이라고 생각하거든.
+RuntimeEventManager.calibratePortal 가
+> return WaypointManager.calibrateNearestPortal();
+인데, 이것보다는 nearest portal gob 을 calibratePortal() 이 찾도록 하고, 찾은 portal gob 으로 calibrate 를 하도록 해야 해. 만약 portal gob 을 찾지 모하면 return false 하여 반복 실행하게 하고, 찾은 경우 WaypointManager.calibrate(portal gob) 가 성공하던 실패하던 true 를 반환하게 해야 해.
+``` sql
+CREATE TABLE IF NOT EXISTS wp_graph (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS wp_anchor (
+  id                INTEGER PRIMARY KEY,
+  graph_id          INTEGER NOT NULL UNIQUE,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id)
+);
+
+CREATE TABLE IF NOT EXISTS wp_portal (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  graph_id          INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  resname           TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id)
+);
+CREATE INDEX IF NOT EXISTS idx_wp_portal_graph_id ON wp_portal (graph_id);
+
+CREATE TABLE IF NOT EXISTS wp_portal_pair (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  portal0_id        INTEGER NOT NULL,
+  portal1_id        INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_portal0_id FOREIGN KEY (portal0_id) REFERENCES wp_portal(id),
+  CONSTRAINT fk_portal1_id FOREIGN KEY (portal1_id) REFERENCES wp_portal(id),
+  CONSTRAINT chk_portal_pair_order CHECK (portal0_id < portal1_id),
+  UNIQUE (portal0_id, portal1_id)
+);
+
+CREATE TABLE IF NOT EXISTS wp_node (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  graph_id          INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  name              TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id)
+);
+CREATE INDEX IF NOT EXISTS idx_wp_node_graph_id ON wp_node (graph_id);
+
+CREATE TABLE IF NOT EXISTS wp_edge (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  node0_id          INTEGER NOT NULL,
+  node1_id          INTEGER NOT NULL,
+  direction         INTEGER NOT NULL,
+  time_cost         DOUBLE NOT NULL,
+  fatigue_cost      DOUBLE NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_node0_id FOREIGN KEY (node0_id) REFERENCES wp_node(id),
+  CONSTRAINT fk_node1_id FOREIGN KEY (node1_id) REFERENCES wp_node(id),
+  CONSTRAINT chk_direction CHECK (direction IN (0, 1, 2, 3)),
+  CONSTRAINT chk_distinct_nodes CHECK (node0_id <> node1_id),
+  CONSTRAINT chk_edge_order CHECK (node0_id < node1_id),
+  UNIQUE (node0_id, node1_id)
+);
+
+CREATE TABLE IF NOT EXISTS wp_segment (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  graph_id      INTEGER NOT NULL,
+  edge_id           INTEGER NOT NULL,
+  step              INTEGER NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id),
+  CONSTRAINT fk_edge_id FOREIGN KEY (edge_id) REFERENCES wp_edge(id),
+  UNIQUE (edge_id, step)
+);
+CREATE INDEX IF NOT EXISTS idx_wp_segment_graph_id ON wp_segment (graph_id);
+
+CREATE TABLE IF NOT EXISTS wp_point (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  segment_id        INTEGER NOT NULL,
+  step              INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  mouse_button      INTEGER NOT NULL,
+  mesh_id           INTEGER,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_segment_id FOREIGN KEY (segment_id) REFERENCES wp_segment(id),
+  CONSTRAINT chk_mouse_button CHECK (mouse_button IN (1, 3)),
+  UNIQUE (segment_id, step)
+);
+```
+니가 제시한 이슈 하나씩 얘기해볼께
+1. 사실 wp_anchor 는 테이블을 만들었지만 단 하나만 둘거야. 처음 calibration 을 할 때 tile 을 선택하게 할건데, calibration 을 진행하기 전에는 지금 위치가 어떤 graph 에 속할지 모르잖아? 그래서 tile calibration 은 항상 특정 graph 에 속하게 해서, 해당 graph 로 calibration 이 되도록 강제할거야. 그래서 wp_anchor 의 row 는 하나만 존재할거고, wp_graph 에 추가적인 column 을 두고 싶지는 않아. 테이블이 과하다는건 알지만, 그럼, 단 하나의 (graph, x, y) 값을 저장할 다른 더 좋은 대안이 있어?
+2. 첫 calibration 은 portal 로 진행하지 않아. 만약 calibration 이 완료된 상태에서 portal 을 통해 world transition 을 했다면, wp_portal_pair 를 통해 맞은편 portal 에 대한 resname 을 알 수 있어. 그래서 가장 가까운 portal 을 찾을 수 있지. 그걸로 calibration 을 진행하면 되.
+3. 좋아. portal0_id < portal1_id 같은 체크를 두고, 저장 전에 정렬해서 넣도록 하자.
+4. 이건 이미 문서화가 되어 있어. 
+- `wp_edge.direction`은 다음 상수를 사용한다
+  - `0 = blocked`
+  - `1 = forward`
+  - `2 = backward`
+  - `3 = bidirectional`
+5. 이건 일단 전부 0으로 넣도록 해줘. 나중에 필요하면 그 때 생각해보자.
+6. 맞아. wp_segment.wp_graph_id -> wp_segment.graph_id 로 바꾸는게 맞아.
+7. 이제 wp_point 가 실제로 상호작용한 gob 을 얻기 위해서는 world 좌표를 사용해서 gob 을 가져오도록 해야 해. resname 같은건 필요 없어.
+8. portal 은 node 처럼 edge endpoint 가 될 수 없어.
+다음으로, 너의 질문에 답할게.
+1. wp_anchor 로 calibration 을 할 때, area select 를 하도록 할거야. 그러면 특정 tile 을 입력받을 수 있는데, 그타일의 시작 좌표를 사용해서 calibration 을 하도록 할거야.
+2. 일반적으로 특정 gob 을 선택해서 calibration 하는 기능은 제거할거고, portal 을 통한 calibartion 은 world transition 일 경우 발생할 텐데, 이 경우 pair 인 resname 을 가진 portal 들 중 가장 가까운 것이 calibration portal 이 될거야.
+너의 의견을 듣고 다시 sql querry 를 다듬어봤어.
+wp_node(graph_id, vir_x, vir_y)는 unique가 맞긴 한데, 굳이 db 에서 할 필요는 없을 것 같아. 일단은 unique 없이 가보자.
+지금은 첫 graph 생성 시 select 한 tile 의 시작 좌표가 virtual position 상 (0, 0) 로 해줘.
+loadAnchors() 는 좋아.
+findAnchorByGraphId() 는 필요 없어. anchor 는 시스템 전체에 대해 단 하나만 존재하거든.
+loadPortalsByResname() 는 안좋은 것 같아. 특정 resname 으로 찾기보다는 portal pair 에서 이미 portal_id 를 알게 되니, 특정 portal id로 load 하면 될 것 같은데
+findPortalPairByPortalId() 는 portal pair 만 가져오는건가? 그럴 필요는 없을 것 같아.
+findCounterpartPortalIds() 는 portal id 를 찾는건가? portal id 가 아니라 portal 을 가져와야 할 것 같은데.
+findCounterpartPortals() 가 더 좋은 것 같아.
+> C. graph traversal용
+좋아. 이건 다 필요하겠네.
+> D. direct lookup용
+이건 일단 건너 뛰고, 나중에 필요해지면 그 때 만들도록 하자.
+```
+  - WpAnchorRecord
+  - WpPortalRecord
+  - WpNodeRecord
+  - WpEdgeRecord
+  - WpSegmentRecord
+  - WpPointRecord
+```
+그래 이것들 만들어보자.
+WpPortalPairRecord 보다는 findCounterpartPortals() 가 WpPortalRecord 를 반환하게 해보자.
+```
+  일단은 안 넣는 게 좋습니다.
+
+  - loadNearbyNodes(...)
+  - loadNearbyPoints(...)
+  - findNodeByGob(...)
+  - findGob(...)
+```
+좋아. 일단은 넣지 말자.
+그럼 설계대로 하나하나 구현해줄래?
+point to point line 도 그리기
+createRootNode 는 이미 anchor 가 존재하면 실패해야 한다.
+gate object position 이 아니라 click position 을 db 에 저장하는 문제
+새 anchor_tile 설정
+anchor_tile 변경 (need calibration)
+grid 단위는 좌표가 불변이지 않을까?
+  출력해보고 싶다.
+line 을 화면 밖도 그리고 싶다.
+cutIdOfCut 는 int 로
+anchor 는 하나만 가져오도록
+  anchors 가 필요 없다.
+gob 이 UI 에서 사라졌다가 다시 보이게 되면, 새로운 gob 이 생성되는 것인지 확인하는 job 만들어줘. 먼저 gob 클릭을 통해 입력받고, gob.removed 가 true 가 될 때까지 기다렸다가 1 초 뒤에 다시 gob 클릭을 통해 gob 을 입력받고, 기존 gob 과 같은지 비교하는 debug job 하나 만들어줘.
+calibration 필요 없음
+anchor 필요 없음
+autoincrement 삭제
+portal -> passage
+혹은 portal 삭제
+grid_id
+CREATE TABLE passage (
+  id                INTEGER PRIMARY KEY,
+  paired_passage_id INTEGER UNIQUE,
+  graph_id          INTEGER NOT NULL,
+  vir_x             INTEGER NOT NULL,
+  vir_y             INTEGER NOT NULL,
+  resname           TEXT NOT NULL,
+  updated_at        DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id),
+  CONSTRAINT fk_paired_passage_id FOREIGN KEY (paired_passage_id) REFERENCES passage(id),
+  CONSTRAINT chk_not_self_pair CHECK (paired_passage_id IS NULL OR paired_passage_id <> id)
+);
+
+CREATE TABLE milestone (
+  id                  INTEGER PRIMARY KEY,
+  graph_id            INTEGER NOT NULL,
+  vir_x               INTEGER NOT NULL,
+  vir_y               INTEGER NOT NULL,
+  resname             TEXT NOT NULL,
+  updated_at          DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_graph_id FOREIGN KEY (graph_id) REFERENCES wp_graph(id),
+  CONSTRAINT fk_paired_passage_id FOREIGN KEY (paired_passage_id) REFERENCES passage(id),
+  CONSTRAINT chk_not_self_pair CHECK (paired_passage_id IS NULL OR paired_passage_id <> id)
+);
+
+CREATE TABLE milestone_link (
+  id                  INTEGER PRIMARY KEY,
+  from_milestone_id   INTEGER NOT NULL,
+  link_no             INTEGER NOT NULL,
+  to_milestone_id     INTEGER NOT NULL,
+  CONSTRAINT fk_milestone_link_from FOREIGN KEY (from_milestone_id) REFERENCES milestone(id),
+  CONSTRAINT fk_milestone_link_to FOREIGN KEY (to_milestone_id) REFERENCES milestone(id),
+  CONSTRAINT chk_milestone_link_not_self CHECK (from_milestone_id <> to_milestone_id),
+  UNIQUE (from_milestone_id, link_no)
+);
+만약 calibration 실패 시, 기존 calibration domain clear
+isCalibrated == false -> no calibrate when transition
+wp_portal_pair 테이블을 따로 두는 것보다 wp_portal 이 counterpart 의 id 를 갖는게 좋겠어. 항상 쌍으로 갖도록 말이야.
+portal transition 시 portal calibration 실패하면 isCalibrate = false
+모든 wp_node, wp_edge 는 memory 에 올려놔야 한다. (길찾기를 위함)
+  아예 그래프가 떨어져 있을 수도 있네? 동일한 graph 만 올려노면 되겠는데? 아니지. 이니지 맞지. 지금 wp_node 는 전부 한 node 에 있을 것을 가정하는데, 완전 따로 떨어질 가능성은?
+아 그러네, 지금 portal transition 시 이전 portal 에 대한 정보가 없겠는데? trigger 가 didPortalEnter 잖아.
+memory 에는 gob id 를 갖도록 ( qud병합)
+  portal gob에 대한 gob id
+calibration 은 hearth fire 로 하자.
+자동 탐지는 hearth fire
+  하지만 hearth fire 의 이름이 바뀔 수 있는 문제가 있다.
+1. hearth fire
+2. 땅을 드래그해서 area 입력을 받는다.
+수동 탐지는 anchor
+hearth return world transition 인 경우
+anchor tile calibration 도 있어야 한다.
+gob.id 는 메모리에서만 사용한다.
+wp graph merge 판단 근거로, 모든 portal 정보를 들고 있어야 한다.
+id 가 바뀐다. node_edge 추가: portal to portal
+anchor 를 둔다. id 아니더라도 서로 구분 가능하도록
+첫 포탈 -> 등록
+아는 포탈 -> calibration
+anchor 편집 interface
+  목록 확인, 삭제, 추가
+  anchor 를 gob_node 와 별개로 관리해야 하는가?
+gob_node.id -> auto increase
+portal 이동 시 portal 못찾는 문제
+특정 gob 이 anchor gob 에 포함되어 있는지
+특정 위치에 portal 이 있는지
+portal 이동 시 항상 portal node 에 등록할 것
+두 graph 의 node 가 연결됐을 때 graph 데이터가 병합되지 않는 문제
+record 시 near node 클릭 후 기다리지 않고 바로 기록 시작
+지금 wp_node 가 0,0 인것 같은데? 0,0 은 gob_node 여야지
+이미 발견한 node 와 이어진 데이터를 draw 한다.(load near 하지 말고)
+```
+java.lang.Error: Unexpected non-local exit
+	at haven.render.RenderTree$TreeSlot.chstate(RenderTree.java:688)
+	at haven.render.RenderTree$TreeSlot.ostate(RenderTree.java:709)
+	at haven.PView.basic(PView.java:149)
+	at haven.MapView.updweather(MapView.java:1108)
+	at haven.MapView.tick(MapView.java:1689)
+	at haven.Widget.tick(Widget.java:758)
+	at haven.Widget$TickEvent.shandle(Widget.java:909)
+	at haven.Widget.handle(Widget.java:889)
+	at haven.Widget$Event.dispatch(Widget.java:841)
+	at haven.Widget$TickEvent.propagation(Widget.java:902)
+	at haven.Widget$Event.propagate(Widget.java:825)
+	at haven.Widget$Event.dispatch(Widget.java:843)
+	at haven.Widget$TickEvent.propagation(Widget.java:902)
+	at haven.Widget$Event.propagate(Widget.java:825)
+	at haven.Widget$Event.dispatch(Widget.java:843)
+	at haven.UI.dispatch(UI.java:610)
+	at haven.UI.tick(UI.java:366)
+	at haven.GLPanel$Loop.run(GLPanel.java:369)
+	at haven.JOGLPanel.run(JOGLPanel.java:247)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+	Suppressed: java.lang.IllegalStateException: updating non-present slot
+		at haven.render.InstanceList.update(InstanceList.java:751)
+		at haven.render.RenderTree$Client.updated(RenderTree.java:116)
+		at haven.render.RenderTree$TreeSlot.lambda$updtotal$0(RenderTree.java:650)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:650)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+		at haven.render.RenderTree$TreeSlot.upddstate(RenderTree.java:638)
+		at haven.render.RenderTree$TreeSlot.chstate(RenderTree.java:683)
+		... 19 more
+Caused by: java.lang.IllegalStateException: updating non-present slot
+	at haven.render.InstanceList.update(InstanceList.java:751)
+	at haven.render.RenderTree$Client.updated(RenderTree.java:116)
+	at haven.render.RenderTree$TreeSlot.lambda$updtotal$0(RenderTree.java:650)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:650)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.updtotal(RenderTree.java:648)
+	at haven.render.RenderTree$TreeSlot.upddstate(RenderTree.java:638)
+	at haven.render.RenderTree$TreeSlot.chstate(RenderTree.java:686)
+	... 19 more
+```
+이건 무슨 에러야? portal 을 사용해서 world transition 을 하니까 loading 화면에서 멈추면서 이 에러가 발생했어.
+```
+null
+java.lang.IllegalArgumentException: Invalid index
+	at java.base/java.text.AttributedString$AttributedStringIterator.setIndex(AttributedString.java:828)
+	at haven.ChatUI$Channel.clicked(ChatUI.java:659)
+	at haven.ChatUI$Channel.mouseup(ChatUI.java:592)
+	at haven.Widget$MouseUpEvent.shandle(Widget.java:1033)
+	at haven.Widget.handle(Widget.java:889)
+	at haven.Widget$Event.dispatch(Widget.java:841)
+	at haven.UI$WidgetGrab.handle(UI.java:543)
+	at haven.UI$WidgetGrab.handle(UI.java:535)
+	at haven.EventHandler$Filter.handle(EventHandler.java:59)
+	at haven.UI$PointerGrab.handle(UI.java:560)
+	at haven.UI$PointerGrab.handle(UI.java:547)
+	at haven.UI$Grab.check(UI.java:523)
+	at haven.UI$Grab.access$700(UI.java:507)
+	at haven.UI.dispatch(UI.java:606)
+	at haven.UI.mouseup(UI.java:855)
+	at haven.UIPanel$Dispatcher.dispatch(UIPanel.java:80)
+	at haven.GLPanel$Loop.run(GLPanel.java:360)
+	at haven.JOGLPanel.run(JOGLPanel.java:247)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+```
+이게 뭘까? system chat 에 출력된 문자열을 드래그하다가 발생했어. 다시 재현하지는 못하겠더라고.
+만약 node gob 을 draw 하기 위해 ocache 를 찾았는데 없다면?
+근처 30 타일 gob, node, point, segment draw
+미리 보이지 않는 다음 segment load
+gob 이 삭제된다면
+새로운 gob 연결
+waypoint_recording 에 started_at 이랑 stopped_at 은 굳이 넣을 필요 없을 것 같아.
+전체적으로 created_at 이랑 updated_at 이 있는데, 너무 과한거 같아서. 그냥 updated_at 으로 통일해서, 변경된 마지막 시간을 추적하도록 하자.

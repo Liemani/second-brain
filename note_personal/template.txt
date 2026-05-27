@@ -1,0 +1,23 @@
+format : https://github.com/Liemani/note_personal/blob/main/document_format_bootstrap.txt
+템플릿 파일입니다.
+새로운 파일 생성이 필요할 시 이 파일을 복사 수정하여 사용하시면 됩니다.
+이 부분에는 파일에 대한 설명을 작성해주세요.
+
+content {
+
+date
+name
+
+}
+
+start:
+another subject format definition {
+comment :
+  you can use this definition as comment list
+}
+
+2024-07-11
+content1
+
+2024-07-10
+content2

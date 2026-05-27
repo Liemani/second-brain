@@ -1,0 +1,13 @@
+idea: program: simulator.txt
+
+# 건축 시뮬레이터
+2023-01-28
+건축 과정을 시뮬레이션 해 볼 수 있는 시뮬레이터
+기존의 다리 건설 게임이나 건축 게임은 현실성이 떨어진다
+
+다양한 값 수정이 가능
+설명용 무슨 무슨 모델 시뮬레이터
+즉 범용 오브젝트 시뮬레이터
+
+# computer simulator
+gate, logic, register, memory, program, device

@@ -1,0 +1,258 @@
+list_word.txt
+
+보조를 뜯하는 단어
+{
+  assistant
+  helper
+  supporter
+  collaborator
+  manager
+
+  support
+  assistance
+  backup
+  auxiliary
+  helper
+}
+
+conversion 변환
+sequence 시퀀스
+scan 스캔
+channel 채널
+prescaler 프리스케일러
+set 설정
+clock 클럭
+register 레지스터
+resolution 해상도
+bit 비트
+flag 플래그
+enable 활성화
+
+walkthrough
+
+new/delete
+allocate/deallocate
+initialize/deinitialize
+
+robust - concise
+
+sensor
+handler
+controller
+manager
+
+location: 어떤 오브젝트의 위치
+position: 동사(위치시키다)
+point: 점
+coordinate: 좌표
+
+# original
+원작
+원서
+원본
+원곡
+원저
+
+# variation(변주)
+subspecies(아종)
+spin-off(스핀오프)
+branch(겉가지)
+parallel world(평행 세계)
+mutant(돌연변이)
+non-mainstream faction[group](비주류)
+
+# 따르다
+conform
+accordance
+compatible
+obey
+accept
+agree
+follow
+recognize
+allow
+permit
+authorize
+consistent
+
+antonym
+conflict
+
+# 정의역 - 치역
+x - y
+정의역 - 치역, 공역
+x 에 대한 y 값
+input - output
+노력 - 보상, 대가
+자극 - 반응
+환경 - 행동
+
+# 생산 - 소비
+작가 - 독자
+전달 - 수용
+발신 - 수신
+송신 - 수신
+
+전파자, 지시자
+
+# 앞 - 뒤
+prefix - suffix
+prepend - append
+head - tail
+top - bottom
+previous - next
+pre (before) - peri (during) - post (after)
+start, begin - end (iterator)
+prologue - epilogue
+before - after
+left - right
+front - back, rear
+up - down
+old - new
+first - last
+
+# 실행 - 취소
+do - undo
+confirm - cancel
+execute, run - exit, quit
+
+# 제어
+control
+condition
+state
+status
+
+# 질문 - 대답
+question - answer
+querry - response
+touch - feedback
+
+# 배열 - 원소
+array, list, vector, iterable, table, set, dictionary - element, item, entry, content
+string - character
+
+# 읽기 / 쓰기
+read / write
+get / set
+pull / push
+pop / push
+output / input
+receive / send
+record / loss
+store / restore
+store / load
+scan / print
+get / put
+save / load
+note / 
+save / open
+sensor
+detector / responder
+request / response
+
+# 데이터 관리
+create
+new
+init
+
+add
+push
+append
+
+edit
+update
+modify
+fix
+move
+
+remove
+pop
+delete
+destroy
+
+# 수행하다
+do
+act
+process
+각종 행동 up down recieve
+work
+conduct
+carry out
+perform
+practice
+execute
+
+# 작업 관련
+worktree
+workspace
+workbench
+tool
+
+# 제외, 아니다
+not
+except
+exclude
+complement
+
+# 달성, 끝내다, 완수하다
+achieve
+obey
+accord
+conform
+finish
+complete
+goal
+accomplish
+end
+
+# 물리 - 물리적이지 않은 것
+
+# 모으다
+수합하다: 물질 개념을 거두어 합치다
+취합하다: 여러 개념을 모아 하나의 대표적인 개념을 만들다
+통합하다: 흩어진 여러 개념을 모아 그것들을 포괄하는 하나의 개념으로 만들다
+
+# 출력
+show
+display
+draw
+list
+print
+describe
+log
+
+# transformation
+transposition
+transition
+rotation
+reflection
+projection
+affine transformation
+
+# 생성과 관련된 단어
+generate
+produce
+initiate
+create
+make
+new
+spawn
+cause
+
+consume
+
+# 정렬하다
+order
+reorder
+arrange
+rearrange
+
+# taxonomy
+domain
+kingdom
+phylum
+class
+order
+family
+genus
+species

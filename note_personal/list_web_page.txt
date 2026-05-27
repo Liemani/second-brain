@@ -1,0 +1,52 @@
+list_web_page.txt
+format : https://github.com/Liemani/note_personal/blob/main/document_format_bootstrap.txt
+유용한 웹 페이지 링크 리스트
+
+git :
+https://github.com/IntelRealSense/librealsense.git
+https://github.com/IoTKETI/nCube-Thyme-Arduino.git
+https://github.com/IoTKETI/oneM2M-API-Testing.git
+
+service_supplier :
+https://jlcpcb.com
+
+resource_supplier :
+https://www.vecteezy.com
+  image
+
+learn :
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/
+https://opensource.apple.com
+
+simulation :
+https://www.falstad.com/circuit/
+  electric circuit
+
+log :
+2025-02-18 Tue https://tamhum.tistory.com/127 daum macos mail 연동 매뉴얼
+
+reading :
+https://www.youtube.com/watch?v=dFe0JR74EI8
+  2300: 6502 CPU 소개
+  65C02 MOS Technology 8bit
+  Apple 2, Commodora 64, Atari 2600
+https://www.youtube.com/watch?v=__Gs2O_lJIk&t=529s
+  본격 임베디드 SW 개발 시작! 전기전자과 학부, 초보 개발자 때 이렇게만 했어도...【RC카 개발4】
+  체계적인 개발 프로젝트 설계 과정을 보여줌
+https://manuel.bernhardt.io/posts/2023-11-16-core-pinning/#:~:text=CPU%20core%20isolation%20ensures%20that,to%20all%20processes%20actively%20executing.
+  On pinning and isolating CPU cores
+  high quality cpu article
+https://www.kernel.org/doc/Documentation/spi/spidev
+https://forum.arduino.cc/t/serial-input-basics-updated/382007
+  arduino serial output
+https://m.blog.naver.com/PostView.naver?blogId=vr_insight&logNo=223364666652&categoryNo=6&proxyReferer=&noTrackingCode=true
+  매우 구체적인 vision pro 리뷰
+https://ko.wikipedia.org/wiki/튜링_기계
+https://ko.wikipedia.org/wiki/폰_노이만_구조?utm_source=chatgpt.com
+https://web.mit.edu/sts.035/www/PDFs/edvac.pdf
+https://www.khug.or.kr/jeonse/web/s02/s020101.jsp
+  전세사기 피해 예방. 너무 좋은 페이지이다.
+https://blog.naver.com/dolicom/10083875471
+  훌륭한 BJT 설명 글
+https://blog.naver.com/icbanq/223362788394
+  BJT, FET 깊지 않지만 설명 깔끔

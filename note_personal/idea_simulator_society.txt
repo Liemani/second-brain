@@ -1,0 +1,3 @@
+idea: program: society simulator.txt
+
+사회 구조를 시뮬레이션하여 다양한 사회적 문제를 분석하는 프로그램

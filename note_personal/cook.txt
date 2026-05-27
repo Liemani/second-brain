@@ -1,0 +1,6 @@
+cook.txt
+format : https://github.com/Liemani/note_personal/blob/main/document_format_bootstrap.txt
+괜찮은 재료 조합을 기록
+
+두부 + 소금 : 콩국수
+두부 + 토마토 스파게티 소스 : 두부 케쳡 볶음

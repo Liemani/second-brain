@@ -1,0 +1,8 @@
+format : https://github.com/Liemani/note_personal/blob/main/document_format_bootstrap.txt
+
+설정
+{
+  기본 설정 (대중적)
+  커스텀 가능
+  커스텀 공유 가능
+}
