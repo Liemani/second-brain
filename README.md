@@ -9,10 +9,12 @@
 - `1_active/`: 현재 진행 중인 작업과 인덱스
 - `2_stable/`: 정리된 기준 문서
 - `3_archive/`: 보관 영역
+- `workflow/`: 작업 운영 체계
 
 ## Start Here
 
 - 현재 작업 인덱스: [1_active/index.md](1_active/index.md)
+- 작업 운영 체계: [workflow/index.md](workflow/index.md)
 
 ## Rule
 

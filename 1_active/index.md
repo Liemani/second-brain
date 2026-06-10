@@ -4,7 +4,6 @@
 
 ## Active Notes
 
-- [todo.md](todo.md)
 - [ai.md](ai.md)
 - [activation.md](activation.md)
 - [activation_function.md](activation_function.md)
