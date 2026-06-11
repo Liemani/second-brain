@@ -2,9 +2,9 @@
 
 <이 결정이 무엇에 대한 것인지 한두 문장으로 설명>
 
-## Related Attempts
+## Related Work Logs
 
-- [<attempt file>](../attempts/<attempt file>)
+- [<work log file>](../work_logs/<work log file>)
 
 ## Related Tasks
 

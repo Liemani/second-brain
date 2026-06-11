@@ -4,11 +4,10 @@
 
 ## Notes
 
-- [tasks.md](tasks.md)
-- [decisions.md](decisions.md)
+- [ideas.md](ideas/index.md)
+- [issues.md](issues/index.md)
+- [tasks.md](tasks/index.md)
+- [work_logs.md](work_logs/index.md)
+- [decisions.md](decisions/index.md)
 - [rules.md](rules.md)
-- [templates/index.md](templates/index.md)
-
-## Records
-
-- [attempts/screen_capture_automation_attempt_2026-06-09.md](attempts/screen_capture_automation_attempt_2026-06-09.md)
+- [templates.md](templates/index.md)

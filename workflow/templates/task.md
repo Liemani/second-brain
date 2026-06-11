@@ -12,9 +12,9 @@ YYYY-MM-DD
 
 YYYY-MM-DD
 
-## Related Attempts
+## Related Work Logs
 
-- [<attempt file>](../attempts/<attempt file>)
+- [<work log file>](../work_logs/<work log file>)
 
 ## Related Decisions
 
@@ -22,5 +22,12 @@ YYYY-MM-DD
 
 ## Notes
 
-- <이 작업에서 해야 할 일>
+- <작업의 목적>
 - <진행 중 참고할 사항>
+
+## Todo
+
+- [ ] <아직 하지 않은 일>
+- [x] <완료한 일> (YYYY-MM-DD)
+- [~] <진행 중이거나 보류 중인 일>
+- [-] <취소한 일>

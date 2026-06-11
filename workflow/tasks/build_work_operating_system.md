@@ -12,9 +12,9 @@ Done
 
 2026-06-10
 
-## Related Attempts
+## Related Work Logs
 
-- [../attempts/workflow_structure_build_attempt_2026-06-10.md](../attempts/workflow_structure_build_attempt_2026-06-10.md)
+- [../work_logs/workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)
 
 ## Related Decisions
 
@@ -22,4 +22,4 @@ Done
 
 ## Notes
 
-- `task`, `attempt`, `decision`, `template`를 연결하는 개인 작업 운영 체계를 정리하고 확장한다.
+- `task`, `work log`, `decision`, `template`를 연결하는 개인 작업 운영 체계를 정리하고 확장한다.

@@ -2,11 +2,15 @@
 
 ## Status
 
-Next
+Done
 
 ## Created
 
 2026-06-09
+
+## Completed
+
+2026-06-10
 
 ## Notes
 
