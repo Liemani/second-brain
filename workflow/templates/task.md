@@ -1,8 +1,10 @@
 # <작업 제목>
 
+<이 task가 어떤 목표 아래 여러 todo를 묶는지 한두 문장으로 설명>
+
 ## Status
 
-<Now / Next / Done>
+<Now / Backlog / Done>
 
 ## Created
 
@@ -16,6 +18,10 @@ YYYY-MM-DD
 
 - [<work log file>](../work_logs/<work log file>)
 
+## Related Todos
+
+- [<todo file>](../todos/<todo file>)
+
 ## Related Decisions
 
 - [<decision file>](../decisions/<decision file>)
@@ -24,10 +30,3 @@ YYYY-MM-DD
 
 - <작업의 목적>
 - <진행 중 참고할 사항>
-
-## Todo
-
-- [ ] <아직 하지 않은 일>
-- [x] <완료한 일> (YYYY-MM-DD)
-- [~] <진행 중이거나 보류 중인 일>
-- [-] <취소한 일>

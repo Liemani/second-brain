@@ -14,11 +14,11 @@ Done
 
 ## Related Work Logs
 
-- [../work_logs/workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)
+- [workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)
 
 ## Related Decisions
 
-- [../decisions/2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)
+- [2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)
 
 ## Notes
 

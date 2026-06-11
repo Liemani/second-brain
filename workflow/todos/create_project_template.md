@@ -14,4 +14,4 @@ Done
 
 ## Notes
 
-- project template을 만들었다.
+- project template을 만든다.

@@ -2,7 +2,7 @@
 
 ## Status
 
-Next
+Backlog
 
 ## Created
 
@@ -10,4 +10,4 @@ Next
 
 ## Notes
 
-- custom AI를 개발하는 작업을 진행한다.
+- custom AI를 개발한다.
