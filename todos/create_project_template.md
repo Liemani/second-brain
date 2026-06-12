@@ -1,0 +1,15 @@
+# project template 만들기
+
+## Status
+
+Done
+
+
+## Lifecycle
+
+- Created: 2026-06-09
+- Started: 2026-06-09
+- Completed: 2026-06-09
+## Notes
+
+- project template을 만든다.
