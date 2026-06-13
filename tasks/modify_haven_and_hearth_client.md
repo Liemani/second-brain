@@ -10,10 +10,10 @@ Now
 
 2026-06-11
 
-## Related Todos
+## Checklist
 
-- [modify_haven_and_hearth_client.md](../todos/modify_haven_and_hearth_client.md)
-- [move_existing_haven_and_hearth_todo_here.md](../todos/move_existing_haven_and_hearth_todo_here.md)
+- [~] `haven and hearth` client 개조 작업 진행
+- [-] 기존 haven and hearth 관련 todo를 second brain으로 옮기기
 
 ## Notes
 

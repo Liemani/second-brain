@@ -10,10 +10,10 @@ Backlog
 
 2026-06-11
 
-## Related Todos
+## Checklist
 
-- [review_linking_bin_instead_of_path.md](../todos/review_linking_bin_instead_of_path.md)
-- [add_todo_feature.md](../todos/add_todo_feature.md)
+- [ ] `bin/`을 `PATH`에 추가하는 것 대신 `.local/bin` 등에 link를 만드는 방식 검토
+- [x] todo 기능 추가 (2026-06-11)
 
 ## Notes
 

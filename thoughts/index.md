@@ -7,3 +7,4 @@
 - [introduce_thought_tracking.md](introduce_thought_tracking.md)
 - [human_like_thinking_ai_would_be_interesting.md](human_like_thinking_ai_would_be_interesting.md)
 - [about_detecting_a_single_photon.md](about_detecting_a_single_photon.md)
+- [transformers_usually_have_to_predict_the_next_token.md](transformers_usually_have_to_predict_the_next_token.md)

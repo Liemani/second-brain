@@ -4,12 +4,18 @@
 
 Done
 
+## Created
 
-## Lifecycle
+2026-06-10
 
-- Created: 2026-06-10
-- Started: 2026-06-10
-- Completed: 2026-06-10
+## Completed
+
+2026-06-10
+
+## Checklist
+
+- [x] iPhone에서 mac과 server에 접속할 수 있도록 public key를 등록한다. (2026-06-10)
+
 ## Notes
 
 - iPhone에서 mac과 server에 접속할 수 있도록 public key를 등록한다.

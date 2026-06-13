@@ -8,6 +8,10 @@
 
 YYYY-MM-DD
 
+## Indexes
+
+- [<index file>](../indexes/<index file>)
+
 ## Related Tasks
 
 - [<task file>](../tasks/<task file>)

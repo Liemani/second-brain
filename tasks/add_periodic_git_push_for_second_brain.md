@@ -4,10 +4,14 @@
 
 Backlog
 
+## Created
 
-## Lifecycle
+2026-06-11
 
-- Created: 2026-06-11
+## Checklist
+
+- [ ] second brain 저장소에 주기적으로 git push 하는 기능을 추가한다.
+
 ## Notes
 
 - second brain 저장소에 주기적으로 git push 하는 기능을 추가한다.

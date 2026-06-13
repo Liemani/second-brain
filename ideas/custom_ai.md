@@ -8,6 +8,10 @@ Open
 
 2026-06-12
 
+## Indexes
+
+- [ai.md](../indexes/ai.md)
+
 ## Notes
 
 - 높은 수준의 라이브러리를 사용하는 것보다, 가능한 한 아래 레벨부터 직접 구현하며 이해하는 custom AI 아이디어

@@ -6,3 +6,4 @@
 
 - [2026-06-10_recording_strategy.md](2026-06-10_recording_strategy.md)
 - [2026-06-11_index_placement.md](2026-06-11_index_placement.md)
+- [2026-06-12_second_brain_and_project_memory.md](2026-06-12_second_brain_and_project_memory.md)

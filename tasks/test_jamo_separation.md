@@ -4,12 +4,18 @@
 
 Done
 
+## Created
 
-## Lifecycle
+2026-06-11
 
-- Created: 2026-06-11
-- Started: 2026-06-11
-- Completed: 2026-06-11
+## Completed
+
+2026-06-11
+
+## Checklist
+
+- [x] screen sharing 환경에서 자모 분리 현상을 테스트한다. (2026-06-11)
+
 ## Notes
 
 - vision Pro에서 mac virtual display로 MacBook을 띄우고, 그 안에서 screen sharing으로 원격 Mac mini에 접속했을 때 자모 분리가 관찰되었다.

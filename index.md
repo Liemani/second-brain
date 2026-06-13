@@ -12,7 +12,7 @@
 - [ideas](ideas/index.md)
 - [issues](issues/index.md)
 - [tasks](tasks/index.md)
-- [todos](todos/index.md)
+- [indexes](indexes/index.md)
 - [work_logs](work_logs/index.md)
 - [decisions](decisions/index.md)
 - [rules](rules.md)

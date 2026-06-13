@@ -8,6 +8,10 @@ Open
 
 2026-06-11
 
+## Indexes
+
+- [ai.md](../indexes/ai.md)
+
 ## Notes
 
 - 사람처럼 사고하는 AI가 있으면 재미있을 것 같다.
