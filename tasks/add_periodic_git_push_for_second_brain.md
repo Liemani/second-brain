@@ -1,16 +1,15 @@
 # second brain 에 주기적으로 git push 하는 기능 추가
 
-## Status
+second brain 저장소에 주기적으로 `git push` 하는 기능을 추가하는 task다.
 
-Backlog
+## Meta
 
-## Created
-
-2026-06-11
+- Status: Backlog
+- Created: 2026-06-11
 
 ## Checklist
 
-- [ ] second brain 저장소에 주기적으로 git push 하는 기능을 추가한다.
+- [ ] second brain 저장소에 주기적으로 git push 하는 기능을 추가한다. (2026-06-11)
 
 ## Notes
 

@@ -2,14 +2,30 @@
 
 이 디렉터리는 바로 복사해서 사용할 수 있는 문서 템플릿과 그 사용 원칙을 모아두는 곳입니다.
 
+## Meta
+
+- Scope: template 문서 전체
+
 ## Files
 
-- [thought.md](thought.md): 아직 idea나 issue로 정리되지 않은 생각을 관리하는 템플릿
-- [idea.md](idea.md): 아직 task로 확정되지 않은 아이디어를 관리하는 템플릿
-- [issue.md](issue.md): 아직 해결되지 않은 문제를 관리하는 템플릿
-- [work_log.md](work_log.md): 작업 진행과 결과를 기록하는 템플릿
-- [task.md](task.md): 작업 항목을 개별 문서로 관리하는 템플릿
-- [decision.md](decision.md): 의사결정을 개별 문서로 기록하는 템플릿
+- [template-index.md](template-index.md): 주제별 인덱스 템플릿
+- [dream.md](dream.md): 꿈일기 템플릿
+- [thought.md](thought.md): 생각 템플릿
+- [idea.md](idea.md): 아이디어 템플릿
+- [issue.md](issue.md): 이슈 템플릿
+- [work_log.md](work_log.md): 작업 기록 템플릿
+- [task.md](task.md): 작업 템플릿
+- [decision.md](decision.md): 결정 템플릿
+
+## dream.md
+
+- 꿈에서 기억나는 내용을 개별 문서로 남길 때 사용합니다.
+- thoughts와 분리해서 관리하며, 나중에 thought나 idea로 이어질 수 있습니다.
+
+## template-index.md
+
+- 같은 주제의 item들을 한 곳에 묶어보는 인덱스를 만들 때 사용합니다.
+- `thought`, `idea`, `issue`, `task`, `dream`, `work_log`, `decision` 같은 item을 함께 둘 수 있습니다.
 
 ## thought.md
 
@@ -36,6 +52,7 @@
 
 - 하나의 작업을 개별 문서로 관리할 때 사용합니다.
 - 실제 실행 단위는 task 내부의 `Checklist` 항목으로 관리합니다.
+- 각 checklist 항목에는 상태와 함께 날짜를 붙이는 것을 기본으로 합니다.
 - 상태, 생성일, 관련 기록, 관련 결정을 함께 둡니다.
 
 ## decision.md

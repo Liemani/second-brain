@@ -2,16 +2,19 @@
 
 `workflow/`를 루트 메타 레이어로 분리하고, 작업 운영에 필요한 기본 문서 구조를 정리한 작업 기록이다.
 
+## Meta
+
+- Created: 2026-06-10
+- Related Decisions:
+  - [2026-06-11_index_placement.md](../decisions/2026-06-11_index_placement.md)
+- Environment:
+  - 적용 주체: second brain 저장소
+  - 대상: 개인 작업 운영 체계
+  - 방식: 디렉터리 분리, 링크 재정리, 템플릿 추가
+
 ## 결과
 
 `workflow/` 아래에 `tasks`, `work_logs`, `decisions`, `templates`와 각 진입 문서를 두는 구조를 만들었다.
-
-## 환경
-
-- 적용 날짜: 2026-06-10
-- 적용 주체: second brain 저장소
-- 대상: 개인 작업 운영 체계
-- 방식: 디렉터리 분리, 링크 재정리, 템플릿 추가
 
 ## 수행 절차
 

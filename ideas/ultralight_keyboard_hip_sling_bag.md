@@ -1,12 +1,11 @@
 # 초경량 키보드용 힙색 / 슬링백
 
-## Status
+초경량 키보드용 힙색 또는 슬링백 아이디어다.
 
-Open
+## Meta
 
-## Created
-
-2026-06-10
+- Status: Open
+- Created: 2026-06-10
 
 ## Notes
 

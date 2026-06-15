@@ -1,24 +1,15 @@
 # <생각 제목>
 
-## Status
+## Meta
 
-<Open / Linked / Archived>
-
-## Created
-
-YYYY-MM-DD
-
-## Indexes
-
-- [<index file>](../indexes/<index file>)
-
-## Related Ideas
-
-- [<idea file>](../ideas/<idea file>)
-
-## Related Issues
-
-- [<issue file>](../issues/<issue file>)
+- Status: <Open / Linked / Archived>
+- Created: YYYY-MM-DD
+- Indexes:
+  - [<index file>](../indexes/<index file>)
+- Related Ideas:
+  - [<idea file>](../ideas/<idea file>)
+- Related Issues:
+  - [<issue file>](../issues/<issue file>)
 
 ## Notes
 

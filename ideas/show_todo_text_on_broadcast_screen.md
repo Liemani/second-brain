@@ -1,12 +1,11 @@
 # show task text on broadcast screen
 
-## Status
+task 텍스트를 방송 화면에 보여주는 기능 아이디어다.
 
-Open
+## Meta
 
-## Created
-
-2026-06-13
+- Status: Open
+- Created: 2026-06-13
 
 ## Notes
 

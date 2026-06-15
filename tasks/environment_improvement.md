@@ -2,17 +2,16 @@
 
 여러 환경 관련 todo를 묶어서 관리하는 상위 task이다.
 
-## Status
+## Meta
 
-Backlog
-
-## Created
-
-2026-06-11
+- Status: Backlog
+- Created: 2026-06-11
 
 ## Checklist
 
-- [ ] `bin/`을 `PATH`에 추가하는 것 대신 `.local/bin` 등에 link를 만드는 방식 검토
+- [ ] `bin/`을 `PATH`에 추가하는 것 대신 `.local/bin` 등에 link를 만드는 방식 검토 (2026-06-11)
+- [ ] codex session과 path 정보를 저장하고 기존 session을 활용해 codex 실행하는 방식 정리 (2026-06-15)
+- [x] second brain의 template에 공통 `meta`를 추가하는 방식 정리 (2026-06-15)
 - [x] todo 기능 추가 (2026-06-11)
 
 ## Notes

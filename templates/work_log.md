@@ -2,16 +2,21 @@
 
 <이 작업 기록이 무엇을 다루는지 한두 문장으로 설명>
 
+## Meta
+
+- Created: YYYY-MM-DD
+- Related Tasks:
+  - [<task file>](../tasks/<task file>)
+- Related Decisions:
+  - [<decision file>](../decisions/<decision file>)
+- Environment:
+  - 적용 주체: <예: 서버 `hermes` 계정>
+  - 대상: <예: 조직, 계정, 시스템, 서비스>
+  - 방식: <예: 인증 방식, 적용 방식>
+
 ## 결과
 
 <가장 핵심적인 결과 한 줄>
-
-## 환경
-
-- 적용 날짜: YYYY-MM-DD
-- 적용 주체: <예: 서버 `hermes` 계정>
-- 대상: <예: 조직, 계정, 시스템, 서비스>
-- 방식: <예: 인증 방식, 적용 방식>
 
 ## 수행 절차
 

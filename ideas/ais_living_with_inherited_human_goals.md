@@ -1,16 +1,13 @@
 # 인간의 목표를 이어받아 사는 ai 들의 세계
 
-## Status
+인간의 목표를 이어받아 사는 AI 세계관 아이디어다.
 
-Open
+## Meta
 
-## Created
-
-2026-06-13
-
-## Indexes
-
-- [ai.md](../indexes/ai.md)
+- Status: Open
+- Created: 2026-06-13
+- Indexes:
+  - [ai.md](../indexes/ai.md)
 
 ## Notes
 

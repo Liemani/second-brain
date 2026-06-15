@@ -1,12 +1,11 @@
 # 실제 우주를 넘나드는 시뮬레이션 게임
 
-## Status
+실제 우주를 탐험하는 느낌의 시뮬레이션 게임 아이디어다.
 
-Open
+## Meta
 
-## Created
-
-2026-06-13
+- Status: Open
+- Created: 2026-06-13
 
 ## Notes
 

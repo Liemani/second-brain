@@ -2,6 +2,11 @@
 
 이 문서는 AI와 관련된 item을 한 곳에서 보기 위한 인덱스입니다.
 
+## Meta
+
+- Created: 2026-06-15
+- Scope: AI 관련 item
+
 ## Items
 
 - thought: [human_like_thinking_ai_would_be_interesting.md](../thoughts/human_like_thinking_ai_would_be_interesting.md)
@@ -9,3 +14,8 @@
 - idea: [custom_ai.md](../ideas/custom_ai.md)
 - idea: [ais_living_with_inherited_human_goals.md](../ideas/ais_living_with_inherited_human_goals.md)
 - idea: [emotional_ai_is_born_by_accident.md](../ideas/emotional_ai_is_born_by_accident.md)
+
+## Notes
+
+- AI와 관련된 thoughts와 ideas를 함께 모아둔다.
+- 필요하면 task, dream, decision, work_log도 같은 주제로 추가할 수 있다.

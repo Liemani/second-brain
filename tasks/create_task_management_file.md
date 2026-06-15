@@ -1,16 +1,12 @@
 # task 관리 파일 생성
 
-## Status
+task를 관리하기 위한 파일을 만든 기록이다.
 
-Done
+## Meta
 
-## Created
-
-2026-06-09
-
-## Completed
-
-2026-06-09
+- Status: Done
+- Created: 2026-06-09
+- Completed: 2026-06-09
 
 ## Checklist
 

@@ -2,9 +2,11 @@
 
 `workflow/` 안의 각 분류 인덱스를 어디에 둘지에 대한 결정 문서이다.
 
-## Related Work Logs
+## Meta
 
-- [workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)
+- Created: 2026-06-11
+- Related Work Logs:
+  - [workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)
 
 ## 결정
 

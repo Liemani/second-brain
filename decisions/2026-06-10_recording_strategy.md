@@ -2,9 +2,11 @@
 
 화면 기록 자동화 시도 이후, 앞으로 어떤 방식으로 작업 기록을 남길지에 대한 결정 문서이다.
 
-## Related Work Logs
+## Meta
 
-- [screen_capture_automation_work_log_2026-06-09.md](../work_logs/screen_capture_automation_work_log_2026-06-09.md)
+- Created: 2026-06-10
+- Related Work Logs:
+  - [screen_capture_automation_work_log_2026-06-09.md](../work_logs/screen_capture_automation_work_log_2026-06-09.md)
 
 ## 결정
 

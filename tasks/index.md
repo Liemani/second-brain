@@ -2,6 +2,10 @@
 
 이 디렉터리는 작업 항목을 개별 문서로 관리하는 곳입니다.
 
+## Meta
+
+- Scope: task 문서 전체
+
 ## Now
 
 - [organize_files.md](organize_files.md)
@@ -18,6 +22,7 @@
 ## Done
 
 - [build_work_operating_system.md](build_work_operating_system.md)
+- [add_dream_diary_feature.md](add_dream_diary_feature.md)
 - [create_project_template.md](create_project_template.md)
 - [create_task_management_file.md](create_task_management_file.md)
 - [register_public_key_for_iphone_access.md](register_public_key_for_iphone_access.md)

@@ -1,16 +1,12 @@
 # 자모 분리 테스트하기
 
-## Status
+screen sharing 환경에서 자모 분리를 테스트한 기록이다.
 
-Done
+## Meta
 
-## Created
-
-2026-06-11
-
-## Completed
-
-2026-06-11
+- Status: Done
+- Created: 2026-06-11
+- Completed: 2026-06-11
 
 ## Checklist
 

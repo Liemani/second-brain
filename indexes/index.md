@@ -4,6 +4,10 @@
 
 기본적으로 index는 특정 기능 타입에 고정되지 않습니다. thought, idea, issue, task, work_log, decision 등 어떤 item이든 같은 주제라면 함께 담을 수 있습니다.
 
+## Meta
+
+- Scope: thematic index 문서 전체
+
 ## Notes
 
 - [ai.md](ai.md)

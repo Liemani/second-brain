@@ -2,12 +2,17 @@
 
 이 문서는 현재 second brain 전체의 진입점입니다.
 
+## Meta
+
+- Scope: second brain 전체
+
 ## Areas
 
 - [areas](areas/index.md)
 
 ## Operations
 
+- [dreams](dreams/index.md)
 - [thoughts](thoughts/index.md)
 - [ideas](ideas/index.md)
 - [issues](issues/index.md)

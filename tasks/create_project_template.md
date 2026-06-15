@@ -1,16 +1,12 @@
 # project template 만들기
 
-## Status
+project를 시작할 때 복사해서 사용할 template을 만든 기록이다.
 
-Done
+## Meta
 
-## Created
-
-2026-06-09
-
-## Completed
-
-2026-06-09
+- Status: Done
+- Created: 2026-06-09
+- Completed: 2026-06-09
 
 ## Checklist
 
