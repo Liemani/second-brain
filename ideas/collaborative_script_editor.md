@@ -1,11 +1,10 @@
+---
+status: "Open"
+created: "2026-06-10"
+---
 # 함께 대본 편집 프로그램
 
 함께 대본을 편집하는 프로그램 아이디어다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-10
 
 ## Notes
 

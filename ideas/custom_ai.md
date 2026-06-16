@@ -1,13 +1,10 @@
+---
+status: "Open"
+created: "2026-06-12"
+---
 # custom ai
 
 아래 레벨부터 직접 구현하는 custom AI 아이디어다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-12
-- Indexes:
-  - [ai.md](../indexes/ai.md)
 
 ## Notes
 

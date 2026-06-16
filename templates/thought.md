@@ -1,15 +1,15 @@
+---
+status: <Open / Linked / Archived>
+created: YYYY-MM-DD
+related_ideas:
+  - "[<idea title>](../ideas/<idea file>)"
+related_issues:
+  - "[<issue title>](../issues/<issue file>)"
+---
+
 # <생각 제목>
 
-## Meta
-
-- Status: <Open / Linked / Archived>
-- Created: YYYY-MM-DD
-- Indexes:
-  - [<index file>](../indexes/<index file>)
-- Related Ideas:
-  - [<idea file>](../ideas/<idea file>)
-- Related Issues:
-  - [<issue file>](../issues/<issue file>)
+<Role of this document>
 
 ## Notes
 

@@ -1,11 +1,10 @@
+---
+status: "Backlog"
+created: "2026-06-11"
+---
 # 환경 개선
 
 여러 환경 관련 todo를 묶어서 관리하는 상위 task이다.
-
-## Meta
-
-- Status: Backlog
-- Created: 2026-06-11
 
 ## Checklist
 

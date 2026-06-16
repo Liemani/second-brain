@@ -1,16 +1,15 @@
+---
+created: "2026-06-09"
+related_decisions:
+  - "[2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)"
+environment:
+  applied_subject: "macOS 사용자 환경"
+  target: "근무 시간대 주기 화면 캡처 자동화"
+  method: "`launchd + shell script + screencapture`"
+---
 # macOS 화면 기록 자동화 검토
 
 macOS에서 근무 시간 동안 주기적으로 화면을 자동 캡처하는 방식을 검토한 작업 기록이다.
-
-## Meta
-
-- Created: 2026-06-09
-- Related Decisions:
-  - [2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)
-- Environment:
-  - 적용 주체: macOS 사용자 환경
-  - 대상: 근무 시간대 주기 화면 캡처 자동화
-  - 방식: `launchd + shell script + screencapture`
 
 ## 결과
 

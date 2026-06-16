@@ -1,12 +1,11 @@
+---
+status: "Canceled"
+created: "2026-06-09"
+canceled: "2026-06-10"
+---
 # 현재 진행중인 작업 시각화
 
 현재 진행 중인 작업을 시각적으로 파악하는 방식에 대한 task다.
-
-## Meta
-
-- Status: Canceled
-- Created: 2026-06-09
-- Canceled: 2026-06-10
 
 ## Checklist
 

@@ -1,11 +1,10 @@
+---
+status: "Open"
+created: "2026-06-10"
+---
 # git auto push with ai generated commit message
 
 AI가 commit message를 만들고 git push까지 이어가는 아이디어다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-10
 
 ## Notes
 

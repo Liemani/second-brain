@@ -1,16 +1,15 @@
+---
+created: "2026-06-10"
+related_decisions:
+  - "[2026-06-11_index_placement.md](../decisions/2026-06-11_index_placement.md)"
+environment:
+  applied_subject: "second brain 저장소"
+  target: "개인 작업 운영 체계"
+  method: "디렉터리 분리, 링크 재정리, 템플릿 추가"
+---
 # workflow 구조 구축
 
 `workflow/`를 루트 메타 레이어로 분리하고, 작업 운영에 필요한 기본 문서 구조를 정리한 작업 기록이다.
-
-## Meta
-
-- Created: 2026-06-10
-- Related Decisions:
-  - [2026-06-11_index_placement.md](../decisions/2026-06-11_index_placement.md)
-- Environment:
-  - 적용 주체: second brain 저장소
-  - 대상: 개인 작업 운영 체계
-  - 방식: 디렉터리 분리, 링크 재정리, 템플릿 추가
 
 ## 결과
 

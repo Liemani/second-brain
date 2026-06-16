@@ -1,19 +1,18 @@
+---
+status: <Now / Backlog / Done / Canceled>
+created: YYYY-MM-DD
+owner: <human / AI>
+canceled: YYYY-MM-DD
+completed: YYYY-MM-DD
+related_work_logs:
+  - "[<work log title>](../work_logs/<work log file>)"
+related_decisions:
+  - "[<decision title>](../decisions/<decision file>)"
+---
+
 # <작업 제목>
 
-<이 task가 무엇을 다루는지 한두 문장으로 설명>
-
-## Meta
-
-- Status: <Now / Backlog / Done / Canceled>
-- Created: YYYY-MM-DD
-- Canceled: YYYY-MM-DD
-- Completed: YYYY-MM-DD
-- Indexes:
-  - [<index file>](../indexes/<index file>)
-- Related Work Logs:
-  - [<work log file>](../work_logs/<work log file>)
-- Related Decisions:
-  - [<decision file>](../decisions/<decision file>)
+<Role of this document>
 
 ## Checklist
 

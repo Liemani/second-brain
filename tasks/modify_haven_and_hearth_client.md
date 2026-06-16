@@ -1,11 +1,10 @@
+---
+status: "Now"
+created: "2026-06-11"
+---
 # haven and hearth client 개조
 
 `haven and hearth` client 개조 작업을 묶어서 관리하는 상위 task이다.
-
-## Meta
-
-- Status: Now
-- Created: 2026-06-11
 
 ## Checklist
 

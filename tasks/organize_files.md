@@ -1,11 +1,10 @@
+---
+status: "Now"
+created: "2026-06-09"
+---
 # 파일 정리 정도
 
 파일 정리 관련 작업을 묶어서 관리하는 상위 task이다.
-
-## Meta
-
-- Status: Now
-- Created: 2026-06-09
 
 ## Checklist
 

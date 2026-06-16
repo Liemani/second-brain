@@ -1,11 +1,10 @@
+---
+status: "Backlog"
+created: "2026-06-12"
+---
 # workflow template 만들기 for new project
 
 새 프로젝트를 시작할 때 사용할 workflow template을 만드는 task다.
-
-## Meta
-
-- Status: Backlog
-- Created: 2026-06-12
 
 ## Checklist
 

@@ -1,13 +1,10 @@
+---
+status: "Open"
+created: "2026-06-13"
+---
 # 우연히 감정 ai 가 탄생하는 이야기
 
 우연히 감정을 갖게 된 AI에 대한 이야기 아이디어다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-13
-- Indexes:
-  - [ai.md](../indexes/ai.md)
 
 ## Notes
 

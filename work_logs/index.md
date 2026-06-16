@@ -1,10 +1,9 @@
+---
+scope: "work log 문서 전체"
+---
 # Work Logs
 
 이 디렉터리는 실제로 진행한 작업과 그 결과를 개별 문서로 관리하는 곳입니다.
-
-## Meta
-
-- Scope: work log 문서 전체
 
 ## Notes
 

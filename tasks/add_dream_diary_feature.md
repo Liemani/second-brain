@@ -1,12 +1,11 @@
+---
+status: "Done"
+created: "2026-06-15"
+completed: "2026-06-15"
+---
 # 꿈일기를 적기 위한 기능 추가
 
 꿈을 바로 적어둘 수 있는 기록 기능을 second brain 안에 추가한다.
-
-## Meta
-
-- Status: Done
-- Created: 2026-06-15
-- Completed: 2026-06-15
 
 ## Checklist
 

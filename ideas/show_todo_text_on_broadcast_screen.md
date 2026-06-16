@@ -1,11 +1,10 @@
+---
+status: "Open"
+created: "2026-06-13"
+---
 # show task text on broadcast screen
 
 task 텍스트를 방송 화면에 보여주는 기능 아이디어다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-13
 
 ## Notes
 

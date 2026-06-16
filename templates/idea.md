@@ -1,13 +1,13 @@
+---
+status: <Open / Promoted / Dropped>
+created: YYYY-MM-DD
+related_tasks:
+  - "[<task title>](../tasks/<task file>)"
+---
+
 # <아이디어 제목>
 
-## Meta
-
-- Status: <Open / Promoted / Dropped>
-- Created: YYYY-MM-DD
-- Indexes:
-  - [<index file>](../indexes/<index file>)
-- Related Tasks:
-  - [<task file>](../tasks/<task file>)
+<Role of this document>
 
 ## Notes
 

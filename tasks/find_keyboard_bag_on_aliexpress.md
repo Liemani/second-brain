@@ -1,11 +1,10 @@
+---
+status: "Backlog"
+created: "2026-06-12"
+---
 # 알리에서 키보드를 넣고 다닐만한 가방 찾아보기
 
 알리익스프레스에서 키보드를 넣고 다닐만한 가방을 찾는 task다.
-
-## Meta
-
-- Status: Backlog
-- Created: 2026-06-12
 
 ## Checklist
 

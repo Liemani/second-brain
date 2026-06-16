@@ -1,11 +1,10 @@
+---
+status: "Open"
+created: "2026-06-11"
+---
 # issue 관리 도입
 
 issue를 별도 문서로 관리하는 방식을 도입하려는 생각이다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-11
 
 ## Notes
 

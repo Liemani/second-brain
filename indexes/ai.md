@@ -1,21 +1,18 @@
+---
+created: 2026-06-16
+scope: AI 관련 관점
+---
 # AI
 
-이 문서는 AI와 관련된 item을 한 곳에서 보기 위한 인덱스입니다.
+AI 관련 content를 공유된 관점 아래 묶는다.
 
-## Meta
+## Thoughts
 
-- Created: 2026-06-15
-- Scope: AI 관련 item
+- [human_like_thinking_ai_would_be_interesting.md](../thoughts/human_like_thinking_ai_would_be_interesting.md)
+- [transformers_usually_have_to_predict_the_next_token.md](../thoughts/transformers_usually_have_to_predict_the_next_token.md)
 
-## Items
+## Ideas
 
-- thought: [human_like_thinking_ai_would_be_interesting.md](../thoughts/human_like_thinking_ai_would_be_interesting.md)
-- thought: [transformers_usually_have_to_predict_the_next_token.md](../thoughts/transformers_usually_have_to_predict_the_next_token.md)
-- idea: [custom_ai.md](../ideas/custom_ai.md)
-- idea: [ais_living_with_inherited_human_goals.md](../ideas/ais_living_with_inherited_human_goals.md)
-- idea: [emotional_ai_is_born_by_accident.md](../ideas/emotional_ai_is_born_by_accident.md)
-
-## Notes
-
-- AI와 관련된 thoughts와 ideas를 함께 모아둔다.
-- 필요하면 task, dream, decision, work_log도 같은 주제로 추가할 수 있다.
+- [custom_ai.md](../ideas/custom_ai.md)
+- [ais_living_with_inherited_human_goals.md](../ideas/ais_living_with_inherited_human_goals.md)
+- [emotional_ai_is_born_by_accident.md](../ideas/emotional_ai_is_born_by_accident.md)

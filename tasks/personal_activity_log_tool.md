@@ -1,12 +1,11 @@
+---
+status: "Canceled"
+created: "2026-06-09"
+canceled: "2026-06-10"
+---
 # 개인용 작업 로그 도구 설계
 
 내가 무엇을 했는지 기록하는 개인용 작업 로그 도구를 설계하는 task다.
-
-## Meta
-
-- Status: Canceled
-- Created: 2026-06-09
-- Canceled: 2026-06-10
 
 ## Checklist
 

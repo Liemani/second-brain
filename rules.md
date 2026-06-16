@@ -4,19 +4,31 @@
 
 ## Roles
 
+- `schemas`: template을 설명하는 metadata를 담는다. 이 저장소에서는 `templates/*.schema.md`로 관리한다.
 - `dreams/`: 꿈일기를 별도 문서로 기록한다. thoughts와 분리하며, 잠에서 깬 직후 기록하는 흐름을 우선한다.
 - `thoughts/`: 문득 든 생각을 자유롭게 기록한다. idea나 issue로 이어질 수도 있지만, 그럴 필요는 없다.
 - `ideas/`: 아직 task로 확정되지 않은 생각과 가능성을 관리한다.
 - `issues/`: 아직 해결되지 않은 문제, 불편, 리스크를 관리한다.
 - `tasks/`: 작업을 관리한다. 실제 실행 단위는 각 task 안의 checklist 항목으로 둔다.
+- `protocols/`: object 간 상태 전환과 반복 가능한 행동 절차를 관리한다.
+- `indexes/`: 공유된 관점 아래 문서를 묶는 인덱스를 관리한다.
 - `work_logs/`: 실제로 한 작업과 그 결과를 기록한다.
 - `decisions/`: 시도와 판단을 바탕으로 내린 결정을 기록한다.
-- `templates/`: 새 문서를 만들 때 사용하는 템플릿을 둔다.
+- `templates/`: 새 문서를 만들 때 사용하는 템플릿과 schema를 둔다.
 
 ## Meta
 
-- item 문서는 상태, 날짜, 링크를 `Meta` 블록에 모은다.
+- item 문서는 날짜, 링크, 필요할 때의 lifecycle field를 YAML frontmatter에 모은다.
 - `task`의 checklist 항목에는 상태 표시와 날짜를 함께 적는다.
+- schema는 template의 fields, sections, 관계, 진화를 설명한다.
+- protocol은 object와 rule 사이에서 실제 전환 절차를 다룬다.
+
+## Layers
+
+1. Objects are knowledge containers.
+2. Schemas describe templates.
+3. Protocols describe actions and state transitions.
+4. Rules describe system-wide constraints.
 
 ## Basic Flow
 
@@ -24,10 +36,11 @@
 2. 해결해야 할 문제나 불편이면 `issues/`에 이슈를 만든다.
 3. 꿈에서 기억난 내용을 남기려면 `dreams/`에 기록한다.
 4. 실제 작업은 `tasks/`에 만든다.
-5. 세부 실행 항목은 각 task 안의 checklist로 관리한다.
-6. 실제로 무언가를 해보면 `work_logs/`에 작업 진행 기록을 남긴다.
-7. 시도 결과를 바탕으로 방향을 정하면 `decisions/`에 결정을 남긴다.
-8. 필요하면 task에서 관련 work log와 decision을 링크한다.
+5. 상태 전환이나 반복 절차가 필요하면 `protocols/`에 기록한다.
+6. 세부 실행 항목은 각 task 안의 checklist로 관리한다.
+7. 실제로 무언가를 해보면 `work_logs/`에 작업 진행 기록을 남긴다.
+8. 시도 결과를 바탕으로 방향을 정하면 `decisions/`에 결정을 남긴다.
+9. 필요하면 task에서 관련 work log와 decision을 링크한다.
 
 ## Linking Rules
 
@@ -35,6 +48,7 @@
 - thought는 필요하면 관련 idea나 issue를 가질 수 있다.
 - issue는 관련 task와 decision을 가질 수 있다.
 - task는 checklist, work log, decision을 함께 관리한다.
+- protocol은 task, work log, decision, idea 간의 상태 전환 규칙을 연결할 수 있다.
 - decision은 근거가 된 work log를 링크하는 것을 기본으로 한다.
 - work log는 필요하면 관련 task를 링크할 수 있다.
 
@@ -48,3 +62,4 @@
 
 - 이 문서들은 현재 second brain의 핵심 작업 영역을 구성한다.
 - `legacy/`와 `areas/`는 주제와 자료를 다루고, 여기의 문서들은 작업 운영 자체를 다룬다.
+- `protocols/`는 객체와 규칙 사이에서 실제 전환 절차를 다룬다.

@@ -1,13 +1,15 @@
+---
+status: <Open / Promoted / Closed / Dropped>
+created: YYYY-MM-DD
+related_tasks:
+  - "[<task title>](../tasks/<task file>)"
+related_decisions:
+  - "[<decision title>](../decisions/<decision file>)"
+---
+
 # <이슈 제목>
 
-## Meta
-
-- Status: <Open / Promoted / Closed / Dropped>
-- Created: YYYY-MM-DD
-- Related Tasks:
-  - [<task file>](../tasks/<task file>)
-- Related Decisions:
-  - [<decision file>](../decisions/<decision file>)
+<Role of this document>
 
 ## Notes
 

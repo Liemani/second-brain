@@ -1,13 +1,10 @@
+---
+status: "Open"
+created: "2026-06-13"
+---
 # 트랜스포머는 보통 다음 단어를 반드시 예측하게 되어 있지 않나
 
 트랜스포머 구조가 생각과 발화를 붙여 놓는 경향이 있다는 생각이다.
-
-## Meta
-
-- Status: Open
-- Created: 2026-06-13
-- Indexes:
-  - [ai.md](../indexes/ai.md)
 
 ## Notes
 

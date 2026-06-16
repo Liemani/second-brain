@@ -1,17 +1,14 @@
+---
+created: YYYY-MM-DD
+related_thoughts:
+  - "[<thought title>](../thoughts/<thought file>)"
+related_ideas:
+  - "[<idea title>](../ideas/<idea file>)"
+---
+
 # <꿈 제목>
 
-꿈에서 기억나는 장면이나 흐름을 기록하는 템플릿
-
-## Meta
-
-- Status: <Recorded / Linked / Archived>
-- Created: YYYY-MM-DD
-- Indexes:
-  - [<index file>](../indexes/<index file>)
-- Related Thoughts:
-  - [<thought file>](../thoughts/<thought file>)
-- Related Ideas:
-  - [<idea file>](../ideas/<idea file>)
+<Role of this document>
 
 ## Notes
 
