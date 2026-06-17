@@ -1,20 +1,11 @@
+---
+status: <Open / Promoted / Closed / Dropped>
+created: YYYY-MM-DD
+---
+
 # <이슈 제목>
 
-## Status
-
-<Open / Promoted / Closed / Dropped>
-
-## Created
-
-YYYY-MM-DD
-
-## Related Tasks
-
-- [<task file>](../tasks/<task file>)
-
-## Related Decisions
-
-- [<decision file>](../decisions/<decision file>)
+<Role of this document>
 
 ## Notes
 

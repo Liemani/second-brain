@@ -1,16 +1,11 @@
+---
+status: <Open / Promoted / Dropped>
+created: YYYY-MM-DD
+---
+
 # <아이디어 제목>
 
-## Status
-
-<Open / Promoted / Dropped>
-
-## Created
-
-YYYY-MM-DD
-
-## Related Tasks
-
-- [<task file>](../tasks/<task file>)
+<Role of this document>
 
 ## Notes
 

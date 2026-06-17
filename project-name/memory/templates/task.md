@@ -1,30 +1,24 @@
+---
+status: <Now / Backlog / Done / Canceled>
+created: YYYY-MM-DD
+canceled: YYYY-MM-DD
+completed: YYYY-MM-DD
+related_work_logs:
+  - "[<work log title>](../work_logs/<work log file>)"
+related_decisions:
+  - "[<decision title>](../decisions/<decision file>)"
+---
+
 # <작업 제목>
 
-<이 task가 어떤 목표 아래 여러 todo를 묶는지 한두 문장으로 설명>
+<Role of this document>
 
-## Status
+## Checklist
 
-<Now / Backlog / Done>
-
-## Created
-
-YYYY-MM-DD
-
-## Completed
-
-YYYY-MM-DD
-
-## Related Work Logs
-
-- [<work log file>](../work_logs/<work log file>)
-
-## Related Todos
-
-- [<todo file>](../todos/<todo file>)
-
-## Related Decisions
-
-- [<decision file>](../decisions/<decision file>)
+- [ ] <아직 하지 않은 실행 항목> (YYYY-MM-DD)
+- [~] <진행 중인 실행 항목> (YYYY-MM-DD)
+- [x] <완료한 실행 항목> (YYYY-MM-DD)
+- [-] <취소한 실행 항목> (YYYY-MM-DD)
 
 ## Notes
 

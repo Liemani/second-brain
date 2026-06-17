@@ -1,6 +1,12 @@
+---
+created: YYYY-MM-DD
+related_tasks:
+  - "[<task title>](../tasks/<task file>)"
+---
+
 # <작업 기록 제목>
 
-<이 작업 기록이 무엇을 다루는지 한두 문장으로 설명>
+<Role of this document>
 
 ## 결과
 
@@ -8,8 +14,7 @@
 
 ## 환경
 
-- 적용 날짜: YYYY-MM-DD
-- 적용 주체: <예: 서버 `hermes` 계정>
+- 적용 대상: <예: 서버 `hermes` 계정>
 - 대상: <예: 조직, 계정, 시스템, 서비스>
 - 방식: <예: 인증 방식, 적용 방식>
 

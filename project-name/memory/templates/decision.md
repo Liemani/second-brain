@@ -1,14 +1,10 @@
+---
+created: YYYY-MM-DD
+---
+
 # <결정 제목>
 
-<이 결정이 무엇에 대한 것인지 한두 문장으로 설명>
-
-## Related Work Logs
-
-- [<work log file>](../work_logs/<work log file>)
-
-## Related Tasks
-
-- [<task file>](../tasks/<task file>)
+<Role of this document>
 
 ## 결정
 
