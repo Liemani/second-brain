@@ -77,11 +77,6 @@ Behavior:
 - Record why it arose and what it may connect to later.
 - Keep the note short enough to revisit.
 
-## Extensible Fields
-
-- source
-- tags
-
 ## Conventions
 
 - Preserve the raw observation or hunch.

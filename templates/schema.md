@@ -2,7 +2,6 @@
 created: YYYY-MM-DD
 related_template: "[<template file>](<template file>)"
 status: <Draft / Stable / Deprecated>
-owner: <human / AI>
 ---
 
 # <Object Name> Schema
@@ -62,10 +61,6 @@ Behavior:
 
 - <what this section does>
 - <how it should behave>
-
-## Extensible Fields
-
-- <future field>
 
 ## Conventions
 

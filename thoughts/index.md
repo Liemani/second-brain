@@ -1,14 +1,14 @@
 ---
-scope: "thought 문서 전체"
+created: 2026-06-11
 ---
 # Thoughts
 
-이 디렉터리는 아이디어나 이슈로 정리되기 전의 생각을 개별 문서로 관리하는 곳입니다.
+초기 생각을 모은다.
 
 ## Open
 
-- [about_dark_adaptation_and_bright_light_blindness.md](about_dark_adaptation_and_bright_light_blindness.md)
-- [introduce_thought_tracking.md](introduce_thought_tracking.md)
-- [human_like_thinking_ai_would_be_interesting.md](human_like_thinking_ai_would_be_interesting.md)
-- [about_detecting_a_single_photon.md](about_detecting_a_single_photon.md)
-- [transformers_usually_have_to_predict_the_next_token.md](transformers_usually_have_to_predict_the_next_token.md)
+- [about_dark_adaptation_and_bright_light_blindness.md](about_dark_adaptation_and_bright_light_blindness.md): 어두운 곳 뒤 밝은 빛 적응에 대한 생각
+- [introduce_thought_tracking.md](introduce_thought_tracking.md): thought 관리 도입
+- [human_like_thinking_ai_would_be_interesting.md](human_like_thinking_ai_would_be_interesting.md): 사람처럼 사고하는 AI에 대한 생각
+- [about_detecting_a_single_photon.md](about_detecting_a_single_photon.md): 광자 하나 측정에 대한 생각
+- [transformers_usually_have_to_predict_the_next_token.md](transformers_usually_have_to_predict_the_next_token.md): 다음 단어 예측에 대한 생각

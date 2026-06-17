@@ -26,7 +26,7 @@ environment:
 ### 2. 진입점과 규칙 정리
 
 1. `workflow/index.md`를 만들어 진입점을 만들었다.
-2. `workflow/rules.md`를 추가해 `task`, `work log`, `decision`의 역할과 흐름을 정리했다.
+2. `workflow`의 운영 제약을 정리하는 문서를 추가해 `task`, `work log`, `decision`의 역할과 흐름을 정리했다.
 3. `workflow`는 `second brain` 내용 흐름과 별개라는 경계를 문서화했다.
 
 ### 3. 템플릿 보강

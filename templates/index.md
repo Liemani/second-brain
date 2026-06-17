@@ -1,18 +1,17 @@
 ---
 created: YYYY-MM-DD
-scope: <optional short perspective summary>
 ---
 
 # <Index Title>
 
-<Role of this document>
+<Short role description>
 
-## <Perspective or topic>
+## <Group>
 
-- [<document title>](../<folder>/<file>)
-- [<document title>](../<folder>/<file>)
+- [<document title>](../<folder>/<file>): <short role>
+- [<document title>](../<folder>/<file>): <short role>
 
-## <Another perspective or topic>
+## <Group>
 
-- [<document title>](../<folder>/<file>)
-- [<document title>](../<folder>/<file>)
+- [<document title>](../<folder>/<file>): <short role>
+- [<document title>](../<folder>/<file>): <short role>

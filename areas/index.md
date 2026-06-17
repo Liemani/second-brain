@@ -1,13 +1,13 @@
 ---
-scope: "area 문서 전체"
+created: 2026-06-12
 ---
 # Areas
 
-이 문서는 second brain 안의 주제별 문서 영역을 안내합니다.
+주제별 문서 영역을 모은다.
 
-## Notes
+## Areas
 
-- [broadcast_setup](broadcast_setup/index.md)
-- [portfolio](portfolio/index.md)
-- [register.txt](register.txt)
-- [log.txt](log.txt)
+- [broadcast_setup](broadcast_setup/index.md): 방송 환경 관련 자료
+- [portfolio](portfolio/index.md): 포트폴리오 관련 자료
+- [register.txt](register.txt): 등록 관련 기록
+- [log.txt](log.txt): 로그 기록

@@ -1,12 +1,12 @@
 ---
-scope: protocol 문서 전체
+created: 2026-06-16
 ---
 
 # Protocols
 
-이 디렉터리는 second brain에서 인간과 AI가 함께 따를 수 있는 공유 행동 프로토콜을 모아둔다.
+공유 절차를 모은다.
 
 ## Shared Protocols
 
-- [promote_idea_to_task.md](promote_idea_to_task.md)
-- [create_work_log.md](create_work_log.md)
+- [promote_idea_to_task.md](promote_idea_to_task.md): idea를 task로 올리는 절차
+- [create_work_log.md](create_work_log.md): work log를 만드는 절차

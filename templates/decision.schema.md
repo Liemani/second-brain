@@ -78,11 +78,6 @@ Behavior:
 - Describe what changes because of this decision.
 - Record downstream consequences or constraints.
 
-## Extensible Fields
-
-- tags
-- source
-
 ## Conventions
 
 - State the decision plainly in the `결정` section.

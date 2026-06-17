@@ -1,7 +1,6 @@
 ---
 status: <Now / Backlog / Done / Canceled>
 created: YYYY-MM-DD
-owner: <human / AI>
 canceled: YYYY-MM-DD
 completed: YYYY-MM-DD
 related_work_logs:

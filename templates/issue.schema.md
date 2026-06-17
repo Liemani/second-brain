@@ -79,12 +79,6 @@ Behavior:
 - Record why it matters and what is known.
 - Keep proposed solutions separate until they are chosen.
 
-## Extensible Fields
-
-- severity
-- impact
-- tags
-
 ## Conventions
 
 - Describe the problem first, not the fix.

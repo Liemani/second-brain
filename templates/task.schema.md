@@ -97,20 +97,6 @@ Format:
 
 - `"[Decision Title](../decisions/decision_file.md)"`
 
-### owner (optional)
-
-Meaning:
-
-- The human or AI agent responsible for the task.
-
-Condition:
-
-- When ownership matters for execution.
-
-Format:
-
-- Short name, handle, or agent label.
-
 ## Body Sections
 
 ### Checklist (required)
@@ -136,12 +122,6 @@ Behavior:
 
 - Record extra context, constraints, or reminders.
 - Keep it separate from executable checklist items.
-
-## Extensible Fields
-
-- priority
-- due
-- related_protocols
 
 ## Conventions
 

@@ -63,12 +63,6 @@ Behavior:
 - Keep enough context to judge whether it should become a task later.
 - Do not force execution before it is ready.
 
-## Extensible Fields
-
-- source
-- tags
-- priority
-
 ## Conventions
 
 - Keep the idea specific enough to discuss, but not forced into execution too early.

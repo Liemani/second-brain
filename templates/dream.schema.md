@@ -65,11 +65,6 @@ Behavior:
 - Preserve remembered scenes, feelings, and sequence.
 - Keep interpretation separate if added later.
 
-## Extensible Fields
-
-- mood
-- tags
-
 ## Conventions
 
 - Record the dream as soon as possible after waking.

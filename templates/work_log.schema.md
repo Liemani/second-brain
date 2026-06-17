@@ -90,11 +90,6 @@ Behavior:
 - Separate expected result, actual result, likely cause, and next ideas.
 - Preserve failures and partial results.
 
-## Extensible Fields
-
-- tags
-- source
-
 ## Conventions
 
 - Write the result first.

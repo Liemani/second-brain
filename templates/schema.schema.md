@@ -61,34 +61,6 @@ Allowed values:
 - `Stable`
 - `Deprecated`
 
-### owner (optional)
-
-Meaning:
-
-- Human or AI responsible for maintaining the schema.
-
-Applicability:
-
-- Use when ownership improves coordination or accountability.
-
-Format:
-
-- Short name, handle, or agent label.
-
-### <field name> (optional)
-
-Meaning:
-
-- <meaning>
-
-Applicability:
-
-- <when it should be used>
-
-Format:
-
-- <format>
-
 ## Body Sections
 
 ### Role (required)
@@ -117,12 +89,6 @@ Behavior:
 - Define the markdown body sections that belong to the related template.
 - Describe how each section should be used.
 
-### Extensible Fields (optional)
-
-Behavior:
-
-- List future fields that may be added later.
-
 ### Conventions (optional)
 
 Behavior:
@@ -135,16 +101,11 @@ Behavior:
 
 - Record additional considerations, cautions, or implementation notes.
 
-## Extensible Fields
-
-- status
-- tags
-
 ## Conventions
 
 - Keep the schema specific to the related template.
 - Do not treat this file as inherited defaults for every object.
-- `created`, `related_template`, `status`, and `owner` are common schema-document fields, not automatic object fields.
+- `created`, `related_template`, and `status` are common schema-document fields, not automatic object fields.
 
 ## Notes
 
