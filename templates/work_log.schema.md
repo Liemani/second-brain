@@ -55,18 +55,6 @@ Format:
 
 - `"[Decision Title](../decisions/decision_file.md)"`
 
-### environment (required)
-
-Meaning:
-
-- Structured execution context for the work log.
-
-Structure:
-
-- `applied_subject` (required)
-- `target` (required)
-- `method` (required)
-
 ## Body Sections
 
 ### 결과 (required)
@@ -82,6 +70,19 @@ Behavior:
 
 - Record the sequence of actions in order.
 - Keep the steps factual and readable.
+
+### 환경 (required)
+
+Behavior:
+
+- Record the execution context before the procedure.
+- Keep the subject, target, and method explicit.
+
+Structure:
+
+- `applied_subject`
+- `target`
+- `method`
 
 ### 결과 상세 (required)
 

@@ -2,10 +2,6 @@
 created: "2026-06-09"
 related_decisions:
   - "[2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)"
-environment:
-  applied_subject: "macOS 사용자 환경"
-  target: "근무 시간대 주기 화면 캡처 자동화"
-  method: "`launchd + shell script + screencapture`"
 ---
 # macOS 화면 기록 자동화 검토
 
@@ -14,6 +10,12 @@ macOS에서 근무 시간 동안 주기적으로 화면을 자동 캡처하는 �
 ## 결과
 
 `launchd + shell script + screencapture` 구조는 현재 macOS 보안 정책 하에서 GUI 화면 캡처 자동화 방식으로 안정적으로 동작하지 않았다.
+
+## 환경
+
+- 적용 대상: `macOS 사용자 환경`
+- 대상: `근무 시간대 주기 화면 캡처 자동화`
+- 방식: `launchd + shell script + screencapture`
 
 ## 수행 절차
 

@@ -4,10 +4,6 @@ related_tasks:
   - "[<task title>](../tasks/<task file>)"
 related_decisions:
   - "[<decision title>](../decisions/<decision file>)"
-environment:
-  applied_subject: <예: 서버 `hermes` 계정>
-  target: <예: 조직, 계정, 시스템, 서비스>
-  method: <예: 인증 방식, 적용 방식>
 ---
 
 # <작업 기록 제목>
@@ -17,6 +13,12 @@ environment:
 ## 결과
 
 <가장 핵심적인 결과 한 줄>
+
+## 환경
+
+- 적용 대상: <예: 서버 `hermes` 계정>
+- 대상: <예: 조직, 계정, 시스템, 서비스>
+- 방식: <예: 인증 방식, 적용 방식>
 
 ## 수행 절차
 

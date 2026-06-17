@@ -2,10 +2,6 @@
 created: "2026-06-10"
 related_decisions:
   - "[2026-06-11_index_placement.md](../decisions/2026-06-11_index_placement.md)"
-environment:
-  applied_subject: "second brain 저장소"
-  target: "개인 작업 운영 체계"
-  method: "디렉터리 분리, 링크 재정리, 템플릿 추가"
 ---
 # workflow 구조 구축
 
@@ -14,6 +10,12 @@ environment:
 ## 결과
 
 `workflow/` 아래에 `tasks`, `work_logs`, `decisions`, `templates`와 각 진입 문서를 두는 구조를 만들었다.
+
+## 환경
+
+- 적용 대상: `second brain 저장소`
+- 대상: `개인 작업 운영 체계`
+- 방식: `디렉터리 분리, 링크 재정리, 템플릿 추가`
 
 ## 수행 절차
 
