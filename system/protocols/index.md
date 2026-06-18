@@ -4,7 +4,7 @@ created: 2026-06-16
 
 # Protocols
 
-공유 절차를 모은다.
+공유 절차
 
 ## Shared Protocols
 

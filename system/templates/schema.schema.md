@@ -5,8 +5,6 @@ related_template: "[schema.md](schema.md)"
 
 # Schema Schema
 
-## Role
-
 Schema documents define how object templates should be written and interpreted.
 
 ## Relationships
@@ -62,12 +60,6 @@ Allowed values:
 - `Deprecated`
 
 ## Body Sections
-
-### Role (required)
-
-Behavior:
-
-- Describe the responsibility of the related template.
 
 ### Relationships (required)
 

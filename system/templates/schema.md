@@ -6,15 +6,11 @@ status: <Draft / Stable / Deprecated>
 
 # <Object Name> Schema
 
-<Role of this document>
-
-## Role
-
-<what responsibility this object has inside the system>
+<Short role description>
 
 ## Relationships
 
-<how this schema relates to related templates, protocols, or other objects>
+- <how this schema relates to related templates, protocols, or other objects>
 
 ## Frontmatter Fields
 

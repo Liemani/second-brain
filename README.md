@@ -5,5 +5,5 @@
 ## Start Here
 
 - 구조 탐색: [index.md](index.md)
-- 설계 원칙: [PHILOSOPHY.md](PHILOSOPHY.md)
+- 운영 레이어: [system/index.md](system/index.md)
 - AI onboarding: [AGENTS.md](AGENTS.md)

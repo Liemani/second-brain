@@ -5,9 +5,7 @@ related_template: "[index.md](index.md)"
 
 # Index Schema
 
-## Role
-
-Index documents provide a short role description and useful navigation links.
+Index documents describe what scope they cover and provide useful navigation links.
 
 ## Relationships
 
@@ -35,14 +33,14 @@ Format:
 
 Behavior:
 
-- Start with a short role description, then group links when that helps readability.
+- Start with a short scope description, then group links when that helps readability.
 - Choose section names that fit the navigation purpose.
 - Link directly to the source documents.
 - Mix document types when that makes the grouping useful.
 
 ## Conventions
 
-- Start with role, then navigation.
+- Start with scope, then navigation.
 - Group when it improves readability.
 - Do not treat an index as a substitute for the source documents.
 - Add links only when the grouping is useful.

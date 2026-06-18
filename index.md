@@ -1,6 +1,10 @@
+---
+created: 2026-06-17
+---
+
 # Index
 
-이 문서는 현재 second brain 전체의 진입점입니다.
+이 문서는 second brain 전체를 탐색하기 위한 진입점입니다.
 
 ## Areas
 
@@ -22,13 +26,12 @@
 
 ## Procedures
 
-- [protocols](protocols/index.md): Shared procedures for ambiguous or repeatable actions.
+- [protocols](system/protocols/index.md): Shared procedures for ambiguous or repeatable actions.
 
-## Governance
+## System
 
 - [AGENTS.md](AGENTS.md): onboarding bootstrap for new AI agents.
-- [PHILOSOPHY.md](PHILOSOPHY.md): design principles behind the second-brain system.
-- [templates](templates): Reusable document structures and their schemas.
+- [system](system/index.md): operating layer with philosophy, templates, and protocols.
 
 ## Legacy
 

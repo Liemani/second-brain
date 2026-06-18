@@ -3,18 +3,18 @@ created: 2026-06-11
 ---
 # Tasks
 
-실행 가능한 작업을 모은다.
+실행 가능한 작업
 
 ## Now
 
 - [organize_files.md](organize_files.md): 현재 정리 작업
 - [modify_haven_and_hearth_client.md](modify_haven_and_hearth_client.md): haven and hearth client 수정
+- [environment_improvement.md](environment_improvement.md): 환경 개선
 
 ## Backlog
 
 - [add_periodic_git_push_for_second_brain.md](add_periodic_git_push_for_second_brain.md): 정기 git push
 - [create_workflow_template_for_new_project.md](create_workflow_template_for_new_project.md): 새 프로젝트 workflow template
-- [environment_improvement.md](environment_improvement.md): 환경 개선
 - [find_keyboard_bag_on_aliexpress.md](find_keyboard_bag_on_aliexpress.md): 키보드 가방 찾기
 - [remove_terminal_screen_record_permission_and_restart.md](remove_terminal_screen_record_permission_and_restart.md): terminal screen record permission 정리
 

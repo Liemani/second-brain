@@ -1,7 +1,5 @@
 ---
 created: "2026-06-11"
-related_work_logs:
-  - "[workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)"
 ---
 # index 배치 방식 결정
 

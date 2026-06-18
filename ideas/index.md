@@ -3,7 +3,7 @@ created: 2026-06-11
 ---
 # Ideas
 
-아직 task가 아닌 아이디어를 모은다.
+아직 task가 아닌 아이디어
 
 ## Open
 

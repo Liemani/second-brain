@@ -6,8 +6,6 @@ related_template: "[task.md](task.md)"
 
 # Task Schema
 
-## Role
-
 The task is the main execution container in the system.
 
 ## Relationships

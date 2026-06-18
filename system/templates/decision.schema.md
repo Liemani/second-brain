@@ -6,14 +6,7 @@ related_template: "[decision.md](decision.md)"
 
 # Decision Schema
 
-## Role
-
 Decisions capture the stable outcome of reasoning so later work can follow the chosen direction.
-
-## Relationships
-
-- `work_log` can provide the evidence behind a decision.
-- `task` can reference a decision when execution should follow a chosen direction.
 
 ## Frontmatter Fields
 
@@ -26,34 +19,6 @@ Meaning:
 Format:
 
 `YYYY-MM-DD`
-
-### related_work_logs (optional)
-
-Meaning:
-
-- Markdown links to work logs that support the decision.
-
-Condition:
-
-- When evidence exists in work logs.
-
-Format:
-
-- `"[Work Log Title](../work_logs/work_log_file.md)"`
-
-### related_tasks (optional)
-
-Meaning:
-
-- Markdown links to tasks that follow from the decision.
-
-Condition:
-
-- When execution follows from the decision.
-
-Format:
-
-- `"[Task Title](../tasks/task_file.md)"`
 
 ## Body Sections
 

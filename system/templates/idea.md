@@ -1,8 +1,6 @@
 ---
 status: <Open / Promoted / Dropped>
 created: YYYY-MM-DD
-related_tasks:
-  - "[<task title>](../tasks/<task file>)"
 ---
 
 # <아이디어 제목>

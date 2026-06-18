@@ -6,14 +6,11 @@ related_template: "[work_log.md](work_log.md)"
 
 # Work Log Schema
 
-## Role
-
 Work logs document what happened so later work can reuse the evidence.
 
 ## Relationships
 
 - `task` can be linked to a work log created via `create_work_log`.
-- `decision` can point to a work log that provided evidence for a choice.
 
 ## Frontmatter Fields
 
@@ -40,20 +37,6 @@ Condition:
 Format:
 
 - `"[Task Title](../tasks/task_file.md)"`
-
-### related_decisions (optional)
-
-Meaning:
-
-- Markdown links to decisions supported by the work log.
-
-Condition:
-
-- When the work log provides evidence for a decision.
-
-Format:
-
-- `"[Decision Title](../decisions/decision_file.md)"`
 
 ## Body Sections
 

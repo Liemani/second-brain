@@ -1,7 +1,5 @@
 ---
 created: "2026-06-10"
-related_work_logs:
-  - "[screen_capture_automation_work_log_2026-06-09.md](../work_logs/screen_capture_automation_work_log_2026-06-09.md)"
 ---
 # 기록 방식 결정
 

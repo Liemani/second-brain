@@ -3,7 +3,7 @@ created: 2026-06-13
 ---
 # AI
 
-AI 관련 문서를 묶는다.
+AI 관련 문서
 
 ## Thoughts
 

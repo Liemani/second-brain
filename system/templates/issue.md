@@ -1,10 +1,6 @@
 ---
 status: <Open / Promoted / Closed / Dropped>
 created: YYYY-MM-DD
-related_tasks:
-  - "[<task title>](../tasks/<task file>)"
-related_decisions:
-  - "[<decision title>](../decisions/<decision file>)"
 ---
 
 # <이슈 제목>

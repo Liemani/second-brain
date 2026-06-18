@@ -1,7 +1,5 @@
 ---
 created: "2026-06-09"
-related_decisions:
-  - "[2026-06-10_recording_strategy.md](../decisions/2026-06-10_recording_strategy.md)"
 ---
 # macOS 화면 기록 자동화 검토
 

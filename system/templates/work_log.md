@@ -2,8 +2,6 @@
 created: YYYY-MM-DD
 related_tasks:
   - "[<task title>](../tasks/<task file>)"
-related_decisions:
-  - "[<decision title>](../decisions/<decision file>)"
 ---
 
 # <작업 기록 제목>

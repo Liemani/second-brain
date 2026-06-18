@@ -4,7 +4,7 @@ created: YYYY-MM-DD
 
 # <Index Title>
 
-<Short role description>
+<Short scope description>
 
 ## <Group>
 

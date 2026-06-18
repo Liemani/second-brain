@@ -6,8 +6,6 @@ related_template: "[dream.md](dream.md)"
 
 # Dream Schema
 
-## Role
-
 Dreams are separate from thoughts and act as a dedicated capture surface for sleep narratives.
 
 ## Relationships

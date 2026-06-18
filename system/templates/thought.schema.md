@@ -6,8 +6,6 @@ related_template: "[thought.md](thought.md)"
 
 # Thought Schema
 
-## Role
-
 Thoughts are the earliest reusable unit of the knowledge system.
 
 ## Relationships

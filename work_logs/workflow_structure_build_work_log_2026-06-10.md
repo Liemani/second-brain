@@ -1,7 +1,5 @@
 ---
 created: "2026-06-10"
-related_decisions:
-  - "[2026-06-11_index_placement.md](../decisions/2026-06-11_index_placement.md)"
 ---
 # workflow 구조 구축
 

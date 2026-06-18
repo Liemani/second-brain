@@ -6,14 +6,11 @@ related_template: "[idea.md](idea.md)"
 
 # Idea Schema
 
-## Role
-
 Ideas bridge early thought and later execution.
 
 ## Relationships
 
 - `thought` can lead into an idea when an unstructured observation becomes more concrete.
-- `task` can be created from an idea via `promote_idea_to_task`.
 
 ## Frontmatter Fields
 
@@ -38,20 +35,6 @@ Meaning:
 Format:
 
 `YYYY-MM-DD`
-
-### related_tasks (optional)
-
-Meaning:
-
-- Markdown links to tasks promoted from or connected to this idea.
-
-Condition:
-
-- When the idea becomes a task via `promote_idea_to_task`.
-
-Format:
-
-- `"[Task Title](../tasks/task_file.md)"`
 
 ## Body Sections
 

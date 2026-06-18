@@ -3,7 +3,7 @@ created: 2026-06-11
 ---
 # Decisions
 
-내린 결정을 모은다.
+내린 결정
 
 ## Decisions
 

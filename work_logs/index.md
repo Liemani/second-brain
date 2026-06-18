@@ -3,7 +3,7 @@ created: 2026-06-11
 ---
 # Work Logs
 
-실행 결과를 모은다.
+실행 결과
 
 ## Work Logs
 

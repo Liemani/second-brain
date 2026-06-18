@@ -1,5 +1,5 @@
 ---
-status: "Backlog"
+status: "Now"
 created: "2026-06-11"
 ---
 # 환경 개선
@@ -10,6 +10,7 @@ created: "2026-06-11"
 
 - [ ] `bin/`을 `PATH`에 추가하는 것 대신 `.local/bin` 등에 link를 만드는 방식 검토 (2026-06-11)
 - [ ] codex session과 path 정보를 저장하고 기존 session을 활용해 codex 실행하는 방식 정리 (2026-06-15)
+- [ ] 소개 페이지 만들기 (2026-06-17)
 - [x] second brain의 template에 공통 `meta`를 추가하는 방식 정리 (2026-06-15)
 - [x] todo 기능 추가 (2026-06-11)
 
