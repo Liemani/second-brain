@@ -6,8 +6,6 @@ related_template: "[decision.md](decision.md)"
 
 # Decision Schema
 
-## Role
-
 Decisions capture the stable outcome of reasoning so later work can follow the chosen direction.
 
 ## Frontmatter Fields

@@ -6,8 +6,6 @@ related_template: "[issue.md](issue.md)"
 
 # Issue Schema
 
-## Role
-
 Issues hold the problem statement before it becomes a task or a decision.
 
 ## Relationships

@@ -6,8 +6,6 @@ related_template: "[idea.md](idea.md)"
 
 # Idea Schema
 
-## Role
-
 Ideas bridge early thought and later execution.
 
 ## Relationships

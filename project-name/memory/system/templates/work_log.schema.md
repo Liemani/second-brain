@@ -6,8 +6,6 @@ related_template: "[work_log.md](work_log.md)"
 
 # Work Log Schema
 
-## Role
-
 Work logs document what happened so later work can reuse the evidence.
 
 ## Relationships

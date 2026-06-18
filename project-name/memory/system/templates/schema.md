@@ -8,13 +8,9 @@ status: <Draft / Stable / Deprecated>
 
 <Role of this document>
 
-## Role
-
-<what responsibility this object has inside the system>
-
 ## Relationships
 
-<how this schema relates to related templates, protocols, or other objects>
+- <how this schema relates to related templates, protocols, or other objects>
 
 ## Frontmatter Fields
 

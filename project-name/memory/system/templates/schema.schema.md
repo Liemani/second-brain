@@ -5,8 +5,6 @@ related_template: "[schema.md](schema.md)"
 
 # Schema Schema
 
-## Role
-
 Schema documents define how object templates should be written and interpreted.
 
 ## Relationships
