@@ -1,7 +1,7 @@
 ---
 created: YYYY-MM-DD
 related_tasks:
-  - "[<task title>](../tasks/<task file>)"
+  - "[<task title>](../../records/tasks/<task file>)"
 ---
 
 # <작업 기록 제목>

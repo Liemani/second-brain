@@ -5,5 +5,6 @@
 ## Start Here
 
 - 구조 탐색: [index.md](index.md)
+- 기록 문서: [records](records)
 - 운영 레이어: [system/index.md](system/index.md)
 - AI onboarding: [AGENTS.md](AGENTS.md)

@@ -1,9 +1,9 @@
 ---
 created: YYYY-MM-DD
 related_thoughts:
-  - "[<thought title>](../thoughts/<thought file>)"
+  - "[<thought title>](../../records/thoughts/<thought file>)"
 related_ideas:
-  - "[<idea title>](../ideas/<idea file>)"
+  - "[<idea title>](../../records/ideas/<idea file>)"
 ---
 
 # <꿈 제목>

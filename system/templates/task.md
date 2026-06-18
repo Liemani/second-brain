@@ -4,9 +4,9 @@ created: YYYY-MM-DD
 canceled: YYYY-MM-DD
 completed: YYYY-MM-DD
 related_work_logs:
-  - "[<work log title>](../work_logs/<work log file>)"
+  - "[<work log title>](../../records/work_logs/<work log file>)"
 related_decisions:
-  - "[<decision title>](../decisions/<decision file>)"
+  - "[<decision title>](../../records/decisions/<decision file>)"
 ---
 
 # <작업 제목>

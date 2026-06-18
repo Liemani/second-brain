@@ -13,7 +13,3 @@ created: 2026-06-18
 ## Templates
 
 - [templates](templates): reusable document structures and their schemas.
-
-## Protocols
-
-- [protocols](protocols): shared procedures for ambiguous or repeatable actions.

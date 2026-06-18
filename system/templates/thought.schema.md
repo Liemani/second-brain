@@ -49,7 +49,7 @@ Condition:
 
 Format:
 
-- `"[Idea Title](../ideas/idea_file.md)"`
+- `"[Idea Title](../../records/ideas/idea_file.md)"`
 
 ### related_issues (optional)
 
@@ -63,7 +63,7 @@ Condition:
 
 Format:
 
-- `"[Issue Title](../issues/issue_file.md)"`
+- `"[Issue Title](../../records/issues/issue_file.md)"`
 
 ## Body Sections
 

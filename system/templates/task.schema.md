@@ -79,7 +79,7 @@ Condition:
 
 Format:
 
-- `"[Work Log Title](../work_logs/work_log_file.md)"`
+- `"[Work Log Title](../../records/work_logs/work_log_file.md)"`
 
 ### related_decisions (optional)
 
@@ -93,7 +93,7 @@ Condition:
 
 Format:
 
-- `"[Decision Title](../decisions/decision_file.md)"`
+- `"[Decision Title](../../records/decisions/decision_file.md)"`
 
 ## Body Sections
 

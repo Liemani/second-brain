@@ -16,9 +16,8 @@
 
 ## System Layers
 
-- Objects는 실제 콘텐츠다.
-- Schemas는 객체의 구조를 정의한다.
-- Protocols는 모호하거나 반복되는 행동의 절차를 정의한다.
+- `records/`는 실제 기록 문서를 물리적으로 묶는 레이어다.
+- Schemas는 templates의 구조를 정의한다.
 - Indexes는 관련 문서를 묶어 탐색을 돕는다.
 - `system/`은 위 문서들을 모아 운영 레이어를 이룬다.
 
@@ -31,13 +30,8 @@
 
 - templates는 문서를 작성하는 가이드다.
 - schemas는 문서 구조를 설명한다.
-- templates는 객체 그 자체가 아니다.
+- templates는 기록 문서 그 자체가 아니다.
 - schemas는 template 내용을 반복하지 않고 구조만 설명한다.
-
-## Protocols Emerge from Ambiguity
-
-- protocols는 행동이 모호하거나 결과가 엇갈릴 때 만든다.
-- 자주 하는 일이라고 해서 protocol을 자동으로 만들지는 않는다.
 
 ## Indexes
 
@@ -46,15 +40,24 @@
 
 ## Boundaries
 
+- `records/`는 실제 기록 문서를 담는다.
+- `indexes/`는 저장소 전체를 탐색하는 문서를 담고 `records/` 밖에 남는다.
 - `areas/`는 주제와 결과물 성격의 자료를 담는다.
 - `legacy/`는 이전 구조와 이전 자료를 보관한다.
 - `system/`은 저장소 운영을 위한 문서를 담는다.
-- `system/protocols/`는 공유 절차를 담는다.
 - `system/templates/`는 작성용 구조를 담는다.
+
+## Context over Skills
+
+- 이 시스템은 skill 기반 제어를 지향하지 않는다.
+- 특정 행동을 위한 순차적인 절차 문서 집합을 만드는 것을 목표로 하지 않는다.
+- agent는 필요한 문서를 읽으며 문맥을 형성하고, 그 문맥 안에서 자연스럽게 다음 행동을 결정해야 한다.
+- 각 문서는 해야 할 일을 직접 지시하기보다 자신의 역할과 목적을 드러내야 한다.
+- 시스템은 명령 집합보다 문맥 형성을 통해 동작하도록 지속적으로 유지한다.
 
 ## Roles over Descriptions
 
-- 객체는 무엇을 담는지보다 왜 존재하는지가 먼저 보여야 한다.
+- 기록 문서는 무엇을 담는지보다 왜 존재하는지가 먼저 보여야 한다.
 - role은 문서의 존재 이유와 책임을 드러낸다.
 
 ## Minimal Useful Structure

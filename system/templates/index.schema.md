@@ -9,7 +9,7 @@ Index documents describe what scope they cover and provide useful navigation lin
 
 ## Relationships
 
-- An index may link to any document type that is useful for the navigation role.
+- An index may link to any record type that is useful for the navigation role.
 
 ## Frontmatter Fields
 
@@ -36,7 +36,7 @@ Behavior:
 - Start with a short scope description, then group links when that helps readability.
 - Choose section names that fit the navigation purpose.
 - Link directly to the source documents.
-- Mix document types when that makes the grouping useful.
+- Mix record types when that makes the grouping useful.
 
 ## Conventions
 
@@ -44,8 +44,8 @@ Behavior:
 - Group when it improves readability.
 - Do not treat an index as a substitute for the source documents.
 - Add links only when the grouping is useful.
-- Avoid hardcoded object-type buckets.
+- Avoid hardcoded record-type buckets.
 
 ## Notes
 
-- Index documents are navigation objects with optional grouping.
+- Index documents are navigation records with optional grouping.

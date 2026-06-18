@@ -4,13 +4,13 @@ related_template: "[<template file>](<template file>)"
 status: <Draft / Stable / Deprecated>
 ---
 
-# <Object Name> Schema
+# <Template Name> Schema
 
 <Short role description>
 
 ## Relationships
 
-- <how this schema relates to related templates, protocols, or other objects>
+- <how this schema relates to other templates>
 
 ## Frontmatter Fields
 
@@ -60,7 +60,7 @@ Behavior:
 
 ## Conventions
 
-- Keep frontmatter fields explicit and object-specific.
+- Keep frontmatter fields explicit and template-specific.
 - Keep body sections separate from frontmatter fields.
 - Use this template to define how a schema document should be written.
 

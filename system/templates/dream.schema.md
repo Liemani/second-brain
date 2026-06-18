@@ -37,7 +37,7 @@ Condition:
 
 Format:
 
-- `"[Thought Title](../thoughts/thought_file.md)"`
+- `"[Thought Title](../../records/thoughts/thought_file.md)"`
 
 ### related_ideas (optional)
 
@@ -51,7 +51,7 @@ Condition:
 
 Format:
 
-- `"[Idea Title](../ideas/idea_file.md)"`
+- `"[Idea Title](../../records/ideas/idea_file.md)"`
 
 ## Body Sections
 

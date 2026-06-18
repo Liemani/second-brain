@@ -2,9 +2,9 @@
 status: <Open / Linked / Archived>
 created: YYYY-MM-DD
 related_ideas:
-  - "[<idea title>](../ideas/<idea file>)"
+  - "[<idea title>](../../records/ideas/<idea file>)"
 related_issues:
-  - "[<issue title>](../issues/<issue file>)"
+  - "[<issue title>](../../records/issues/<issue file>)"
 ---
 
 # <생각 제목>

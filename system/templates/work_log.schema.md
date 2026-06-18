@@ -36,7 +36,7 @@ Condition:
 
 Format:
 
-- `"[Task Title](../tasks/task_file.md)"`
+- `"[Task Title](../../records/tasks/task_file.md)"`
 
 ## Body Sections
 

@@ -5,13 +5,12 @@ related_template: "[schema.md](schema.md)"
 
 # Schema Schema
 
-Schema documents define how object templates should be written and interpreted.
+Schema documents define how templates should be written and interpreted.
 
 ## Relationships
 
 - `schema.md` is the reusable template for schema documents.
-- Object-specific schema files describe the fields and body sections of their related templates.
-- Protocols may reference schema-defined fields when describing state transitions.
+- Template-specific schema files describe the fields and body sections of their related templates.
 
 ## Frontmatter Fields
 
@@ -65,14 +64,14 @@ Allowed values:
 
 Behavior:
 
-- Describe how the schema relates to related templates, protocols, or other objects.
+- Describe how the schema relates to other templates.
 
 ### Frontmatter Fields (required)
 
 Behavior:
 
 - Define the frontmatter fields that belong to the related template.
-- Keep the definitions explicit and object-specific.
+- Keep the definitions explicit and template-specific.
 
 ### Body Sections (required)
 
@@ -96,8 +95,8 @@ Behavior:
 ## Conventions
 
 - Keep the schema specific to the related template.
-- Do not treat this file as inherited defaults for every object.
-- `created`, `related_template`, and `status` are common schema-document fields, not automatic object fields.
+- Do not treat this file as inherited defaults for every template.
+- `created`, `related_template`, and `status` are common schema-document fields, not automatic template fields.
 
 ## Notes
 
