@@ -8,18 +8,18 @@ created: 2026-06-18
 
 ## Core
 
-- [ideas](ideas/index.md): 아직 작업으로 확정되지 않은 방향
-- [issues](issues/index.md): 해결이 필요한 문제와 마찰
-- [tasks](tasks/index.md): 실행 단위의 작업
-- [work_logs](work_logs/index.md): 진행 기록
-- [decisions](decisions/index.md): 선택과 판단의 기록
+- [ideas](records/ideas/index.md): 아직 작업으로 확정되지 않은 방향
+- [issues](records/issues/index.md): 해결이 필요한 문제와 마찰
+- [tasks](records/tasks/index.md): 실행 단위의 작업
+- [work_logs](records/work_logs/index.md): 진행 기록
+- [decisions](records/decisions/index.md): 선택과 판단의 기록
 
 ## Reference
 
-- [requirements](requirements/index.md): 요구사항 관리
+- [requirements](records/requirements/index.md): 요구사항 관리
 - [wiki](wiki/index.md): 맥락과 참고 문서
 - [extracted](extracted/index.md): 원문에서 추출한 산출물
-- [docs](docs/index.md): 보조 문서와 일반 문서
+- [docs](records/docs/index.md): 보조 문서와 일반 문서
 - [indexes](indexes/index.md): 묶음형 네비게이션
 
 ## Support
