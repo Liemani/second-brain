@@ -1,7 +1,6 @@
 ---
 status: "Canceled"
-created: "2026-06-09"
-canceled: "2026-06-10"
+updated: "2026-06-09"
 ---
 # 개인용 작업 로그 도구 설계
 

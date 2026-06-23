@@ -1,5 +1,5 @@
 ---
-created: 2026-06-11
+updated: 2026-06-11
 ---
 # Issues
 
@@ -8,3 +8,7 @@ created: 2026-06-11
 ## Open
 
 - [introduce_issue_tracking.md](introduce_issue_tracking.md): issue 관리 도입
+
+## Template
+
+- [template.md](template.md): this collection's authoring guide

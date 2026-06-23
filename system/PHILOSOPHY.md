@@ -16,9 +16,9 @@
 
 ## System Layers
 
-- `records/`는 실제 기록 문서를 물리적으로 묶는 레이어다.
-- Schemas는 templates의 구조를 정의한다.
-- Indexes는 관련 문서를 묶어 탐색을 돕는다.
+- `records/`는 실제 기록 문서를 담는다.
+- 각 `records/*/template.md`와 `indexes/template.md`는 기록 문서와 index 문서를 쓰는 표면과 가이드를 함께 담는다.
+- `indexes/`는 관련 문서를 묶어 탐색을 돕는다.
 - `system/`은 위 문서들을 모아 운영 레이어를 이룬다.
 
 ## Discoverability over Exhaustiveness
@@ -26,12 +26,11 @@
 - `index.md`는 모든 파일을 나열하기보다 어디로 가야 하는지 알려주는 데 집중한다.
 - 진입점은 완전한 목록이 아니라 적절한 출발점이어야 한다.
 
-## Templates and Schemas
+## Templates
 
-- templates는 문서를 작성하는 가이드다.
-- schemas는 문서 구조를 설명한다.
-- templates는 기록 문서 그 자체가 아니다.
-- schemas는 template 내용을 반복하지 않고 구조만 설명한다.
+- template 파일은 문서를 작성하는 표면이다.
+- 각 template는 실제로 복사할 본문과 그 본문을 해석하는 가이드를 함께 담는다.
+- template 파일은 기록 문서 그 자체가 아니다.
 
 ## Indexes
 
@@ -41,11 +40,12 @@
 ## Boundaries
 
 - `records/`는 실제 기록 문서를 담는다.
+- `records/*/template.md`는 각 기록 컬렉션과 함께 둔다.
 - `indexes/`는 저장소 전체를 탐색하는 문서를 담고 `records/` 밖에 남는다.
 - `areas/`는 주제와 결과물 성격의 자료를 담는다.
 - `legacy/`는 이전 구조와 이전 자료를 보관한다.
 - `system/`은 저장소 운영을 위한 문서를 담는다.
-- `system/templates/`는 작성용 구조를 담는다.
+- `system/template_guide.md`는 템플릿 구조와 가이드를 설명한다.
 
 ## Context over Skills
 

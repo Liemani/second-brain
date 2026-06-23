@@ -1,5 +1,5 @@
 ---
-created: 2026-06-17
+updated: 2026-06-17
 ---
 
 # Index
@@ -27,7 +27,7 @@ created: 2026-06-17
 ## System
 
 - [AGENTS.md](AGENTS.md): onboarding bootstrap for new AI agents.
-- [system](system/index.md): operating layer with philosophy and templates.
+- [system](system/index.md): operating layer with philosophy, local templates, and template guide.
 
 ## Legacy
 

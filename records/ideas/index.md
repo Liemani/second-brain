@@ -1,5 +1,5 @@
 ---
-created: 2026-06-11
+updated: 2026-06-11
 ---
 # Ideas
 
@@ -13,5 +13,11 @@ created: 2026-06-11
 - [emotional_ai_is_born_by_accident.md](emotional_ai_is_born_by_accident.md): 감정을 갖게 되는 AI 이야기
 - [git_auto_push_with_ai_commit_message.md](git_auto_push_with_ai_commit_message.md): AI 커밋 메시지로 자동 push
 - [interstellar_space_simulation_game.md](interstellar_space_simulation_game.md): 실제 우주를 넘나드는 시뮬레이션 게임
+- [mechanical_motion_simulation_game.md](mechanical_motion_simulation_game.md): 부품으로 기계 움직임을 시뮬레이션하는 게임
+- [collection_focused_game.md](collection_focused_game.md): 수집하는 재미가 핵심인 게임
 - [show_todo_text_on_broadcast_screen.md](show_todo_text_on_broadcast_screen.md): 방송 화면에 todo 텍스트 표시
 - [ultralight_keyboard_hip_sling_bag.md](ultralight_keyboard_hip_sling_bag.md): 초경량 키보드용 슬링백/힙색
+
+## Template
+
+- [template.md](template.md): this collection's authoring guide

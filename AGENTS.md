@@ -16,7 +16,8 @@ New AI agents should onboard by reading source documents directly.
 - `index.md` = where to go
 - `records/*/*.md` = actual record documents
 - `records/*/index.md` = what each record collection does
-- `system/templates/*.schema.md` = how templates are structured
+- `records/*/template.md`, `indexes/template.md`, `system/template_guide.md` = how templates are structured
+- When creating a new record, inspect the local `template.md` in that collection first.
 
 ## Guidelines
 

@@ -1,5 +1,5 @@
 ---
-created: 2026-06-15
+updated: 2026-06-15
 ---
 # Dreams
 
@@ -8,3 +8,7 @@ created: 2026-06-15
 ## Open
 
 - [2026-06-15_dream_about_room_taken_over.md](2026-06-15_dream_about_room_taken_over.md): 방을 빼앗기는 꿈
+
+## Template
+
+- [template.md](template.md): this collection's authoring guide

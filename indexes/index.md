@@ -1,5 +1,5 @@
 ---
-created: 2026-06-13
+updated: 2026-06-13
 ---
 # Indexes
 
@@ -8,3 +8,4 @@ created: 2026-06-13
 ## Indexes
 
 - [ai.md](ai.md): AI 관련 index
+- [template.md](template.md): grouped navigation template

@@ -1,7 +1,6 @@
 ---
 status: "Canceled"
-created: "2026-06-09"
-canceled: "2026-06-10"
+updated: "2026-06-09"
 ---
 # 현재 진행중인 작업 시각화
 

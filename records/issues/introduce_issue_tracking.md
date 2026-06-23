@@ -1,6 +1,6 @@
 ---
 status: "Open"
-created: "2026-06-11"
+updated: "2026-06-11"
 ---
 # issue 관리 도입
 

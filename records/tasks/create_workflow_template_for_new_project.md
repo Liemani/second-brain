@@ -1,6 +1,6 @@
 ---
 status: "Backlog"
-created: "2026-06-12"
+updated: "2026-06-12"
 ---
 # workflow template 만들기 for new project
 

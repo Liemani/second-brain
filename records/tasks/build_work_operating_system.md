@@ -1,7 +1,6 @@
 ---
 status: "Done"
-created: "2026-06-10"
-completed: "2026-06-10"
+updated: "2026-06-10"
 related_work_logs:
   - "[workflow_structure_build_work_log_2026-06-10.md](../work_logs/workflow_structure_build_work_log_2026-06-10.md)"
 related_decisions:

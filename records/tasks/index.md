@@ -1,5 +1,5 @@
 ---
-created: 2026-06-11
+updated: 2026-06-11
 ---
 # Tasks
 
@@ -32,3 +32,7 @@ created: 2026-06-11
 
 - [personal_activity_log_tool.md](personal_activity_log_tool.md): 개인용 작업 로그 도구
 - [visualize_current_work.md](visualize_current_work.md): 현재 진행중인 작업 시각화
+
+## Template
+
+- [template.md](template.md): this collection's authoring guide

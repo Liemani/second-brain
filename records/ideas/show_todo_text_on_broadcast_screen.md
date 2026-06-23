@@ -1,6 +1,6 @@
 ---
 status: "Open"
-created: "2026-06-13"
+updated: "2026-06-13"
 ---
 # show task text on broadcast screen
 

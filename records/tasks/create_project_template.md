@@ -1,7 +1,6 @@
 ---
 status: "Done"
-created: "2026-06-09"
-completed: "2026-06-09"
+updated: "2026-06-09"
 ---
 # project template 만들기
 

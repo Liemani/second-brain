@@ -1,6 +1,6 @@
 ---
 status: "Now"
-created: "2026-06-11"
+updated: "2026-06-11"
 ---
 # haven and hearth client 개조
 

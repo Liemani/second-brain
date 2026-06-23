@@ -1,7 +1,6 @@
 ---
 status: "Done"
-created: "2026-06-09"
-completed: "2026-06-10"
+updated: "2026-06-09"
 ---
 # screen_log daemon 제거하기
 

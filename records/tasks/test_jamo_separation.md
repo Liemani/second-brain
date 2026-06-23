@@ -1,7 +1,6 @@
 ---
 status: "Done"
-created: "2026-06-11"
-completed: "2026-06-11"
+updated: "2026-06-11"
 ---
 # 자모 분리 테스트하기
 

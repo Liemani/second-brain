@@ -1,6 +1,6 @@
 ---
 status: "Backlog"
-created: "2026-06-11"
+updated: "2026-06-11"
 ---
 # second brain 에 주기적으로 git push 하는 기능 추가
 

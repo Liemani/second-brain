@@ -1,15 +1,12 @@
 ---
-created: 2026-06-18
+updated: 2026-06-23
 ---
 
 # System
 
-운영 레이어를 모은다.
+`system/` 안의 운영 문서를 모은다.
 
-## Philosophy
+## Operating Docs
 
 - [PHILOSOPHY.md](PHILOSOPHY.md): design principles behind the second-brain system.
-
-## Templates
-
-- [templates](templates): reusable document structures and their schemas.
+- [template_guide.md](template_guide.md): guidance for template-layer files.
