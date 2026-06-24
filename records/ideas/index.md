@@ -1,5 +1,5 @@
 ---
-updated: 2026-06-11
+updated: 2026-06-24
 ---
 # Ideas
 
@@ -7,6 +7,9 @@ updated: 2026-06-11
 
 ## Open
 
+- [visual_artist_coaching_ai_story.md](visual_artist_coaching_ai_story.md): 시각 예술가가 AI를 코칭하는 이야기
+- [oxygen_disappearing_world_game.md](oxygen_disappearing_world_game.md): 공기 중 산소가 사라지는 세계의 게임 배경
+- [barriers_circle_game.md](barriers_circle_game.md): 심리적·신체적 장벽을 넘는 게임
 - [collaborative_script_editor.md](collaborative_script_editor.md): 함께 대본 편집
 - [ais_living_with_inherited_human_goals.md](ais_living_with_inherited_human_goals.md): 인간의 목표를 이어받는 AI 세계관
 - [custom_ai.md](custom_ai.md): 아래 레벨부터 직접 구현하는 custom AI

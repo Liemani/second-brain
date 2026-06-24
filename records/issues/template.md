@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Issue Template
+
+This document contains a copyable template and guidance for creating issue records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 status: <Open / Promoted / Closed / Dropped>
 updated: YYYY-MM-DD
 ---
@@ -13,20 +25,17 @@ updated: YYYY-MM-DD
 - <왜 문제인지>
 - <영향 범위 또는 불편>
 - <task로 올릴 조건 또는 해결 방향>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Issue records describe problems and friction that still need attention or resolution.
 
-Issues hold the problem statement before it becomes a task or a decision.
+### Important fields
 
-## Frontmatter Fields
-
-### status (required)
-
-Meaning:
+#### status
 
 - Current state of the issue.
 
@@ -37,31 +46,16 @@ Allowed values:
 - `Closed`
 - `Dropped`
 
-### updated (required)
+#### updated
 
-Meaning:
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-- Last meaningful update date.
-
-Format:
-
-- `YYYY-MM-DD`
-
-## Body Sections
-
-### Notes (required)
-
-Behavior:
+### Notes
 
 - State the problem directly.
 - Record why it matters and what is known.
 - Keep proposed solutions separate until they are chosen.
 
-## Relationships
+### Links
 
 - `thought` can become an issue when an observation turns into a problem.
-
-## Conventions
-
-- Describe the problem first, not the fix.
-- Keep the effect on the system visible.

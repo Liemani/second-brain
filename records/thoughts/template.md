@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Thought Template
+
+This document contains a copyable template and guidance for creating thought records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 status: <Open / Linked / Archived>
 updated: YYYY-MM-DD
 related_ideas:
@@ -16,20 +28,17 @@ related_issues:
 - <생각 내용>
 - <왜 떠올랐는지>
 - <나중에 idea나 issue로 이어질 수 있는지>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Thought records capture early observations, hunches, and problem signals before they become ideas or issues.
 
-Thoughts are the earliest reusable unit of the knowledge system.
+### Important fields
 
-## Frontmatter Fields
-
-### status (required)
-
-Meaning:
+#### status
 
 - Current state of the thought.
 
@@ -39,61 +48,25 @@ Allowed values:
 - `Linked`
 - `Archived`
 
-### updated (required)
+#### updated
 
-Meaning:
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-- Last meaningful update date.
+#### related_ideas
 
-Format:
+- Link ideas that came from this thought when useful.
 
-- `YYYY-MM-DD`
+#### related_issues
 
-### related_ideas (optional)
+- Link issues that came from this thought when useful.
 
-Meaning:
-
-- Markdown links to ideas that were derived from this thought.
-
-Applicability:
-
-- Use when the thought becomes more concrete.
-
-Format:
-
-- `"[Idea Title](../ideas/idea_file.md)"`
-
-### related_issues (optional)
-
-Meaning:
-
-- Markdown links to issues that were derived from this thought.
-
-Applicability:
-
-- Use when the thought identifies a problem.
-
-Format:
-
-- `"[Issue Title](../issues/issue_file.md)"`
-
-## Body Sections
-
-### Notes (required)
-
-Behavior:
+### Notes
 
 - Preserve the raw thought first.
 - Record why it arose and what it may connect to later.
 - Keep the note short enough to revisit.
 
-## Relationships
+### Links
 
 - `idea` can grow out of a thought when the thought becomes actionable or coherent.
 - `issue` can grow out of a thought when the thought identifies a problem.
-
-## Conventions
-
-- Preserve the raw observation or hunch.
-- Keep the note short enough to revisit later.
-- Promote the thought only when it becomes more specific.

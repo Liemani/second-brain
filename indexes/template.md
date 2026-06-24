@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Index Template
+
+This document contains a copyable template and guidance for creating grouped navigation indexes.
+Copy only the fenced block under `## Template` when creating a new index.
+
+## Template
+
+```md
+---
 updated: YYYY-MM-DD
 ---
 
@@ -15,46 +27,27 @@ updated: YYYY-MM-DD
 
 - [<document title>](../<folder>/<file>): <short role>
 - [<document title>](../<folder>/<file>): <short role>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Index documents group related documents to make navigation easier.
 
-Index documents provide grouped navigation with short role descriptions.
+### Important fields
 
-## Frontmatter Fields
+#### updated
 
-### updated (required)
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-Meaning:
-
-- Last meaningful update date.
-
-Format:
-
-- `YYYY-MM-DD`
-
-## Body Sections
-
-### <Group> (repeatable)
-
-Behavior:
+#### <Group>
 
 - Give a short role description first, then group links when that helps readability.
 - Choose section names that fit the navigation purpose.
 - Link directly to the source documents.
 - Mix documents when that makes the grouping useful.
 
-## Relationships
+### Links
 
 - An index may link to any document that is useful for the navigation role.
-
-## Conventions
-
-- Role first, navigation second.
-- Group when it improves readability.
-- Do not treat an index as a substitute for the source documents.
-- Add links only when the grouping is useful.
-- Avoid hardcoded record-type buckets.

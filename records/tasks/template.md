@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Task Template
+
+This document contains a copyable template and guidance for creating task records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 status: <Now / Backlog / Done / Canceled>
 updated: YYYY-MM-DD
 related_work_logs:
@@ -22,20 +34,17 @@ related_decisions:
 
 - <작업의 목적>
 - <진행 중 참고할 사항>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Task records manage executable work that can be tracked over time.
 
-The task is the main execution container in the system.
+### Important fields
 
-## Frontmatter Fields
-
-### status (required)
-
-Meaning:
+#### status
 
 - Current state of the task.
 
@@ -46,49 +55,19 @@ Allowed values:
 - `Done`
 - `Canceled`
 
-### updated (required)
+#### updated
 
-Meaning:
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-- Last meaningful update date.
+#### related_work_logs
 
-Format:
+- Link work logs that record execution for this task.
 
-- `YYYY-MM-DD`
+#### related_decisions
 
-### related_work_logs (optional)
+- Link decisions influenced by this task.
 
-Meaning:
-
-- Markdown links to work logs that record execution for this task.
-
-Condition:
-
-- When execution has been recorded in a work log.
-
-Format:
-
-- `"[Work Log Title](../work_logs/work_log_file.md)"`
-
-### related_decisions (optional)
-
-Meaning:
-
-- Markdown links to decisions influenced by this task.
-
-Condition:
-
-- When the task leads to or depends on a decision.
-
-Format:
-
-- `"[Decision Title](../decisions/decision_file.md)"`
-
-## Body Sections
-
-### Checklist (required)
-
-Behavior:
+### Checklist
 
 - Represent executable actions.
 - Progress through checklist states.
@@ -104,21 +83,13 @@ Allowed states:
 
 Checklist items should include dates.
 
-### Notes (optional)
-
-Behavior:
+### Notes
 
 - Record extra context, constraints, or reminders.
 - Keep it separate from executable checklist items.
 
-## Relationships
+### Links
 
 - `idea` can become a task when it is ready for execution.
 - `work_log` can record task execution.
 - `decision` can be linked when work leads to a stable choice.
-
-## Conventions
-
-- Keep the task narrow enough to execute.
-- Put actual execution items in `Checklist`.
-- Include dates in checklist items.

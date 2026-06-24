@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Idea Template
+
+This document contains a copyable template and guidance for creating idea records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 status: <Open / Promoted / Dropped>
 updated: YYYY-MM-DD
 ---
@@ -12,26 +24,19 @@ updated: YYYY-MM-DD
 - <아이디어 내용>
 - <왜 흥미로운지>
 - <나중에 task로 올릴 조건>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Ideas capture promising directions that are not ready for execution yet.
 
-Ideas bridge early thought and later execution.
+### Important fields
 
-## Frontmatter Fields
+#### status
 
-### status (required)
-
-Meaning:
-
-- Current state of the idea.
-
-Applicability:
-
-- Use for every idea.
+Current state of the idea.
 
 Allowed values:
 
@@ -39,31 +44,16 @@ Allowed values:
 - `Promoted`
 - `Dropped`
 
-### updated (required)
+#### updated
 
-Meaning:
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-- Last meaningful update date.
-
-Format:
-
-- `YYYY-MM-DD`
-
-## Body Sections
-
-### Notes (required)
-
-Behavior:
+### Notes
 
 - Record the idea itself.
 - Keep enough context to judge whether it should become a task later.
 - Do not force execution before it is ready.
 
-## Relationships
+### Links
 
 - `thought` can lead into an idea when an unstructured observation becomes more concrete.
-
-## Conventions
-
-- Keep the idea specific enough to discuss, but not forced into execution too early.
-- Use a task only when the idea is ready to be worked on.

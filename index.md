@@ -1,5 +1,5 @@
 ---
-updated: 2026-06-17
+updated: 2026-06-24
 ---
 
 # Index
@@ -27,7 +27,7 @@ updated: 2026-06-17
 ## System
 
 - [AGENTS.md](AGENTS.md): onboarding bootstrap for new AI agents.
-- [system](system/index.md): operating layer with philosophy, local templates, and template guide.
+- [PHILOSOPHY.md](PHILOSOPHY.md): operating principles for the repository.
 
 ## Legacy
 

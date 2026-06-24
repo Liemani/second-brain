@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Work Log Template
+
+This document contains a copyable template and guidance for creating work log records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 updated: YYYY-MM-DD
 related_tasks:
   - "[<task title>](../tasks/<task file>)"
@@ -38,53 +50,30 @@ related_tasks:
 - 실제 결과: <실제로 어떻게 되었는지>
 - 문제 또는 실패 원인 후보: <확인된 문제나 추정 원인>
 - 다음 시도 아이디어: <다음에 무엇을 바꿔볼지>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Work logs record what happened during execution so later work can reuse the evidence.
 
-Work logs document what happened so later work can reuse the evidence.
+### Important fields
 
-## Frontmatter Fields
+#### updated
 
-### updated (required)
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-Meaning:
+#### related_tasks
 
-- Last meaningful update date.
+- Link tasks that this work log records.
 
-Format:
-
-- `YYYY-MM-DD`
-
-### related_tasks (optional)
-
-Meaning:
-
-- Markdown links to tasks that the work log records.
-
-Applicability:
-
-- Use when the work log records execution for a task.
-
-Format:
-
-- `"[Task Title](../tasks/task_file.md)"`
-
-## Body Sections
-
-### 결과 (required)
-
-Behavior:
+### Result
 
 - State the main result first.
 - Let a reader understand the outcome without scanning the rest.
 
-### 환경 (required)
-
-Behavior:
+### Environment
 
 - Record the execution context before the procedure.
 - Keep the subject, target, and method explicit.
@@ -95,26 +84,16 @@ Structure:
 - `target`
 - `method`
 
-### 수행 절차 (required)
-
-Behavior:
+### Procedure
 
 - Record the sequence of actions in order.
 - Keep the steps factual and readable.
 
-### 결과 상세 (required)
-
-Behavior:
+### Outcome details
 
 - Separate expected result, actual result, likely cause, and next ideas.
 - Preserve failures and partial results.
 
-## Relationships
+### Links
 
 - `task` can be linked to a work log when task execution is recorded.
-
-## Conventions
-
-- Write the result first.
-- Keep `수행 절차` and `결과 상세` separate.
-- Record failures as well as successes.

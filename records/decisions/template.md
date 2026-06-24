@@ -1,4 +1,16 @@
 ---
+updated: 2026-06-24
+---
+
+# Decision Template
+
+This document contains a copyable template and guidance for creating decision records.
+Copy only the fenced block under `## Template` when creating a new record.
+
+## Template
+
+```md
+---
 updated: YYYY-MM-DD
 ---
 
@@ -19,60 +31,35 @@ updated: YYYY-MM-DD
 
 - <이 결정이 이후 작업에 주는 영향>
 - <무엇이 바뀌는지>
+```
 
----
+## Guide
 
-# Template Guide
+### What this record is
 
-## Role
+Decision records capture a stable choice and the reasoning behind it.
 
-Decisions capture the stable outcome of reasoning so later work can follow the chosen direction.
+### Important fields
 
-## Frontmatter Fields
+#### updated
 
-### updated (required)
+- Last meaningful update date. Use `YYYY-MM-DD`.
 
-Meaning:
-
-- Last meaningful update date.
-
-Format:
-
-- `YYYY-MM-DD`
-
-## Body Sections
-
-### 결정 (required)
-
-Behavior:
+### 결정
 
 - State what was decided.
 - Keep the decision separate from the reasoning.
 
-### 이유 (required)
-
-Behavior:
+### 이유
 
 - Record the evidence, reasoning, or comparison that led to the decision.
 - Keep it separate from the decision itself.
 
-### 영향 (optional)
-
-Behavior:
+### 영향
 
 - Describe what changes because of this decision.
 - Record downstream consequences or constraints.
 
-## Relationships
+### Links
 
 - `work_log` can provide the evidence that led to a decision.
-
-## Conventions
-
-- State the decision plainly in the `결정` section.
-- Link to the work log that motivated the choice when possible.
-- Keep the reason and impact separate from the decision itself.
-
-## Notes
-
-- Do not turn this into a generic analysis note.
