@@ -24,5 +24,5 @@ created: 2026-06-18
 
 ## Support
 
-- [AGENTS.md](AGENTS.md): 에이전트 온보딩 안내
-- [system](system/index.md): 메모리 시스템의 원칙과 템플릿
+- [AGENTS.md](../AGENTS.md): 에이전트 온보딩 안내
+- [PRINCIPLES.md](../PRINCIPLES.md): 프로젝트 운영 원칙
