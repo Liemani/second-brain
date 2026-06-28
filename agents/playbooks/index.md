@@ -15,6 +15,7 @@ They sit below role definitions and above session prompts.
 ## Documents
 
 - [template](template.md): canonical self-contained playbook template
+- [external-design-partner](external-design-partner.md): external architectural collaboration style
 - [explorer](explorer.md): Explorer operating model and stable discovery practice
 - [planner](planner.md): Planner operating model and stable planning practice
 - [worker](worker.md): Worker operating model and stable execution practice

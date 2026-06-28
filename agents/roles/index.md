@@ -14,6 +14,7 @@ They describe how a role fits into the workspace.
 ## Documents
 
 - [template](template.md): canonical self-contained role template
+- [external-design-partner](external-design-partner.md): external architectural collaborator
 - [planner](planner.md): defines planning responsibility and decision-shaping scope
 - [explorer](explorer.md): defines discovery and context-gathering responsibility
 - [worker](worker.md): defines implementation and record-updating responsibility

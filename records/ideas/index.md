@@ -4,6 +4,7 @@
 
 ## Open
 
+- [planning_exploration_execution_as_architectural_responsibilities.md](planning_exploration_execution_as_architectural_responsibilities.md): Planning, Exploration, and Execution as responsibilities rather than fixed agent identities
 - [visual_artist_coaching_ai_story.md](visual_artist_coaching_ai_story.md): 시각 예술가가 AI를 코칭하는 이야기
 - [oxygen_disappearing_world_game.md](oxygen_disappearing_world_game.md): 공기 중 산소가 사라지는 세계의 게임 배경
 - [barriers_circle_game.md](barriers_circle_game.md): 심리적·신체적 장벽을 넘는 게임
