@@ -17,6 +17,7 @@
 
 ## System Layers
 
+- `agents/`는 durable agent knowledge를 담는다.
 - `projects/`는 관리 중인 프로젝트와 그에 필요한 맥락, 책임을 담는다.
 - `records/`는 판단이 끝난 지식, 결정, 경과를 담는다.
 - `indexes/`는 탐색을 돕는다.
@@ -55,6 +56,7 @@
 
 ## Roles over Descriptions
 
+- 역할 문서는 `agents/roles/`에, playbook은 `agents/playbooks/`에 둔다.
 - 기록 문서는 무엇을 담는지보다 왜 존재하는지가 먼저 보여야 한다.
 - role은 문서의 존재 이유와 책임을 드러낸다.
 

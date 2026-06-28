@@ -13,6 +13,7 @@
 - [add_periodic_git_push_for_second_brain.md](add_periodic_git_push_for_second_brain.md): 정기 git push
 - [create_workflow_template_for_new_project.md](create_workflow_template_for_new_project.md): 새 프로젝트 workflow template
 - [find_keyboard_bag_on_aliexpress.md](find_keyboard_bag_on_aliexpress.md): 키보드 가방 찾기
+- [validate_workspace_based_agent_onboarding.md](validate_workspace_based_agent_onboarding.md): workspace 기반 agent onboarding 검증
 - [remove_terminal_screen_record_permission_and_restart.md](remove_terminal_screen_record_permission_and_restart.md): terminal screen record permission 정리
 
 ## Done

@@ -4,6 +4,7 @@
 
 ## Navigation
 
+- [Agents](agents/index.md): durable agent knowledge and operating practice.
 - [Recorded Knowledge](records/index.md): durable records and decisions.
 - [Projects](projects/index.md): managed project material and workspace areas.
 - [Navigation Indexes](indexes/index.md): grouped navigation for the repository.
