@@ -4,7 +4,7 @@ created: 2026-06-28
 
 # Agents
 
-이 문서는 durable agent knowledge의 진입점입니다.
+이 문서는 에이전트의 장기 책임과 지속적인 운영 지식을 문서로 설명하는 진입점입니다.
 
 ## Agent Knowledge
 

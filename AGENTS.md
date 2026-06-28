@@ -1,6 +1,6 @@
 # AGENTS
 
-New AI agents should onboard by reading source documents directly.
+New AI agents should begin by reading the source documents first.
 
 ## Read In Order
 
@@ -12,7 +12,7 @@ New AI agents should onboard by reading source documents directly.
 ## Source Of Truth
 
 - `README.md` = what this workspace is and how to navigate it
-- `PRINCIPLES.md` = why this repository is designed this way
+- `PRINCIPLES.md` = why this workspace is designed this way
 - `projects/*` = managed project documents and workspace material
 - `records/*/*.md` = actual record documents
 - `records/*/index.md` = what each record collection does

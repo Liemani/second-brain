@@ -1,10 +1,10 @@
 # Shared Workspace
 
-이 저장소는 사람과 AI 에이전트가 함께 운영하는 shared workspace입니다.
+이 저장소는 사람과 AI 에이전트가 함께 협업하는 shared workspace입니다.
 
 ## Navigation
 
-- [Agents](agents/index.md): durable agent knowledge and operating practice.
+- [Agents](agents/index.md): durable documentation of agent responsibilities and operating practice.
 - [Recorded Knowledge](records/index.md): durable records and decisions.
 - [Projects](projects/index.md): managed project material and workspace areas.
 - [Navigation Indexes](indexes/index.md): grouped navigation for the repository.
