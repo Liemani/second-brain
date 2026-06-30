@@ -5,6 +5,7 @@
 ## Navigation
 
 - [Agents](agents/index.md): durable documentation of agent responsibilities and operating practice.
+- [Procedures](procedures/index.md): workspace-owned repeatable operations that are invoked explicitly.
 - [Recorded Knowledge](records/index.md): durable records and decisions.
 - [Projects](projects/index.md): managed project material and workspace areas.
 - [Navigation Indexes](indexes/index.md): grouped navigation for the repository.

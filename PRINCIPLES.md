@@ -18,6 +18,7 @@
 ## Workspace Layers
 
 - `agents/`는 durable agent knowledge를 담는다.
+- `procedures/`는 workspace에서 명시적으로 호출하는 반복 가능한 운영 절차를 담는다.
 - `projects/`는 관리 중인 프로젝트와 그에 필요한 맥락, 책임을 담는다.
 - `records/`는 판단이 끝난 지식, 결정, 경과를 담는다.
 - `indexes/`는 탐색을 돕는다.
@@ -49,7 +50,7 @@
 ## Context over Skills
 
 - 이 workspace는 skill 기반 선택보다 문서에서 문맥을 형성하는 일을 우선한다.
-- 특정 행동을 위한 순차적인 절차 문서 집합을 만드는 것을 목표로 하지 않는다.
+- 반복 가능한 workspace 절차는 `procedures/`에 두되, 기본 agent 문맥에 포함하지 않고 역할 정의나 session prompt로 확장하지 않는다.
 - agent는 필요한 문서를 읽으며 문맥을 형성하고, 그 문맥 안에서 다음에 무엇을 다뤄야 하는지 자연스럽게 알아가야 한다.
 - 각 문서는 해야 할 일을 직접 지시하기보다 자신의 역할과 목적을 드러내야 한다.
 - workspace는 명령 집합보다 문맥 형성을 통해 동작하도록 지속적으로 유지한다.
@@ -57,6 +58,7 @@
 ## Roles over Descriptions
 
 - 역할 문서는 `agents/roles/`에, playbook은 `agents/playbooks/`에 둔다.
+- 절차 문서는 `procedures/`에 둔다.
 - 기록 문서는 무엇을 담는지보다 왜 존재하는지가 먼저 보여야 한다.
 - role은 문서의 존재 이유와 책임을 드러낸다.
 
