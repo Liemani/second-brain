@@ -6,14 +6,19 @@ New AI agents should onboard by reading source documents directly.
 
 1. `README.md`
 2. `PRINCIPLES.md`
+3. `memory/index.md`
 
 ## Source Of Truth
 
 - `README.md` = what this project template is and how to navigate it
 - `PRINCIPLES.md` = why this template is designed this way
+- `memory/index.md` = project memory entry point
+- `memory/records/index.md` = record collection entry point
+- `memory/indexes/index.md` = index collection entry point
 - `memory/*` = project memory documents and navigation
 - `memory/*/index.md` = what each collection does
 - `memory/indexes/template.md`, `memory/wiki/template.md`, `memory/records/*/template.md` = local guide docs for their own document type
+- `raw/*` = unreconciled source inputs
 - When creating a new document, inspect the local `template.md` first and copy only the template block.
 
 ## Guidelines

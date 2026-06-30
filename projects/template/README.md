@@ -14,5 +14,7 @@
 - `PRINCIPLES.md`: 프로젝트 운영 원칙
 - `memory/`: 프로젝트 메모리, 위키, 기록
 - `memory/index.md`: 메모리 영역의 진입점
+- `memory/records/index.md`: 기록 컬렉션 진입점
+- `raw/`: 정리되지 않은 원본 입력
 
 ## Notes

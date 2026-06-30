@@ -30,5 +30,6 @@ updated: 2026-06-30
 ## Documents
 
 - [template](template.md): canonical self-contained procedure template
+- [apply-project-template](apply-project-template.md): applying a released project template to an existing project
 - [create-project](create-project.md): creating an independent project from a released template
 - [release-project-template](release-project-template.md): preparing and releasing the project template
