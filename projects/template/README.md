@@ -11,7 +11,7 @@
 ## Structure
 
 - `AGENTS.md`: 프로젝트 온보딩 안내
-- `PRINCIPLES.md`: 프로젝트 운영 원칙
+- `memory/PRINCIPLES.md`: 프로젝트 운영 원칙
 - `memory/`: 프로젝트 메모리, 위키, 기록
 - `memory/index.md`: 메모리 영역의 진입점
 - `memory/records/index.md`: 기록 컬렉션 진입점
